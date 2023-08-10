@@ -23,7 +23,7 @@ export const Hero = () => {
             <h1 className={classnames(
                 'hidden',
                 'md:flex',
-                'text-[#054C85]',
+                'text-[#0B387E]',
                 'md:text-6xl',
                 'lg:text-7xl',
                 'font-bold',

@@ -6,11 +6,23 @@ export const Footer = () => {
     <div
       className={classnames(
         'rexine-spa-care-footer',
+        'flex',
+        'flex-col',
+        'place-content-end',
         'w-full',
-        'h-96',
+        'h-auto',
         'bg-rexine-blue',
+        'text-white',
+        'p-12'
       )}
     >
+      <p className={classnames('font-mono', 'font-semibold', 'text-xl')}>Inquiries & Assistance:</p>
+      <p className={classnames('text-lg', 'text-[#C0F0FF]')}>623-282-2530</p>
+      <p className={classnames('font-mono', 'font-semibold', 'text-xl', 'pt-4')}>Email:</p>
+      <p className={classnames('text-xl', 'text-[#C0F0FF]')}>info@rexinespacare.com</p>
+      <p className={classnames('font-mono', 'font-semibold', 'text-xl', 'pt-4')}>Standard Business Hours:</p>
+      <p className={classnames('text-lg', 'text-[#C0F0FF]')}>Monday-Friday 8:00am-6:00pm </p>
+      <p className={classnames('text-lg', 'text-[#C0F0FF]', 'italic')}>Saturday & Sunday available by appointment.</p>
     </div>
   );
 }
