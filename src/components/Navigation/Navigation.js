@@ -5,9 +5,11 @@ import { MobileNavigation } from './MobileNavigation';
 
 export const Navigation = () => {
   return (
-    <div
+    <header
       className={classnames(
         'rexine-spa-care-navigation',
+        'sticky', 
+        'top-0',
         'z-[50]',
         'shadow-sm',
         'shadow-blue-500'
@@ -15,6 +17,6 @@ export const Navigation = () => {
     >
       <DesktopNavigation />
       <MobileNavigation />
-    </div>
+    </header>
   );
 }

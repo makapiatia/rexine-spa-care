@@ -11,6 +11,9 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {
+      borderRadius: {
+        extraLarge: '12rem'
+      },
       colors: {
         'rexine-blue': '#0F52BA',
       },
