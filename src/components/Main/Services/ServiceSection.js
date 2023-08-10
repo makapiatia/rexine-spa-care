@@ -13,14 +13,12 @@ export const ServiceSection = () => {
         'w-auto',
         'h-auto',
         'm-12',
-        'border-2',
-        'border-[#C0F0FF]',
         'rounded-3xl',
-        'bg-[#C0F0FF]'
+        'bg-light-blue'
       )}
     >
       <h1 className={classnames(
-        'text-[#005D9E]',
+        'text-medium-blue',
         'text-4xl',
         'uppercase',
         'font-semibold',
@@ -36,8 +34,8 @@ export const ServiceSection = () => {
         Services
       </h1>
       <div className={classnames('flex', 'flex-row', 'justify-end')}>
-        <div className={classnames('pl-16', 'pb-16', 'max-w-[900px]', 'text-[#007DB6]', 'text-lg')}>
-        <p className={classnames('mt-6')}>
+        <div className={classnames('pl-16', 'pb-16', 'max-w-[900px]', 'text-green-blue', 'text-lg')}>
+          <p className={classnames('mt-6')}>
             Zhuchengceratops Haestasaurus Nanosaurus Magnapaulia Brachylophosaurus Pararhabdodon Dilong
             Huangshanlong Anzu Oohkotokia Titanosaurus Suchomimus Eocursor Sinornithomimus Cedrorestes
             Stygimoloch Mongolosaurus Nanyangosaurus Antarctosaurus Acristavus.
@@ -59,13 +57,13 @@ export const ServiceSection = () => {
             'font-semibold',
             'font-mono',
             'text-white',
-            'bg-[#0B387E]',
-            'hover:bg-[#005D9E]',
+            'bg-rexine-blue',
+            'hover:bg-blue-500',
             'rounded-md',
             'p-8'
-            )}>
-              Services + Pricing
-              </button>
+          )}>
+            Services + Pricing
+          </button>
         </div>
         <div className={classnames('pt-8', 'pb-16', 'px-16')}>
           <img
