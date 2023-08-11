@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'tailwindcss-classnames';
 import spaJet from '../../../assets/images/spaJet.jpeg';
+import { Link } from 'react-router-dom';
 
 export const ServiceSection = () => {
 
@@ -10,8 +11,6 @@ export const ServiceSection = () => {
         'rexine-spa-care-service-section',
         'flex',
         'flex-col',
-        'w-auto',
-        'h-auto',
         'm-12',
         'rounded-3xl',
         'bg-light-blue'
@@ -25,7 +24,7 @@ export const ServiceSection = () => {
         'font-mono',
         'my-8',
         'py-8',
-        'px-24',
+        'px-16',
         'self-center',
         'w-fit',
         'bg-white',
@@ -33,8 +32,20 @@ export const ServiceSection = () => {
       )}>
         Services
       </h1>
-      <div className={classnames('flex', 'flex-row', 'justify-end')}>
-        <div className={classnames('pl-16', 'pb-16', 'max-w-[900px]', 'text-green-blue', 'text-lg')}>
+      <div className={classnames('flex', 'flex-col', 'xl:flex-row', 'xl:justify-end' )}>
+        <div className={classnames(
+          'flex',
+          'flex-col',
+          'pl-16', 
+          'pr-16',
+          'xl:pr-0',
+          'pb-16', 
+          'h-auto',
+          'text-green-blue', 
+          'text-lg',
+          'items-center',
+          'xl:items-start'
+          )}>
           <p className={classnames('mt-6')}>
             Zhuchengceratops Haestasaurus Nanosaurus Magnapaulia Brachylophosaurus Pararhabdodon Dilong
             Huangshanlong Anzu Oohkotokia Titanosaurus Suchomimus Eocursor Sinornithomimus Cedrorestes
@@ -45,27 +56,35 @@ export const ServiceSection = () => {
             Wyleyia Klamelisaurus Aliwalia Koshisaurus Conchoraptor Ornithomerus Gongxianosaurus Graciliceratops
             Buitreraptor Frenguellisaurus Beelemodon Coronosaurus Augustynolophus Monkonosaurus.
           </p>
-          <p className={classnames('mt-6')}>
+          <p className={classnames('my-6')}>
             Xinjiangovenator Zhongjianosaurus Macelognathus Almas Hypsirhophus Beelemodon Mamenchisaurus
             Coloradia Dacentrurus Guaibasaurus Micropachycephalosaurus Corythoraptor Kritosaurus Moabosaurus
             Serendipaceratops Heterosaurus Eousdryosaurus Bambiraptor Paluxysaurus Bravoceratops.
           </p>
-          <button className={classnames(
-            'mt-6',
-            'text-2xl',
-            'uppercase',
-            'font-semibold',
-            'font-mono',
-            'text-white',
-            'bg-rexine-blue',
-            'hover:bg-blue-500',
-            'rounded-md',
-            'p-8'
-          )}>
-            Services + Pricing
-          </button>
+          <div className={classnames('pt-9')}>
+          <Link
+            to="/services"
+          >
+            <span
+              className={classnames(
+                'text-lg',
+                'md:text-2xl',
+                'uppercase',
+                'font-semibold',
+                'font-mono',
+                'text-white',
+                'bg-rexine-blue',
+                'hover:bg-blue-500',
+                'rounded-md',
+                'p-8',
+                'w-max'
+              )}>
+              Services + Pricing
+            </span>
+          </Link>
+          </div>
         </div>
-        <div className={classnames('pt-8', 'pb-16', 'px-16')}>
+        <div className={classnames('hidden', 'xl:flex', 'pt-7', 'pb-16', 'px-16', 'xl:min-w-[500px]')}>
           <img
             src={spaJet}
             alt='spa-jet'
