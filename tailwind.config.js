@@ -20,7 +20,9 @@ module.exports = {
         'green-blue': '#007DB6',
         'rexine-blue': '#0F52BA',
         'medium-blue': '#005D9E',
-        'deep-blue': '#0B387E'
+        'deep-blue': '#0B387E',
+        'medium-teal': '#029794',
+        'medium-green': '#029756'
       },
     },
   },

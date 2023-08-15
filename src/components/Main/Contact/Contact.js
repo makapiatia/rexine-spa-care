@@ -188,7 +188,8 @@ export const Contact = () => {
                         'text-xl',
                         'uppercase',
                         'tracking-widest',
-                        'font-semibold'
+                        'font-semibold',
+                        'mt-6'
                     )}
                 >
                     Send
