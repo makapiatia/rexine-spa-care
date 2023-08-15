@@ -65,7 +65,7 @@ export const Contact = () => {
                         'flex-col',
                         'pb-8'
                     )}>
-                    <label for="telephone">Telephone Number:</label>
+                    <label htmlFor="telephone">Telephone Number:</label>
                     <input
                         type="telephone"
                         name="telephone"

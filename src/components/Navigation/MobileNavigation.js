@@ -22,7 +22,7 @@ export const MobileNavigation = () => {
       width: '36px'
     },
     bmCross: {
-      background: '#FFFFFF'
+      background: '#005D9E'
     },
     bmMenuWrap: {
       position: 'fixed',
@@ -30,7 +30,7 @@ export const MobileNavigation = () => {
       width: '375px'
     },
     bmMenu: {
-      background: '#0B387E',
+      background: '#FFFFFF',
       padding: '1.5em 0 0',
       fontSize: '2.15em'
     },
@@ -38,7 +38,7 @@ export const MobileNavigation = () => {
       fill: '#000000'
     },
     bmItemList: {
-      color: '#FFFFFF',
+      color: '#005D9E',
       padding: '0.8em'
     },
     bmOverlay: {
@@ -56,7 +56,8 @@ export const MobileNavigation = () => {
               'menu-item',
               'font-semibold',
               'border-b-2',
-              'hover:bg-medium-blue',
+              'border-light-blue',
+              'hover:bg-extra-light-blue',
               'py-2'
             )}
             href="/">
@@ -68,7 +69,8 @@ export const MobileNavigation = () => {
               'menu-item',
               'font-semibold',
               'border-b-2',
-              'hover:bg-medium-blue',
+              'border-light-blue',
+              'hover:bg-extra-light-blue',
               'py-2'
             )}
             href="/services">
@@ -80,7 +82,8 @@ export const MobileNavigation = () => {
               'menu-item',
               'font-semibold',
               'border-b-2',
-              'hover:bg-medium-blue',
+              'border-light-blue',
+              'hover:bg-extra-light-blue',
               'py-2'
             )}
             href="/about-us">
@@ -91,7 +94,8 @@ export const MobileNavigation = () => {
             className={classnames(
               'menu-item',
               'font-semibold',
-              'hover:bg-medium-blue',
+              'border-light-blue',
+              'hover:bg-extra-light-blue',
               'py-2'
             )}
             href="/contact">

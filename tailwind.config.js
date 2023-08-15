@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     screens: {
       'xs': '375px',
-      'sm': '640px',
+      'sm': '500px',
       'md': '768px',
       'lg': '1024px',
       'xl': '1280px',
@@ -15,6 +15,7 @@ module.exports = {
         extraLarge: '12rem'
       },
       colors: {
+        'extra-light-blue': '#E8FAFF',
         'light-blue': '#C0F0FF',
         'green-blue': '#007DB6',
         'rexine-blue': '#0F52BA',

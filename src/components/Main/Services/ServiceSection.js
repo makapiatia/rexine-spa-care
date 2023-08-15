@@ -1,9 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import classnames from 'tailwindcss-classnames';
 import spaJet from '../../../assets/images/spaJet.jpeg';
-import { Link } from 'react-router-dom';
+import { useMediaQuery } from '../../../utils/hooks';
+
 
 export const ServiceSection = () => {
+  const smallScreen = useMediaQuery('500px');
+  const serviceButtonText = smallScreen ? 'Services + Pricing' : 'Services';
 
   return (
     <div
@@ -23,8 +27,10 @@ export const ServiceSection = () => {
         'font-semibold',
         'font-mono',
         'my-8',
-        'py-8',
-        'px-16',
+        'py-4',
+        'sm:py-8',
+        'px-5',
+        'sm:px-16',
         'self-center',
         'w-fit',
         'bg-white',
@@ -79,7 +85,7 @@ export const ServiceSection = () => {
                 'p-8',
                 'w-max'
               )}>
-              Services + Pricing
+              {serviceButtonText}
             </span>
           </Link>
           </div>
