@@ -34,6 +34,15 @@ export const Contact = () => {
                 )}
                 onSubmit={handleSubmit}
             >
+                <h1 className={classnames(
+                    'pb-8', 
+                    'text-3xl',
+                    'font-bold',
+                    'uppercase'
+                    )}
+                >
+                    Get In Touch
+                    </h1>
                 <div
                     className={classnames(
                         'flex',
@@ -41,16 +50,15 @@ export const Contact = () => {
                         'pb-8'
                     )}
                 >
-                    <label htmlFor="name">Full Name:</label>
                     <input
                         id="name"
                         name="name"
                         className={classnames(
-                            'border-2',
+                            'border-b-2',
                             'border-gray-400',
-                            'rounded-lg',
+                            'focus:outline-none'
                         )}
-                        placeholder="First Last"
+                        placeholder="NAME"
                         required={true}
                     />
                     <ValidationError
@@ -65,16 +73,15 @@ export const Contact = () => {
                         'flex-col',
                         'pb-8'
                     )}>
-                    <label htmlFor="telephone">Telephone Number:</label>
                     <input
                         type="telephone"
                         name="telephone"
                         id="telephone"
-                        placeholder="(555) 555-5555"
+                        placeholder="PHONE NUMBER"
                         className={classnames(
-                            'border-2',
+                            'border-b-2',
                             'border-gray-400',
-                            'rounded-lg'
+                            'focus:outline-none'
                         )}
                         required={true}
                     />
@@ -86,19 +93,16 @@ export const Contact = () => {
                         'pb-8'
                     )}
                 >
-                    <label htmlFor="email">
-                        Email Address:
-                    </label>
                     <input
                         id="email"
                         type="email"
                         name="email"
                         className={classnames(
-                            'border-2',
+                            'border-b-2',
                             'border-gray-400',
-                            'rounded-lg'
+                            'focus:outline-none'
                         )}
-                        placeholder="email@domain.tld"
+                        placeholder="EMAIL ADDRESS"
                         required={true}
                     />
                     <ValidationError
@@ -111,21 +115,21 @@ export const Contact = () => {
                     className={classnames(
                         'flex',
                         'flex-col',
-                        'pb-8'
+                        'pb-8',
+                        
                     )}
                 >
-                    <label htmlFor="message">
-                        Relevant Info:
-                    </label>
                     <textarea
                         id="message"
                         name="message"
                         className={classnames(
-                            'border-2',
+                            'border-b-2',
                             'border-gray-400',
-                            'rounded-lg'
+                            'ml-3',
+                            'focus:outline-none'
+                            
                         )}
-                        placeholder="(Optional)"
+                        placeholder="EXTRA INFO"
                         required={true}
                     />
                     <ValidationError
@@ -144,12 +148,13 @@ export const Contact = () => {
                         'hover:bg-blue-500',
                         'rounded-lg',
                         'text-white',
+                        'text-xl',
                         'uppercase',
                         'tracking-widest',
                         'font-semibold'
                     )}
                 >
-                    Submit
+                    Send
                 </button>
             </form>
         </div>
