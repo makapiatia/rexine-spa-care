@@ -1,6 +1,5 @@
 import React from 'react';
 import classnames from 'tailwindcss-classnames';
-import { ServiceArea } from './ServiceArea';
 
 export const ServicePage = () => {
   return (
@@ -14,7 +13,6 @@ export const ServicePage = () => {
         'place-items-center'
       )}
     >
-      <ServiceArea />
     </div>
   );
 }

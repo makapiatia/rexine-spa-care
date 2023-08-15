@@ -1,10 +1,11 @@
 import React from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import classnames from 'tailwindcss-classnames';
+import { ServiceArea } from './ServiceArea';
 
 export const Contact = () => {
     const [state, handleSubmit] = useForm("mleyjapj");
-    
+
     if (state.succeeded) {
         return <p>Thank you! We will be in contact as soon as possible!</p>;
     }
@@ -12,7 +13,8 @@ export const Contact = () => {
     return (
         <div className={classnames(
             'flex',
-            'flex-row',
+            'flex-col',
+            'xl:flex-row',
             'min-h-max',
             'w-full',
             'bg-light-blue',
@@ -26,30 +28,33 @@ export const Contact = () => {
                     'w-auto',
                     'bg-white',
                     'm-12',
-                    'md:m-16',
+                    'xl:ml-16',
+                    'xl:mr-8',
                     'p-12',
-                    'md:px-24',
+                    'xl:px-24',
                     'items-center',
                     'rounded-lg',
-                    'font-mono'
+                    'font-mono',
                 )}
                 onSubmit={handleSubmit}
             >
                 <h1 className={classnames(
-                    'pb-8', 
+                    'pb-16',
                     'text-2xl',
                     'sm:text-3xl',
                     'font-bold',
-                    'uppercase'
-                    )}
+                    'uppercase',
+                    'text-deep-blue'
+                )}
                 >
                     Get In Touch
-                    </h1>
+                </h1>
                 <div
                     className={classnames(
                         'flex',
                         'flex-col',
-                        'pb-8'
+                        'pb-8',
+                        'w-full'
                     )}
                 >
                     <input
@@ -58,7 +63,8 @@ export const Contact = () => {
                         className={classnames(
                             'border-b-2',
                             'border-gray-400',
-                            'focus:outline-none'
+                            'focus:outline-none',
+                           
                         )}
                         placeholder="NAME"
                         required={true}
@@ -73,7 +79,8 @@ export const Contact = () => {
                     className={classnames(
                         'flex',
                         'flex-col',
-                        'pb-8'
+                        'pb-8',
+                        'w-full'
                     )}>
                     <input
                         type="telephone"
@@ -92,7 +99,8 @@ export const Contact = () => {
                     className={classnames(
                         'flex',
                         'flex-col',
-                        'pb-8'
+                        'pb-8',
+                        'w-full'
                     )}
                 >
                     <input
@@ -118,7 +126,32 @@ export const Contact = () => {
                         'flex',
                         'flex-col',
                         'pb-8',
-                        
+                        'w-full'
+                    )}
+                >
+                    <input
+                        id="location"
+                        name="location"
+                        className={classnames(
+                            'border-b-2',
+                            'border-gray-400',
+                            'focus:outline-none'
+                        )}
+                        placeholder="LOCATION"
+                        required={true}
+                    />
+                    <ValidationError
+                        prefix="Message"
+                        field="message"
+                        errors={state.errors}
+                    />
+                </div>
+                <div
+                    className={classnames(
+                        'flex',
+                        'flex-col',
+                        'pb-8',
+                        'w-full'
                     )}
                 >
                     <textarea
@@ -127,11 +160,10 @@ export const Contact = () => {
                         className={classnames(
                             'border-b-2',
                             'border-gray-400',
-                            'sm:ml-3',
                             'focus:outline-none'
-                            
+
                         )}
-                        placeholder="EXTRA INFO"
+                        placeholder="EXTRA INFO (OPTIONAL)"
                         required={true}
                     />
                     <ValidationError
@@ -159,6 +191,31 @@ export const Contact = () => {
                     Send
                 </button>
             </form>
+            <div
+                className={classnames(
+                    'rexine-spa-care-service-page',
+                    'relative',
+                    'flex',
+                    'flex-col',
+                    'place-items-center',
+                    'xl:my-12',
+                    'text-3xl',
+                    'font-bold',
+                    'text-deep-blue',
+                    'font-mono',
+                    'uppercase',
+                    'bg-white',
+                    'rounded-lg',
+                    'p-6',
+                    'mx-12',
+                    'xl:ml-6',
+                    'xl:mr-12',
+                    'mb-12'
+                )}
+            >
+                <h1 className={classnames('pt-5', 'pb-5')}>Service Area</h1>
+                <ServiceArea />
+            </div>
         </div>
     );
 }

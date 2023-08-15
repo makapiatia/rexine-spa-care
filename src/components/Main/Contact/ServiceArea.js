@@ -4,14 +4,13 @@ import { useMediaQuery } from '../../../utils/hooks';
 
 export const ServiceArea = () => {
   const mdScreen = useMediaQuery('768px');
-  const serviceMapWidth = mdScreen ? '640' : '320';
-  const serviceMapHeight = mdScreen ? '480' : '240';
+  const serviceMapWidth = mdScreen ? '640' : '369';
+  const serviceMapHeight = mdScreen ? '480' : '280';
 
   return (
     <div
       className={classnames(
         'rexine-spa-care-service-area-section',
-        'p-8',
       )}
     >
       <iframe
