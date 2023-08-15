@@ -36,7 +36,8 @@ export const Contact = () => {
             >
                 <h1 className={classnames(
                     'pb-8', 
-                    'text-3xl',
+                    'text-2xl',
+                    'sm:text-3xl',
                     'font-bold',
                     'uppercase'
                     )}
@@ -125,7 +126,7 @@ export const Contact = () => {
                         className={classnames(
                             'border-b-2',
                             'border-gray-400',
-                            'ml-3',
+                            'sm:ml-3',
                             'focus:outline-none'
                             
                         )}
