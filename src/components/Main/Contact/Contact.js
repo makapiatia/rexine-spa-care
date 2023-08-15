@@ -4,6 +4,7 @@ import classnames from 'tailwindcss-classnames';
 
 export const Contact = () => {
     const [state, handleSubmit] = useForm("mleyjapj");
+    
     if (state.succeeded) {
         return <p>Thank you! We will be in contact as soon as possible!</p>;
     }
