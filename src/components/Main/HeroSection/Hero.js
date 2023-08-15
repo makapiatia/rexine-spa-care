@@ -18,7 +18,8 @@ export const Hero = () => {
                 'md:h-[500px]',
                 'items-center',
                 'justify-center',
-                'text-center'
+                'text-center',
+                'drop-shadow-md'
             )}
             style={{ backgroundImage: `url(${hero})` }}
         >

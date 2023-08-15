@@ -37,6 +37,7 @@ export const Contact = () => {
                     'items-center',
                     'rounded-lg',
                     'font-mono',
+                    'drop-shadow-xl'
                 )}
                 onSubmit={handleSubmit}
             >
@@ -47,7 +48,7 @@ export const Contact = () => {
                     'sm:text-3xl',
                     'font-bold',
                     'uppercase',
-                    'text-deep-blue'
+                    'text-medium-teal'
                 )}
                 >
                     Get In Touch
@@ -181,15 +182,16 @@ export const Contact = () => {
                     className={classnames(
                         'px-6',
                         'py-4',
-                        'bg-rexine-blue',
-                        'hover:bg-blue-500',
+                        'bg-medium-green',
+                        'hover:bg-light-green',
                         'rounded-lg',
                         'text-white',
                         'text-xl',
                         'uppercase',
                         'tracking-widest',
                         'font-semibold',
-                        'mt-6'
+                        'mt-6',
+                        'drop-shadow-xl'
                     )}
                 >
                     Send
@@ -205,7 +207,7 @@ export const Contact = () => {
                     'xl:my-12',
                     'text-3xl',
                     'font-bold',
-                    'text-deep-blue',
+                    'text-medium-teal',
                     'font-mono',
                     'uppercase',
                     'bg-white',
@@ -216,10 +218,11 @@ export const Contact = () => {
                     'xl:ml-6',
                     'xl:mr-12',
                     'mb-6',
-                    'sm:mb-12'
+                    'sm:mb-12',
+                    'drop-shadow-xl'
                 )}
             >
-                <h1 className={classnames('pt-5', 'pb-5')}>Service Area</h1>
+                <h1 className={classnames('pt-6', 'pb-5')}>Service Area</h1>
                 <ServiceArea />
             </div>
         </div>

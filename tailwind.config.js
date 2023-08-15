@@ -22,6 +22,7 @@ module.exports = {
         'medium-blue': '#005D9E',
         'deep-blue': '#0B387E',
         'medium-teal': '#029794',
+        'light-green': '#02c772',
         'medium-green': '#029756'
       },
     },

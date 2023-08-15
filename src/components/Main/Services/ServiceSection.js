@@ -17,7 +17,8 @@ export const ServiceSection = () => {
         'flex-col',
         'm-12',
         'rounded-3xl',
-        'bg-light-blue'
+        'bg-light-blue',
+        'drop-shadow-xl'
       )}
     >
       <h1 className={classnames(
@@ -34,24 +35,25 @@ export const ServiceSection = () => {
         'self-center',
         'w-fit',
         'bg-white',
-        'rounded-full'
+        'rounded-2xl',
+        'drop-shadow-md'
       )}>
         Services
       </h1>
-      <div className={classnames('flex', 'flex-col', 'xl:flex-row', 'xl:justify-end' )}>
+      <div className={classnames('flex', 'flex-col', 'xl:flex-row', 'xl:justify-end')}>
         <div className={classnames(
           'flex',
           'flex-col',
-          'pl-16', 
+          'pl-16',
           'pr-16',
           'xl:pr-0',
-          'pb-16', 
+          'pb-16',
           'h-auto',
-          'text-green-blue', 
+          'text-green-blue',
           'text-lg',
           'items-center',
           'xl:items-start'
-          )}>
+        )}>
           <p className={classnames('mt-6')}>
             Zhuchengceratops Haestasaurus Nanosaurus Magnapaulia Brachylophosaurus Pararhabdodon Dilong
             Huangshanlong Anzu Oohkotokia Titanosaurus Suchomimus Eocursor Sinornithomimus Cedrorestes
@@ -68,29 +70,38 @@ export const ServiceSection = () => {
             Serendipaceratops Heterosaurus Eousdryosaurus Bambiraptor Paluxysaurus Bravoceratops.
           </p>
           <div className={classnames('pt-9')}>
-          <Link
-            to="/services"
-          >
-            <span
-              className={classnames(
-                'text-lg',
-                'md:text-2xl',
-                'uppercase',
-                'font-semibold',
-                'font-mono',
-                'text-white',
-                'bg-rexine-blue',
-                'hover:bg-blue-500',
-                'rounded-md',
-                'p-8',
-                'w-max'
-              )}>
-              {serviceButtonText}
-            </span>
-          </Link>
+            <Link
+              to="/services"
+            >
+              <span
+                className={classnames(
+                  'text-lg',
+                  'md:text-2xl',
+                  'uppercase',
+                  'font-semibold',
+                  'font-mono',
+                  'text-white',
+                  'bg-rexine-blue',
+                  'hover:bg-blue-500',
+                  'rounded-md',
+                  'p-8',
+                  'w-max',
+                  'drop-shadow-xl'
+                )}>
+                {serviceButtonText}
+              </span>
+            </Link>
           </div>
         </div>
-        <div className={classnames('hidden', 'xl:flex', 'pt-7', 'pb-16', 'px-16', 'xl:min-w-[500px]')}>
+        <div className={classnames(
+          'hidden',
+          'xl:flex',
+          'pt-7',
+          'pb-16',
+          'px-16',
+          'xl:min-w-[500px]',
+          'drop-shadow-xl'
+        )}>
           <img
             src={spaJet}
             alt='spa-jet'

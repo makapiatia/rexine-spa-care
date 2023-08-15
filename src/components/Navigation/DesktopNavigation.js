@@ -25,11 +25,24 @@ export const DesktopNavigation = () => {
       'font-mono',
       'text-white'
     )}>
-      <div
-        className={classnames('navigation-logo', 'px-6', 'text-xl', 'font-extrabold')}
+      <Link
+        className={classnames(
+          'flex',
+          'h-full',
+          'items-center')}
+        to={'/'}
       >
-        Rexine Spa Care
-      </div>
+        <span
+          className={classnames(
+            'navigation-logo',
+            'px-6',
+            'text-xl',
+            'font-extrabold',
+          )}
+        >
+          Rexine Spa Care
+        </span>
+      </Link>
       <div className={classnames(
         'flex',
         'flex-row',

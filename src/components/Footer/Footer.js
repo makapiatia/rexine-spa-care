@@ -13,7 +13,7 @@ export const Footer = () => {
         'h-auto',
         'bg-rexine-blue',
         'text-white',
-        'p-12'
+        'p-12',
       )}
     >
       <p className={classnames('font-mono', 'font-semibold', 'text-xl')}>Inquiries & Assistance:</p>
