@@ -3,9 +3,18 @@ import classnames from 'tailwindcss-classnames';
 import { useMediaQuery } from '../../../utils/hooks';
 
 export const ServiceArea = () => {
+  const xsScreen = useMediaQuery('500px');
   const mdScreen = useMediaQuery('768px');
-  const serviceMapWidth = mdScreen ? '640' : '369';
-  const serviceMapHeight = mdScreen ? '480' : '280';
+  const serviceMapWidth = xsScreen
+    ? mdScreen
+      ? '640'
+      : '369'
+    : '250';
+  const serviceMapHeight = xsScreen
+    ? mdScreen
+      ? '480'
+      : '280'
+    : '200';
 
   return (
     <div

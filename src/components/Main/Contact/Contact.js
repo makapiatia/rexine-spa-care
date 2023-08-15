@@ -27,10 +27,12 @@ export const Contact = () => {
                     'h-auto',
                     'w-auto',
                     'bg-white',
-                    'm-12',
+                    'm-6',
+                    'sm:m-12',
                     'xl:ml-16',
                     'xl:mr-8',
-                    'p-12',
+                    'p-8',
+                    'sm:p-12',
                     'xl:px-24',
                     'items-center',
                     'rounded-lg',
@@ -39,7 +41,8 @@ export const Contact = () => {
                 onSubmit={handleSubmit}
             >
                 <h1 className={classnames(
-                    'pb-16',
+                    'pb-8',
+                    'sm:pb-16',
                     'text-2xl',
                     'sm:text-3xl',
                     'font-bold',
@@ -207,10 +210,12 @@ export const Contact = () => {
                     'bg-white',
                     'rounded-lg',
                     'p-6',
-                    'mx-12',
+                    'mx-6',
+                    'sm:mx-12',
                     'xl:ml-6',
                     'xl:mr-12',
-                    'mb-12'
+                    'mb-6',
+                    'sm:mb-12'
                 )}
             >
                 <h1 className={classnames('pt-5', 'pb-5')}>Service Area</h1>
