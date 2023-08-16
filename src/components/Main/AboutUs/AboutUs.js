@@ -156,6 +156,7 @@ export const AboutUs = () => {
                 'md:h-[110px]',
                 'xl:w-[150px]',
                 'xl:h-[150px]',
+                'drop-shadow-lg'
               )}
             />
           );
