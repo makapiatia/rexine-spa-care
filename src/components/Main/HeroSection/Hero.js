@@ -1,10 +1,9 @@
 import React from 'react';
 import classnames from 'tailwindcss-classnames';
 import hero from '../../../assets/images/hero.jpeg';
+import RexineSpaCareLogo_WhiteText from '../../../assets/images/RexineSpaCareLogo_WhiteText.png';
 
 export const Hero = () => {
-    const desktopBannerText = "We're here to help with all of your spa care needs!";
-    const mobileBannerText = "Rexine Spa Care";
 
     return (
         <div
@@ -14,7 +13,7 @@ export const Hero = () => {
                 'bg-cover',
                 'bg-center',
                 'w-full',
-                'h-[300px]',
+                'h-[400px]',
                 'md:h-[500px]',
                 'items-center',
                 'justify-center',
@@ -23,33 +22,43 @@ export const Hero = () => {
             )}
             style={{ backgroundImage: `url(${hero})` }}
         >
-            <h1 className={classnames(
-                'hidden',
-                'md:flex',
-                'text-deep-blue',
-                'md:text-6xl',
-                'lg:text-7xl',
-                'font-bold',
-                'tracking-tight',
-                'max-w-[1000px]',
-                'px-8',
-                'drop-shadow-lg'
+            <div
+                className={classnames(
+                    'hidden',
+                    'md:flex',
+                    'flex-col'
+                )}
+            >
+                <div className={classnames(
+                'max-w-[400px]',
+                'max-h-[400px]',
+                'p-12',
+                'drop-shadow-lg',
+                'bg-green-blue/25',
+                'rounded-full'
             )}>
-                {desktopBannerText}
-            </h1>
-            <h1 className={classnames(
+                <img
+                    src={RexineSpaCareLogo_WhiteText}
+                    alt={'rexine-spa-care-logo'}
+                />
+                </div>
+            </div>
+            <div className={classnames(
                 'flex',
                 'md:hidden',
-                'text-deep-blue',
-                'text-6xl',
-                'font-bold',
-                'tracking-tight',
-                'max-w-[350px]',
-                'px-8',
-                'drop-shadow-lg'
+                'max-w-[330px]',
+                'max-h-[330px]',
+                'p-8',
+                'my-12',
+                'drop-shadow-lg',
+                'bg-green-blue/25',
+                'rounded-full'
             )}>
-                {mobileBannerText}
-            </h1>
+                <img
+                    src={RexineSpaCareLogo_WhiteText}
+                    alt={'rexine-spa-care-logo'}
+                />
+            </div>
         </div>
     );
 }

@@ -29,7 +29,8 @@ export const DesktopNavigation = () => {
         className={classnames(
           'flex',
           'h-full',
-          'items-center')}
+          'items-center'
+        )}
         to={'/'}
       >
         <span

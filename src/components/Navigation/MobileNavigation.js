@@ -56,7 +56,7 @@ export const MobileNavigation = () => {
               'menu-item',
               'font-semibold',
               'border-b-2',
-              'border-light-blue',
+              'border-extra-light-blue',
               'hover:bg-extra-light-blue',
               'py-2'
             )}
@@ -69,7 +69,7 @@ export const MobileNavigation = () => {
               'menu-item',
               'font-semibold',
               'border-b-2',
-              'border-light-blue',
+              'border-extra-light-blue',
               'hover:bg-extra-light-blue',
               'py-2'
             )}
@@ -82,7 +82,7 @@ export const MobileNavigation = () => {
               'menu-item',
               'font-semibold',
               'border-b-2',
-              'border-light-blue',
+              'border-extra-light-blue',
               'hover:bg-extra-light-blue',
               'py-2'
             )}

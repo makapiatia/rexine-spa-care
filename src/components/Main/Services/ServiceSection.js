@@ -25,8 +25,7 @@ export const ServiceSection = () => {
         'text-medium-blue',
         'text-4xl',
         'uppercase',
-        'font-semibold',
-        'font-mono',
+        'font-bold',
         'my-8',
         'py-4',
         'sm:py-8',
@@ -106,10 +105,9 @@ export const ServiceSection = () => {
             src={spaJet}
             alt='spa-jet'
             className={classnames(
-              'h-auto',
+              'h-[400px]',
               'w-[400px]',
-              'rounded-tl-extraLarge',
-              'rounded-br-extraLarge'
+              'rounded-full'
             )}
           />
         </div>
