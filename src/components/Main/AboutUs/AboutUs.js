@@ -68,7 +68,9 @@ export const AboutUs = () => {
             'bg-light-blue',
             'rounded-xl',
             'p-8',
-            'drop-shadow-md'
+            'drop-shadow-md',
+            'mb-10',
+            'md:mb-0'
           )}
         >
           <h1
