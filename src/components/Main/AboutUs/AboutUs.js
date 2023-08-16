@@ -76,7 +76,7 @@ export const AboutUs = () => {
               'px-8',
               'py-4',
               'mb-8',
-              'text-2xl',
+              'text-3xl',
               'md:text-4xl',
               'uppercase',
               'font-bold',
@@ -84,7 +84,9 @@ export const AboutUs = () => {
               'rounded-xl',
               'w-fit',
               'drop-shadow-md',
-              'text-medium-blue'
+              'text-medium-blue',
+              'self-center',
+              'lg:self-start'
             )}
           >
             About Us
@@ -158,7 +160,9 @@ export const AboutUs = () => {
                 'md:h-[110px]',
                 'xl:w-[150px]',
                 'xl:h-[150px]',
-                'drop-shadow-lg'
+                'drop-shadow-lg',
+                'mb-2',
+                'mx-2'
               )}
             />
           );
