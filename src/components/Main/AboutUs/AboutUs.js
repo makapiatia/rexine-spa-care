@@ -34,8 +34,9 @@ export const AboutUs = () => {
     >
       <div
         className={classnames(
-          'mx-12',
-          'my-16',
+          'mx-8',
+          'my-12',
+          'md:my-16',
           'lg:my-24',
           'lg:px-8',
           'flex',
@@ -52,12 +53,13 @@ export const AboutUs = () => {
             className={classnames(
               'rounded-full',
               'about-us-photo',
-              'w-60',
-              'h-60',
+              'w-70',
+              'h-70',
               'sm:h-96',
               'sm:w-96',
               'drop-shadow-lg',
-              'mb-16'
+              'mb-12',
+              'md:mb-16'
             )}
           />
         )}

@@ -21,6 +21,7 @@ module.exports = {
         'rexine-blue': '#0F52BA',
         'medium-blue': '#005D9E',
         'deep-blue': '#0B387E',
+        'light-teal': '#00bfb9',
         'medium-teal': '#029794',
         'light-green': '#00ba69',
         'medium-green': '#029756'

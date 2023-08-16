@@ -15,7 +15,7 @@ export const ServiceSection = () => {
         'rexine-spa-care-service-section',
         'flex',
         'flex-col',
-        'm-12',
+        'm-8',
         'rounded-3xl',
         'bg-light-blue',
         'drop-shadow-md'
@@ -43,8 +43,8 @@ export const ServiceSection = () => {
         <div className={classnames(
           'flex',
           'flex-col',
-          'pl-16',
-          'pr-16',
+          'pl-8',
+          'pr-8',
           'xl:pr-0',
           'pb-16',
           'h-auto',
@@ -53,20 +53,15 @@ export const ServiceSection = () => {
           'items-center',
           'xl:items-start'
         )}>
-          <p className={classnames('mt-6')}>
+          <p className={classnames('xl:mt-6')}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
-          <p className={classnames('mt-6')}>
+          <p className={classnames('my-6')}>
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             Excepteur sint occaecat cupidatat non proident,
             sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-          <p className={classnames('my-6')}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
           <div className={classnames('pt-9')}>
             <Link
