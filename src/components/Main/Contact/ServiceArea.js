@@ -5,6 +5,7 @@ import { useMediaQuery } from '../../../utils/hooks';
 export const ServiceArea = () => {
   const xsScreen = useMediaQuery('500px');
   const mdScreen = useMediaQuery('768px');
+  
   const serviceMapWidth = xsScreen
     ? mdScreen
       ? '640'

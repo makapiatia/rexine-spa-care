@@ -1,7 +1,28 @@
 import React from 'react';
 import classnames from 'tailwindcss-classnames';
+import artesianSpasLogo from '../../../assets/images/logos/artesianSpasLogo.png';
+import bioGuardLogo from '../../../assets/images/logos/bioGuardLogo.jpeg';
+import bullfrogSpasLogo from '../../../assets/images/logos/bullfrogSpasLogo.jpg';
+import calderaSpasLogo from '../../../assets/images/logos/calderaSpasLogo.png';
+import hotSpringLogo from '../../../assets/images/logos/hotSpringLogo.jpeg';
+import spaGuardLogo from '../../../assets/images/logos/spaGuardLogo.jpg';
+import sundanceSpasLogo from '../../../assets/images/logos/sundanceSpasLogo.png';
+import aboutUs from '../../../assets/images/aboutUs.jpeg';
+import { useMediaQuery } from '../../../utils/hooks';
 
 export const AboutUs = () => {
+  const mdScreen = useMediaQuery('1024px');
+
+  const logos = [
+    { 'brand': 'bullfrog-spas-logo', 'imgSrc': bullfrogSpasLogo },
+    { 'brand': 'caldera-spas-logo', 'imgSrc': calderaSpasLogo },
+    { 'brand': 'artesian-spas-logo', 'imgSrc': artesianSpasLogo },
+    { 'brand': 'hotspring-spas-logo', 'imgSrc': hotSpringLogo },
+    { 'brand': 'spa-guard-logo', 'imgSrc': spaGuardLogo },
+    { 'brand': 'bio-guard-logo', 'imgSrc': bioGuardLogo },
+    { 'brand': 'sundance-spas-logo', 'imgSrc': sundanceSpasLogo }
+  ];
+
   return (
     <div
       className={classnames(
@@ -13,83 +34,132 @@ export const AboutUs = () => {
     >
       <div
         className={classnames(
-          'about-us-matt-photo',
+          'mx-12',
+          'my-24',
+          'lg:px-8',
           'flex',
           'flex-col',
-          'bg-medium-green',
-          'rounded-full',
-          'h-80',
-          'w-80',
-          'm-16',
-          'drop-shadow-lg'
+          'lg:flex-row',
+          'items-center',
+          'lg:items-start'
         )}
       >
-      </div>
-      <div
-        className={classnames(
-          'mx-12',
-          'mb-12',
-          'text-medium-teal',
-          'text-xl',
-          'px-28'
+        {!mdScreen && (
+          <img
+            src={aboutUs}
+            alt={'about-us'}
+            className={classnames(
+              'rounded-full',
+              'about-us-photo',
+              'w-80',
+              'h-80',
+              'sm:h-96',
+              'sm:w-96',
+              'drop-shadow-lg',
+              'mb-16'
+            )}
+          />
         )}
-      >
-        <p
+        <div
           className={classnames(
-            'pb-4'
+            'flex',
+            'flex-col',
+            'bg-light-blue',
+            'rounded-xl',
+            'p-8',
+            'drop-shadow-md'
           )}
         >
-          Nambalia. Algoasaurus. Lewisuchus. Neosaurus.
-          Kileskus. Palaeopteryx. Tatankaceratops. Incisivosaurus.
-          Garudimimus. Scipionyx. Dracorex. Heterodontosaurus. Yixianosaurus.
-          Ohmdenosaurus. Sauroniops. Achelousaurus. Laplatasaurus. Protognathus.
-          Machairasaurus. Neuquenraptor. Sauroniops. Saurolophus. Troodon. Alioramus.
-          Juravenator. Agathaumas. Breviceratops.
-        </p>
-        <p>
-          Notoceratops. Homalocephale. Dasygnathoides. Deinonychus. Chindesaurus.
-          Anthodon. Leptospondylus. Arizonasaurus. Maiasaura. Eucnemesaurus. Teratophoneus.
-          Loricosaurus. Bonitasaura. Proceratops. Becklespinax. Galesaurus.
-        </p>
-      </div>
-      <div
-        className={classnames(
-          'bg-medium-teal',
-          'w-4/5',
-          'h-36',
-          'mb-6'
+          <h1
+            className={classnames(
+              'px-8',
+              'py-4',
+              'mb-8',
+              'text-4xl',
+              'uppercase',
+              'font-bold',
+              'bg-white',
+              'rounded-xl',
+              'w-fit',
+              'drop-shadow-md',
+              'text-medium-blue'
+            )}
+          >
+            About Us
+          </h1>
+          <p
+            className={classnames(
+              'pb-4',
+              'text-green-blue',
+              'text-xl',
+            )}
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <p className={classnames(
+            'pb-4',
+            'text-green-blue',
+            'text-xl',
+          )}>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
+        {mdScreen && (
+          <img
+            src={aboutUs}
+            alt={'about-us'}
+            className={classnames(
+              'rounded-full',
+              'about-us-photo',
+              'h-96',
+              'w-96',
+              'drop-shadow-lg',
+              'mt-16',
+              'lg:mt-0',
+              'lg:ml-16'
+            )}
+          />
         )}
-      >
-
       </div>
       <div
         className={classnames(
-          'about-us-tia-photo',
           'flex',
-          'flex-col',
-          'bg-green-blue',
-          'rounded-full',
-          'h-80',
-          'w-80',
-          'm-16',
-          'drop-shadow-lg'
+          'flex-row',
+          'flex-wrap',
+          'w-full',
+          'h-36',
+          'px-6',
+          'md:px-12',
+          'mb-24',
+          'md:grid',
+          'md:grid-cols-7',
+          'justify-center',
+          'content-center',
+          'justify-items-center'
         )}
       >
-      </div>
-      <div
-        className={classnames(
-          'mx-12',
-          'mb-12',
-          'text-green-blue',
-          'text-xl',
-          'px-28'
-        )}
-      >
-        <p>
-          Notoceratops. Homalocephale. Dasygnathoides. Deinonychus. Chindesaurus.
-          Anthodon. Leptospondylus. Arizonasaurus. Maiasaura. Eucnemesaurus. Teratophoneus.
-          Loricosaurus. Bonitasaura. Proceratops. Becklespinax. Galesaurus.
-        </p>
+        {logos?.map((logo, i) => {
+          return (
+            <img
+              src={logo?.imgSrc}
+              alt={logo?.brand + i}
+              key={logo?.brand + i}
+              className={classnames(
+                'bg-green-blue/75',
+                'w-[80px]',
+                'h-[80px]',
+                'md:w-[110px]',
+                'md:h-[110px]',
+                'xl:w-[150px]',
+                'xl:h-[150px]',
+              )}
+            />
+          );
+        })}
       </div>
     </div>
   );

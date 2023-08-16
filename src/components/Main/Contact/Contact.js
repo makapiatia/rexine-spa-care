@@ -36,8 +36,7 @@ export const Contact = () => {
                     'xl:px-24',
                     'items-center',
                     'rounded-lg',
-                    'font-mono',
-                    'drop-shadow-xl'
+                    'drop-shadow-md'
                 )}
                 onSubmit={handleSubmit}
             >
@@ -48,7 +47,8 @@ export const Contact = () => {
                     'sm:text-3xl',
                     'font-bold',
                     'uppercase',
-                    'text-medium-teal'
+                    'text-green-blue',
+                    'drop-shadow-sm'
                 )}
                 >
                     Get In Touch
@@ -191,7 +191,7 @@ export const Contact = () => {
                         'tracking-widest',
                         'font-semibold',
                         'mt-6',
-                        'drop-shadow-xl'
+                        'drop-shadow-md'
                     )}
                 >
                     Send
@@ -207,8 +207,7 @@ export const Contact = () => {
                     'xl:my-12',
                     'text-3xl',
                     'font-bold',
-                    'text-medium-teal',
-                    'font-mono',
+                    'text-green-blue',
                     'uppercase',
                     'bg-white',
                     'rounded-lg',
@@ -219,10 +218,10 @@ export const Contact = () => {
                     'xl:mr-12',
                     'mb-6',
                     'sm:mb-12',
-                    'drop-shadow-xl'
+                    'drop-shadow-md'
                 )}
             >
-                <h1 className={classnames('pt-6', 'pb-5')}>Service Area</h1>
+                <h1 className={classnames('pt-6', 'pb-5', 'drop-shadow-sm')}>Service Area</h1>
                 <ServiceArea />
             </div>
         </div>

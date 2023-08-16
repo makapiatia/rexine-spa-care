@@ -18,7 +18,7 @@ export const ServiceSection = () => {
         'm-12',
         'rounded-3xl',
         'bg-light-blue',
-        'drop-shadow-xl'
+        'drop-shadow-md'
       )}
     >
       <h1 className={classnames(
@@ -55,19 +55,19 @@ export const ServiceSection = () => {
           'xl:items-start'
         )}>
           <p className={classnames('mt-6')}>
-            Zhuchengceratops Haestasaurus Nanosaurus Magnapaulia Brachylophosaurus Pararhabdodon Dilong
-            Huangshanlong Anzu Oohkotokia Titanosaurus Suchomimus Eocursor Sinornithomimus Cedrorestes
-            Stygimoloch Mongolosaurus Nanyangosaurus Antarctosaurus Acristavus.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
           <p className={classnames('mt-6')}>
-            Daurosaurus Xenoposeidon Blikanasaurus Marmarospondylus Yuanmousaurus Sinornithosaurus
-            Wyleyia Klamelisaurus Aliwalia Koshisaurus Conchoraptor Ornithomerus Gongxianosaurus Graciliceratops
-            Buitreraptor Frenguellisaurus Beelemodon Coronosaurus Augustynolophus Monkonosaurus.
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
           <p className={classnames('my-6')}>
-            Xinjiangovenator Zhongjianosaurus Macelognathus Almas Hypsirhophus Beelemodon Mamenchisaurus
-            Coloradia Dacentrurus Guaibasaurus Micropachycephalosaurus Corythoraptor Kritosaurus Moabosaurus
-            Serendipaceratops Heterosaurus Eousdryosaurus Bambiraptor Paluxysaurus Bravoceratops.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
           </p>
           <div className={classnames('pt-9')}>
             <Link
@@ -86,7 +86,7 @@ export const ServiceSection = () => {
                   'rounded-md',
                   'p-8',
                   'w-max',
-                  'drop-shadow-xl'
+                  'drop-shadow-md'
                 )}>
                 {serviceButtonText}
               </span>
@@ -100,12 +100,17 @@ export const ServiceSection = () => {
           'pb-16',
           'px-16',
           'xl:min-w-[500px]',
-          'drop-shadow-xl'
+          'drop-shadow-md'
         )}>
           <img
             src={spaJet}
             alt='spa-jet'
-            className={classnames('h-auto', 'w-[400px]', 'rounded-tl-extraLarge rounded-br-extraLarge')}
+            className={classnames(
+              'h-auto',
+              'w-[400px]',
+              'rounded-tl-extraLarge',
+              'rounded-br-extraLarge'
+            )}
           />
         </div>
       </div>

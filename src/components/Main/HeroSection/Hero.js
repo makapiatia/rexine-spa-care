@@ -32,7 +32,8 @@ export const Hero = () => {
                 'font-bold',
                 'tracking-tight',
                 'max-w-[1000px]',
-                'px-8'
+                'px-8',
+                'drop-shadow-lg'
             )}>
                 {desktopBannerText}
             </h1>
@@ -44,7 +45,8 @@ export const Hero = () => {
                 'font-bold',
                 'tracking-tight',
                 'max-w-[350px]',
-                'px-8'
+                'px-8',
+                'drop-shadow-lg'
             )}>
                 {mobileBannerText}
             </h1>

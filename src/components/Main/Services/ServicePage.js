@@ -17,8 +17,9 @@ export const ServicePage = () => {
           'uppercase',
           'font-bold',
           'text-4xl',
-          'text-gray-600',
-          'pt-20'
+          'text-deep-blue',
+          'pt-20',
+          'drop-shadow-md'
         )}
       >
         Plans
@@ -54,7 +55,8 @@ export const ServicePage = () => {
               'font-bold',
               'text-4xl',
               'py-4',
-              'border-b-2'
+              'border-b-2',
+              'drop-shadow-md'
             )}
           >
             One Month
@@ -104,7 +106,8 @@ export const ServicePage = () => {
               'font-bold',
               'text-4xl',
               'py-4',
-              'border-b-2'
+              'border-b-2',
+              'drop-shadow-md'
             )}
           >
             Three Months
@@ -154,7 +157,8 @@ export const ServicePage = () => {
               'font-bold',
               'text-4xl',
               'py-4',
-              'border-b-2'
+              'border-b-2',
+              'drop-shadow-md'
             )}
           >
             Six Months
@@ -202,7 +206,8 @@ export const ServicePage = () => {
             'uppercase',
             'font-bold',
             'text-4xl',
-            'text-gray-600'
+            'text-deep-blue',
+            'drop-shadow-md'
           )}
         >
           Full Cleaning
