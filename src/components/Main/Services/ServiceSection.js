@@ -37,7 +37,7 @@ export const ServiceSection = () => {
         'rounded-2xl',
         'drop-shadow-md'
       )}>
-        Services
+        What We Do
       </h1>
       <div className={classnames('flex', 'flex-col', 'xl:flex-row', 'xl:justify-end')}>
         <div className={classnames(
