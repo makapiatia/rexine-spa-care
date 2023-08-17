@@ -9,209 +9,271 @@ export const ServicePage = () => {
         'relative',
         'flex',
         'flex-col',
-        'place-items-center'
+        'place-items-center',
+        'bg-extra-light-blue'
       )}
     >
-      <h1
+      <div
         className={classnames(
-          'uppercase',
-          'font-bold',
-          'text-4xl',
-          'text-deep-blue',
-          'pt-20',
-          'drop-shadow-md'
+          'flex',
+          'flex-col',
+          'bg-light-blue',
+          'rounded-xl',
+          'p-8',
+          'drop-shadow-md',
+          'm-8',
+          'sm:mx-20',
+          'sm:mt-20'
         )}
       >
-        Plans
-      </h1>
-      <div className={classnames(
-        'tiered-service-pricing-section',
-        'flex',
-        'flex-col',
-        'lg:flex-row',
-        'grid',
-        'grid-rows-3',
-        'lg:grid-cols-3',
-        'lg:grid-rows-1',
-        'mx-8',
-        'my-20',
-        'xl:mx-20',
-        'gap-8',
-        'xl:gap-16',
-        'text-white'
-      )}>
-        <div
+        <h1
           className={classnames(
-            'one-month-pricing-section',
-            'bg-green-blue',
-            'rounded-xl',
+            'flex',
+            'uppercase',
+            'font-bold',
+            'text-3xl',
+            'md:text-4xl',
+            'text-medium-blue',
+            'mt-8',
             'p-8',
-            'drop-shadow-xl'
+            'w-fit',
+            'drop-shadow-md',
+            'bg-white',
+            'rounded-xl',
+            'place-self-center'
           )}
         >
-          <h2
-            className={classnames(
-              'uppercase',
-              'font-bold',
-              'text-4xl',
-              'py-4',
-              'border-b-2',
-              'drop-shadow-md'
-            )}
-          >
-            One Month
-          </h2>
-          <div className={classnames(
-            'one-month-bi-weekly-pricing',
-            'py-6'
-          )}>
-            <h3
-              className={classnames(
-                'uppercase',
-                'font-semibold',
-                'text-3xl',
-              )}
-            >
-              Bi-Weekly
-            </h3>
-            <p></p>
-          </div>
-          <div className={classnames(
-            'one-month-weekly-pricing',
-          )}>
-            <h3
-              className={classnames(
-                'uppercase',
-                'font-semibold',
-                'text-3xl',
-              )}
-            >
-              Weekly
-            </h3>
-            <p></p>
-          </div>
-        </div>
+          Plans
+        </h1>
         <div
           className={classnames(
-            'three-month-pricing-section',
-            'bg-medium-teal',
-            'rounded-xl',
-            'p-8',
-            'drop-shadow-xl'
+            'tiered-service-pricing-section',
+            'flex',
+            'flex-col',
+            'lg:flex-row',
+            'grid',
+            'grid-rows-3',
+            'lg:grid-cols-3',
+            'lg:grid-rows-1',
+            'mx-8',
+            'my-8',
+            'sm:my-10',
+            'sm:mx-10',
+            'gap-8',
+            'xl:gap-16',
+            'text-white'
           )}
         >
-          <h2
+          <div
             className={classnames(
-              'uppercase',
-              'font-bold',
-              'text-4xl',
-              'py-4',
-              'border-b-2',
-              'drop-shadow-md'
+              'one-month-pricing-section',
+              'bg-green-blue',
+              'rounded-xl',
+              'p-8',
+              'drop-shadow-xl'
             )}
           >
-            Three Months
-          </h2>
-          <div className={classnames(
-            'three-month-bi-weekly-pricing',
-            'py-6'
-          )}>
-            <h3
+            <h2
               className={classnames(
                 'uppercase',
-                'font-semibold',
-                'text-3xl',
+                'font-bold',
+                'text-4xl',
+                'py-4',
+                'border-b-2',
+                'drop-shadow-md'
               )}
             >
-              Bi-Weekly
-            </h3>
-            <p></p>
+              One Month
+            </h2>
+            <div className={classnames(
+              'one-month-bi-weekly-pricing',
+              'py-6'
+            )}>
+              <h3
+                className={classnames(
+                  'uppercase',
+                  'font-semibold',
+                  'text-3xl',
+                )}
+              >
+                Bi-Weekly
+              </h3>
+              <p></p>
+            </div>
+            <div className={classnames(
+              'one-month-weekly-pricing',
+            )}>
+              <h3
+                className={classnames(
+                  'uppercase',
+                  'font-semibold',
+                  'text-3xl',
+                )}
+              >
+                Weekly
+              </h3>
+              <p></p>
+            </div>
           </div>
-          <div className={classnames(
-            'three-month-weekly-pricing',
-          )}>
-            <h3
-              className={classnames(
-                'uppercase',
-                'font-semibold',
-                'text-3xl',
-              )}
-            >
-              Weekly
-            </h3>
-            <p></p>
-          </div>
-        </div>
-        <div
-          className={classnames(
-            'six-month-pricing-section',
-            'bg-medium-green',
-            'rounded-xl',
-            'p-8',
-            'drop-shadow-xl'
-          )}
-        >
-          <h2
+          <div
             className={classnames(
-              'uppercase',
-              'font-bold',
-              'text-4xl',
-              'py-4',
-              'border-b-2',
-              'drop-shadow-md'
+              'three-month-pricing-section',
+              'bg-medium-teal',
+              'rounded-xl',
+              'p-8',
+              'drop-shadow-xl'
             )}
           >
-            Six Months
-          </h2>
-          <div className={classnames(
-            'six-month-bi-weekly-pricing',
-            'py-6'
-          )}>
-            <h3
+            <h2
               className={classnames(
                 'uppercase',
-                'font-semibold',
-                'text-3xl',
+                'font-bold',
+                'text-4xl',
+                'py-4',
+                'border-b-2',
+                'drop-shadow-md'
               )}
             >
-              Bi-Weekly
-            </h3>
-            <p></p>
+              Three Months
+            </h2>
+            <div className={classnames(
+              'three-month-bi-weekly-pricing',
+              'py-6'
+            )}>
+              <h3
+                className={classnames(
+                  'uppercase',
+                  'font-semibold',
+                  'text-3xl',
+                )}
+              >
+                Bi-Weekly
+              </h3>
+              <p></p>
+            </div>
+            <div className={classnames(
+              'three-month-weekly-pricing',
+            )}>
+              <h3
+                className={classnames(
+                  'uppercase',
+                  'font-semibold',
+                  'text-3xl',
+                )}
+              >
+                Weekly
+              </h3>
+              <p></p>
+            </div>
           </div>
-          <div className={classnames(
-            'six-month-weekly-pricing',
-          )}>
-            <h3
+          <div
+            className={classnames(
+              'six-month-pricing-section',
+              'bg-medium-green',
+              'rounded-xl',
+              'p-8',
+              'drop-shadow-xl'
+            )}
+          >
+            <h2
               className={classnames(
                 'uppercase',
-                'font-semibold',
-                'text-3xl',
+                'font-bold',
+                'text-4xl',
+                'py-4',
+                'border-b-2',
+                'drop-shadow-md'
               )}
             >
-              Weekly
-            </h3>
-            <p></p>
+              Six Months
+            </h2>
+            <div className={classnames(
+              'six-month-bi-weekly-pricing',
+              'py-6'
+            )}>
+              <h3
+                className={classnames(
+                  'uppercase',
+                  'font-semibold',
+                  'text-3xl',
+                )}
+              >
+                Bi-Weekly
+              </h3>
+              <p></p>
+            </div>
+            <div className={classnames(
+              'six-month-weekly-pricing',
+            )}>
+              <h3
+                className={classnames(
+                  'uppercase',
+                  'font-semibold',
+                  'text-3xl',
+                )}
+              >
+                Weekly
+              </h3>
+              <p></p>
+            </div>
           </div>
         </div>
       </div>
       <div className={classnames(
         'cleaning-pricing-section',
         'flex',
-        'flex-row',
+        'flex-col',
+        'bg-light-blue',
+        'rounded-xl',
         'p-8',
-        'mb-20'
+        'drop-shadow-md',
+        'm-8',
+        'sm:mx-16',
+        'md:mx-20',
+        'sm:mt-12',
+        'sm:mb-20',
+        'w-fit'
       )}>
         <h2
           className={classnames(
             'uppercase',
             'font-bold',
-            'text-4xl',
-            'text-deep-blue',
-            'drop-shadow-md'
+            'text-3xl',
+            'md:text-4xl',
+            'text-medium-blue',
+            'drop-shadow-md',
+            'my-8',
+            'py-8',
+            'px-3',
+            'md:px-8',
+            'w-fit',
+            'bg-white',
+            'rounded-xl',
+            'place-self-center',
+            'text-center'
           )}
         >
           Full Cleaning
         </h2>
+        <div
+          className={classnames(
+            'flex',
+            'flex-col',
+            'mx-8',
+            'text-medium-blue'
+          )}
+        >
+          <p className={classnames('xl:mt-6')}>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+          <p className={classnames('my-6')}>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            Excepteur sint occaecat cupidatat non proident,
+            sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
       </div>
     </div>
   );

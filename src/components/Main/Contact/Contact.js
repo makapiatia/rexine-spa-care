@@ -43,8 +43,7 @@ export const Contact = () => {
                 <h1 className={classnames(
                     'pb-8',
                     'sm:pb-16',
-                    'text-2xl',
-                    'sm:text-3xl',
+                    'text-3xl',
                     'font-bold',
                     'uppercase',
                     'text-green-blue',
@@ -68,7 +67,7 @@ export const Contact = () => {
                             'border-b-2',
                             'border-gray-400',
                             'focus:outline-none',
-                           
+
                         )}
                         placeholder="NAME"
                         required={true}
@@ -182,8 +181,8 @@ export const Contact = () => {
                     className={classnames(
                         'px-6',
                         'py-4',
-                        'bg-medium-teal',
-                        'hover:bg-light-teal',
+                        'bg-rexine-blue',
+                        'hover:bg-blue-500',
                         'rounded-lg',
                         'text-white',
                         'text-xl',

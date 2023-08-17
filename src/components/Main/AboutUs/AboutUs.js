@@ -29,7 +29,8 @@ export const AboutUs = () => {
         'rexine-spa-care-about-us',
         'flex',
         'flex-col',
-        'place-items-center'
+        'place-items-center',
+        'bg-extra-light-blue'
       )}
     >
       <div
