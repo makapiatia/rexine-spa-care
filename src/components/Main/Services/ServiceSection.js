@@ -45,7 +45,7 @@ export const ServiceSection = () => {
           'bg-white',
           'rounded-2xl',
           'drop-shadow-md',
-          'self-center',
+          'self-center'
         )}>
           What We Do
         </h1>

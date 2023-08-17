@@ -22,8 +22,9 @@ export const DesktopNavigation = () => {
       'w-full',
       'h-20',
       'bg-rexine-blue',
-      'font-mono',
-      'text-white'
+      'text-white',
+      'font-londrina',
+      'font-light'
     )}>
       <Link
         className={classnames(
@@ -37,8 +38,7 @@ export const DesktopNavigation = () => {
           className={classnames(
             'navigation-logo',
             'px-6',
-            'text-xl',
-            'font-extrabold',
+            'text-3xl',
           )}
         >
           Rexine Spa Care
@@ -62,13 +62,14 @@ export const DesktopNavigation = () => {
               <span className={classnames(
                 'navigation-tab',
                 'flex',
-                'pt-7',
+                'pt-6',
                 'px-4',
                 'lg:px-6',
                 'hover:bg-blue-500',
                 'border-l',
                 'border-blue-600',
                 'h-full',
+                'text-2xl'
               )}>
                 {tab?.tabTitle}
               </span>

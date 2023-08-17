@@ -11,6 +11,12 @@ module.exports = {
       '2xl': '1536px',
     },
     extend: {
+      fontFamily: {
+        Rampart: ["Rampart One", "cursive"],
+        'bricolage': ['Bricolage Grotesque', 'sans-serif'],
+        'dm': ['DM Sans', 'sans-serif'],
+        'londrina': ['Londrina Solid', 'cursive'],
+       },
       borderRadius: {
         extraLarge: '12rem'
       },
