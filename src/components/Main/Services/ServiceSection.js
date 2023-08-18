@@ -56,9 +56,11 @@ export const ServiceSection = () => {
             'pb-16',
             'h-auto',
             'text-green-blue',
-            'text-lg',
+            'text-xl',
             'items-center',
-            'xl:items-start'
+            'xl:items-start',
+            'font-dm',
+            'font-medium'
           )}>
             <p className={classnames('xl:mt-6')}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit,

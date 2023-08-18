@@ -91,11 +91,11 @@ export const ServicePage = () => {
             </h2>
             <div className={classnames(
               'one-month-bi-weekly-pricing',
-              'py-6'
+              'py-6',
+              'font-dm',
             )}>
               <h3
                 className={classnames(
-                  'uppercase',
                   'font-semibold',
                   'text-3xl',
                 )}
@@ -106,10 +106,10 @@ export const ServicePage = () => {
             </div>
             <div className={classnames(
               'one-month-weekly-pricing',
+              'font-dm',
             )}>
               <h3
                 className={classnames(
-                  'uppercase',
                   'font-semibold',
                   'text-3xl',
                 )}
@@ -143,11 +143,11 @@ export const ServicePage = () => {
             </h2>
             <div className={classnames(
               'three-month-bi-weekly-pricing',
-              'py-6'
+              'py-6',
+              'font-dm',
             )}>
               <h3
                 className={classnames(
-                  'uppercase',
                   'font-semibold',
                   'text-3xl',
                 )}
@@ -158,10 +158,10 @@ export const ServicePage = () => {
             </div>
             <div className={classnames(
               'three-month-weekly-pricing',
+              'font-dm',
             )}>
               <h3
                 className={classnames(
-                  'uppercase',
                   'font-semibold',
                   'text-3xl',
                 )}
@@ -195,11 +195,11 @@ export const ServicePage = () => {
             </h2>
             <div className={classnames(
               'six-month-bi-weekly-pricing',
-              'py-6'
+              'py-6',
+              'font-dm',
             )}>
               <h3
                 className={classnames(
-                  'uppercase',
                   'font-semibold',
                   'text-3xl',
                 )}
@@ -210,10 +210,10 @@ export const ServicePage = () => {
             </div>
             <div className={classnames(
               'six-month-weekly-pricing',
+              'font-dm',
             )}>
               <h3
                 className={classnames(
-                  'uppercase',
                   'font-semibold',
                   'text-3xl',
                 )}
@@ -269,7 +269,10 @@ export const ServicePage = () => {
             'flex',
             'flex-col',
             'sm:mx-8',
-            'text-medium-blue'
+            'text-green-blue',
+            'font-dm',
+            'font-medium',
+            'text-xl'
           )}
         >
           <p className={classnames('xl:mt-6')}>

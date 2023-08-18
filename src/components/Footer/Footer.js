@@ -30,12 +30,14 @@ export const Footer = () => {
         )}
       >
         <p className={classnames('font-londrina', 'font-light', 'text-2xl')}>Inquiries & Assistance:</p>
-        <p className={classnames('text-lg', 'text-light-blue')}>623-282-2530</p>
+        <p className={classnames('text-lg', 'text-light-blue', 'font-dm', 'font-medium')}>623-282-2530</p>
         <p className={classnames('font-londrina', 'font-light', 'text-2xl', 'pt-4')}>Email:</p>
-        <p className={classnames('text-xl', 'text-light-blue')}>info@rexinespacare.com</p>
+        <p className={classnames('text-xl', 'text-light-blue', 'font-dm', 'font-medium')}>info@rexinespacare.com</p>
         <p className={classnames('font-londrina', 'font-light', 'text-2xl', 'pt-4')}>Regular Business Hours:</p>
-        <p className={classnames('text-lg', 'text-light-blue')}>Monday-Friday 8:00am-6:00pm </p>
-        <p className={classnames('text-lg', 'text-light-blue', 'italic')}>Saturday & Sunday available by appointment.</p>
+        <p className={classnames('text-lg', 'text-light-blue', 'font-dm', 'font-medium')}>Monday-Friday 8:00am-6:00pm </p>
+        <p className={classnames('text-lg', 'text-light-blue', 'font-dm', 'italic')}>
+          Saturday & Sunday available by appointment.
+        </p>
       </div>
       <div
         className={classnames(
@@ -45,7 +47,8 @@ export const Footer = () => {
           'mt-6',
           'md:place-self-end',
           'text-lg',
-          'text-light-blue'
+          'text-light-blue',
+          'font-dm'
         )}>
         <p>Follow us on social media!</p>
         <div

@@ -58,7 +58,10 @@ export const Contact = () => {
                         'flex',
                         'flex-col',
                         'pb-8',
-                        'w-full'
+                        'w-full',
+                        'font-dm',
+                        'font-medium',
+                        'text-xl'
                     )}
                 >
                     <input
@@ -70,7 +73,7 @@ export const Contact = () => {
                             'focus:outline-none',
 
                         )}
-                        placeholder="NAME"
+                        placeholder="Name"
                         required={true}
                     />
                     <ValidationError
@@ -84,13 +87,16 @@ export const Contact = () => {
                         'flex',
                         'flex-col',
                         'pb-8',
-                        'w-full'
+                        'w-full',
+                        'font-dm',
+                        'font-medium',
+                        'text-xl'
                     )}>
                     <input
                         type="telephone"
                         name="telephone"
                         id="telephone"
-                        placeholder="PHONE NUMBER"
+                        placeholder="Phone Number"
                         className={classnames(
                             'border-b-2',
                             'border-gray-400',
@@ -104,7 +110,10 @@ export const Contact = () => {
                         'flex',
                         'flex-col',
                         'pb-8',
-                        'w-full'
+                        'w-full',
+                        'font-dm',
+                        'font-medium',
+                        'text-xl'
                     )}
                 >
                     <input
@@ -116,7 +125,7 @@ export const Contact = () => {
                             'border-gray-400',
                             'focus:outline-none'
                         )}
-                        placeholder="EMAIL ADDRESS"
+                        placeholder="Email Address"
                         required={true}
                     />
                     <ValidationError
@@ -130,7 +139,10 @@ export const Contact = () => {
                         'flex',
                         'flex-col',
                         'pb-8',
-                        'w-full'
+                        'w-full',
+                        'font-dm',
+                        'font-medium',
+                        'text-xl'
                     )}
                 >
                     <input
@@ -141,7 +153,7 @@ export const Contact = () => {
                             'border-gray-400',
                             'focus:outline-none'
                         )}
-                        placeholder="LOCATION"
+                        placeholder="Location"
                         required={true}
                     />
                     <ValidationError
@@ -155,7 +167,10 @@ export const Contact = () => {
                         'flex',
                         'flex-col',
                         'pb-8',
-                        'w-full'
+                        'w-full',
+                        'font-dm',
+                        'font-medium',
+                        'text-xl',
                     )}
                 >
                     <textarea
@@ -167,7 +182,7 @@ export const Contact = () => {
                             'focus:outline-none'
 
                         )}
-                        placeholder="EXTRA INFO (OPTIONAL)"
+                        placeholder="Extra Info (Optional)"
                         required={true}
                     />
                     <ValidationError

@@ -98,6 +98,8 @@ export const AboutUs = () => {
               'pb-4',
               'text-green-blue',
               'text-xl',
+              'font-dm',
+              'font-medium'
             )}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -108,6 +110,8 @@ export const AboutUs = () => {
             'pb-4',
             'text-green-blue',
             'text-xl',
+            'font-dm',
+            'font-medium'
           )}>
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             Excepteur sint occaecat cupidatat non proident,
