@@ -228,7 +228,7 @@ export const Contact = () => {
                     'bg-white',
                     'rounded-lg',
                     'p-6',
-                    'mx-6',
+                    'mx-8',
                     'sm:mx-12',
                     'xl:ml-6',
                     'xl:mr-12',
