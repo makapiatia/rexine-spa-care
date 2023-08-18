@@ -36,9 +36,9 @@ export const AboutUs = () => {
       <div
         className={classnames(
           'mx-8',
-          'my-12',
+          'my-9',
           'md:my-16',
-          'lg:my-24',
+          'lg:my-20',
           'lg:px-8',
           'flex',
           'flex-col',
@@ -59,7 +59,7 @@ export const AboutUs = () => {
               'sm:h-96',
               'sm:w-96',
               'drop-shadow-lg',
-              'mb-12',
+              'mb-8',
               'md:mb-16'
             )}
           />
@@ -71,9 +71,7 @@ export const AboutUs = () => {
             'bg-light-blue',
             'rounded-xl',
             'p-8',
-            'drop-shadow-md',
-            'mb-10',
-            'md:mb-0'
+            'drop-shadow-md'
           )}
         >
           <h1
@@ -139,10 +137,13 @@ export const AboutUs = () => {
           'flex-row',
           'flex-wrap',
           'w-full',
-          'h-36',
+          'h-auto',
+          'md:h-36',
           'px-6',
           'md:px-12',
-          'mb-24',
+          'mb-7',
+          'md:mb-16',
+          'xl:mb-20',
           'md:grid',
           'md:grid-cols-7',
           'justify-center',

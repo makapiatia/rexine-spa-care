@@ -18,7 +18,8 @@ export const Contact = () => {
             'min-h-max',
             'w-full',
             'bg-light-blue',
-            'justify-center'
+            'justify-center',
+            'xl:py-8'
         )}>
             <form
                 className={classnames(
@@ -216,7 +217,7 @@ export const Contact = () => {
                     'sm:mx-12',
                     'xl:ml-6',
                     'xl:mr-12',
-                    'mb-6',
+                    'mb-8',
                     'sm:mb-12',
                     'drop-shadow-md'
                 )}
