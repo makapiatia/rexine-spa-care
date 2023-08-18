@@ -23,19 +23,24 @@ export const ServicePage = () => {
           'drop-shadow-md',
           'm-8',
           'sm:mx-20',
-          'sm:mt-20'
+          'sm:mt-20',
         )}
       >
         <h1
           className={classnames(
             'flex',
-            'uppercase',
             'font-bold',
+            'font-bricolage',
             'text-3xl',
-            'md:text-4xl',
+            'sm:text-4xl',
             'text-medium-blue',
-            'mt-8',
-            'p-8',
+            'mb-9',
+            'md:mt-8',
+            'md:mb-0',
+            'xl:mb-6',
+            'py-5',
+            'sm:py-8',
+            'px-20',
             'w-fit',
             'drop-shadow-md',
             'bg-white',
@@ -55,10 +60,8 @@ export const ServicePage = () => {
             'grid-rows-3',
             'lg:grid-cols-3',
             'lg:grid-rows-1',
-            'mx-8',
-            'my-8',
-            'sm:my-10',
-            'sm:mx-10',
+            'md:my-10',
+            'md:mx-10',
             'gap-8',
             'xl:gap-16',
             'text-white'
@@ -76,9 +79,10 @@ export const ServicePage = () => {
             <h2
               className={classnames(
                 'uppercase',
-                'font-bold',
+                'font-londrina', 
+                'font-light', 
                 'text-4xl',
-                'py-4',
+                'py-2',
                 'border-b-2',
                 'drop-shadow-md'
               )}
@@ -127,9 +131,10 @@ export const ServicePage = () => {
             <h2
               className={classnames(
                 'uppercase',
-                'font-bold',
+                'font-londrina', 
+                'font-light', 
                 'text-4xl',
-                'py-4',
+                'py-2',
                 'border-b-2',
                 'drop-shadow-md'
               )}
@@ -178,9 +183,10 @@ export const ServicePage = () => {
             <h2
               className={classnames(
                 'uppercase',
-                'font-bold',
+                'font-londrina', 
+                'font-light', 
                 'text-4xl',
-                'py-4',
+                'py-2',
                 'border-b-2',
                 'drop-shadow-md'
               )}
@@ -236,15 +242,17 @@ export const ServicePage = () => {
       )}>
         <h2
           className={classnames(
-            'uppercase',
             'font-bold',
+            'font-bricolage',
             'text-3xl',
-            'md:text-4xl',
+            'sm:text-4xl',
             'text-medium-blue',
             'drop-shadow-md',
-            'my-8',
-            'py-8',
-            'px-3',
+            'mb-7',
+            'sm:my-8',
+            'py-5',
+            'md:py-8',
+            'px-6',
             'md:px-8',
             'w-fit',
             'bg-white',
@@ -259,7 +267,7 @@ export const ServicePage = () => {
           className={classnames(
             'flex',
             'flex-col',
-            'mx-8',
+            'sm:mx-8',
             'text-medium-blue'
           )}
         >

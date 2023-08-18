@@ -12,7 +12,6 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        Rampart: ["Rampart One", "cursive"],
         'bricolage': ['Bricolage Grotesque', 'sans-serif'],
         'dm': ['DM Sans', 'sans-serif'],
         'londrina': ['Londrina Solid', 'cursive'],

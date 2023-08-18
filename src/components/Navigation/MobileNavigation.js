@@ -18,19 +18,22 @@ export const MobileNavigation = () => {
       background: '#C0F0FF'
     },
     bmCrossButton: {
-      height: '36px',
-      width: '36px'
+      height: '40px',
+      width: '40px'
     },
     bmCross: {
-      background: '#005D9E'
+      background: '#FFFFFF',
+      height: '36px',
+      paddingLeft: '4px',
+      margin: '-4px'
     },
     bmMenuWrap: {
       position: 'fixed',
       height: '100%',
-      width: '375px'
+      width: '355px'
     },
     bmMenu: {
-      background: '#FFFFFF',
+      background: '#0F52BA',
       padding: '1.5em 0 0',
       fontSize: '2.15em'
     },
@@ -38,7 +41,7 @@ export const MobileNavigation = () => {
       fill: '#000000'
     },
     bmItemList: {
-      color: '#005D9E',
+      color: '#FFFFFF',
       padding: '0.8em'
     },
     bmOverlay: {
@@ -48,17 +51,17 @@ export const MobileNavigation = () => {
 
   return (
     <div className={classnames('rexine-spa-care-mobile-navigation', 'flex', 'flex-col', 'md:hidden')}>
-      <div className={classnames('w-full', 'h-24', 'bg-rexine-blue')}>
+      <div className={classnames('w-full', 'h-24', 'font-londrina', 'bg-rexine-blue', 'font-light')}>
         <Menu styles={menuStyles}>
           <a
             id="home"
             className={classnames(
               'menu-item',
-              'font-semibold',
               'border-b-2',
               'border-extra-light-blue',
-              'hover:bg-extra-light-blue',
-              'py-2'
+              'hover:bg-blue-500',
+              'py-2',
+              'pl-1'
             )}
             href="/">
             Home
@@ -67,11 +70,11 @@ export const MobileNavigation = () => {
             id="services"
             className={classnames(
               'menu-item',
-              'font-semibold',
               'border-b-2',
               'border-extra-light-blue',
-              'hover:bg-extra-light-blue',
-              'py-2'
+              'hover:bg-blue-500',
+              'py-2',
+              'pl-1'
             )}
             href="/services">
             Services + Pricing
@@ -80,11 +83,11 @@ export const MobileNavigation = () => {
             id="about-us"
             className={classnames(
               'menu-item',
-              'font-semibold',
               'border-b-2',
               'border-extra-light-blue',
-              'hover:bg-extra-light-blue',
-              'py-2'
+              'hover:bg-blue-500',
+              'py-2',
+              'pl-1'
             )}
             href="/about-us">
             About Us
@@ -93,10 +96,10 @@ export const MobileNavigation = () => {
             id="contact"
             className={classnames(
               'menu-item',
-              'font-semibold',
               'border-light-blue',
-              'hover:bg-extra-light-blue',
-              'py-2'
+              'hover:bg-blue-500',
+              'py-2',
+              'pl-1'
             )}
             href="/contact">
             Contact

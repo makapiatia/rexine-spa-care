@@ -2,13 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'tailwindcss-classnames';
 import spaJet from '../../../assets/images/spaJet.jpeg';
-import { useMediaQuery } from '../../../utils/hooks';
 
 
 export const ServiceSection = () => {
-  const smallScreen = useMediaQuery('500px');
-  const serviceButtonText = smallScreen ? 'Services + Pricing' : 'Services';
-
   return (
     <div className={classnames(
       'rexine-spa-care-service-section',
@@ -30,22 +26,24 @@ export const ServiceSection = () => {
       >
         <h1 className={classnames(
           'text-medium-blue',
-          'text-4xl',
-          'uppercase',
+          'text-3xl',
+          'sm:text-4xl',
           'font-bold',
+          'font-bricolage',
           'm-8',
           'xl:mt-8',
           'xl:mx-8',
           'xl:mb-3',
           'py-8',
           'sm:pt-8',
-          'px-4',
+          'px-6',
           'sm:px-8',
           'w-fit',
           'bg-white',
           'rounded-2xl',
           'drop-shadow-md',
-          'self-center'
+          'self-center',
+          'xl:self-start'
         )}>
           What We Do
         </h1>
@@ -72,26 +70,28 @@ export const ServiceSection = () => {
               Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <div className={classnames('pt-9', 'self-center')}>
+            <div className={classnames('xl:hidden', 'pt-9', 'self-center')}>
               <Link
                 to="/services"
               >
                 <span
                   className={classnames(
-                    'text-lg',
-                    'md:text-2xl',
+                    'text-2xl',
+                    'sm:text-3xl',
                     'uppercase',
-                    'font-semibold',
-                    'font-mono',
+                    'font-londrina', 
+                    'font-light', 
                     'text-white',
                     'bg-rexine-blue',
                     'hover:bg-blue-500',
                     'rounded-md',
-                    'p-8',
+                    'px-4',
+                    'py-8',
+                    'sm:px-8',
                     'w-max',
                     'drop-shadow-md'
                   )}>
-                  {serviceButtonText}
+                   Services + Pricing
                 </span>
               </Link>
             </div>

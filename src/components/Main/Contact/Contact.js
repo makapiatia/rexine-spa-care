@@ -43,9 +43,9 @@ export const Contact = () => {
                 <h1 className={classnames(
                     'pb-8',
                     'sm:pb-16',
-                    'text-3xl',
                     'font-bold',
-                    'uppercase',
+                    'font-bricolage',
+                    'text-4xl',
                     'text-green-blue',
                     'drop-shadow-sm'
                 )}
@@ -185,10 +185,11 @@ export const Contact = () => {
                         'hover:bg-blue-500',
                         'rounded-lg',
                         'text-white',
-                        'text-xl',
+                        'text-3xl',
                         'uppercase',
                         'tracking-widest',
-                        'font-semibold',
+                        'font-londrina', 
+                        'font-light', 
                         'mt-6',
                         'drop-shadow-md'
                     )}
@@ -204,10 +205,10 @@ export const Contact = () => {
                     'flex-col',
                     'place-items-center',
                     'xl:my-12',
-                    'text-3xl',
                     'font-bold',
+                    'font-bricolage',
+                    'text-4xl',
                     'text-green-blue',
-                    'uppercase',
                     'bg-white',
                     'rounded-lg',
                     'p-6',
@@ -220,7 +221,7 @@ export const Contact = () => {
                     'drop-shadow-md'
                 )}
             >
-                <h1 className={classnames('pt-6', 'pb-5', 'drop-shadow-sm')}>Service Area</h1>
+                <h1 className={classnames('pt-2', 'sm:pt-6', 'pb-5', 'drop-shadow-sm')}>Service Area</h1>
                 <ServiceArea />
             </div>
         </div>
