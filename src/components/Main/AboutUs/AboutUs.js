@@ -23,6 +23,15 @@ export const AboutUs = () => {
     { 'brand': 'sundance-spas-logo', 'imgSrc': sundanceSpasLogo }
   ];
 
+  const certifications = [
+    'Bullfrog Spa Factory',
+    'Caldera Spas',
+    'Hot Spring',
+    'Artesian Spas',
+    'Tropic Seas Spas',
+    'TidalFit'
+  ];
+
   return (
     <div
       className={classnames(
@@ -43,8 +52,7 @@ export const AboutUs = () => {
           'flex',
           'flex-col',
           'lg:flex-row',
-          'items-center',
-          'lg:items-start'
+          'items-center'
         )}
       >
         {!mdScreen && (
@@ -93,30 +101,48 @@ export const AboutUs = () => {
           >
             About Us
           </h1>
-          <p
-            className={classnames(
-              'pb-4',
-              'text-green-blue',
-              'text-xl',
-              'font-dm',
-              'font-medium'
-            )}
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-          <p className={classnames(
-            'pb-4',
+          <div className={classnames(
             'text-green-blue',
             'text-xl',
             'font-dm',
             'font-medium'
           )}>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident,
-            sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
+            <div
+              className={classnames(
+                'pb-6',
+              )}
+            >
+              Our lead technician has ten years experience in spa service and sales.
+              Much of that experience includes spa chemical, cleaning and maintenance trainings with the leading spa chemical
+              manufacturer Spa Guard/Bio Guard.
+            </div>
+            <div className={classnames(
+              'pb-6',
+            )}>
+              He has extensive experience with numerous other spa brands and has attended several
+              factory and vendor trainings.
+              His spa brand certifications include:
+              <ul
+                className={classnames(
+                  'flex',
+                  'flex-row',
+                  'grid',
+                  'grid-flow-row',
+                  'list-disc',
+                  'pl-6'
+                )}
+              >
+                {certifications.map((cert, i) => {
+                  return <li>{cert}</li>;
+                })}
+              </ul>
+            </div>
+            <div>
+              At Rexine Spa Care we are fully field experienced & trained in a multitude of spa
+              sanitation options including Spa Frog/@Ease,
+              bromine, chlorine, softsoak, and many more!
+            </div>
+          </div>
         </div>
         {mdScreen && (
           <img
