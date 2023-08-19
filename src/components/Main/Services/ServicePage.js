@@ -293,12 +293,24 @@ export const ServicePage = () => {
             'text-xl'
           )}
         >
-          <p className={classnames('xl:mt-6')}>
-            If our services and plans do not meet your needs please give us a
-            call at 623-282-2530, or send us an email at info@rexinespacare.com,
-            and we will be happy to work with you to
+          <div className={classnames('xl:mt-6')}>
+            If our services and plans do not meet your needs please send us an email at
+            <a
+              href='mailto:info@rexinespacare.com'
+              className={classnames('pl-1', 'hover:text-medium-blue')}
+            >
+              info@rexinespacare.com
+            </a>
+            , or give us a call at
+            <a
+              href='tel:+1623-282-2530'
+              className={classnames('pl-1', 'hover:text-medium-blue')}
+            >
+              +1-623-282-2530
+            </a>
+            , and we will be happy to work with you to
             create a custom care plan.
-          </p>
+          </div>
         </div>
       </div>
     </div>

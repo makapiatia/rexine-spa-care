@@ -30,9 +30,23 @@ export const Footer = () => {
         )}
       >
         <p className={classnames('font-signika', 'font-light', 'text-2xl')}>Inquiries & Assistance:</p>
-        <p className={classnames('text-lg', 'text-light-blue', 'font-dm', 'font-medium')}>623-282-2530</p>
+        <div className={classnames('text-lg', 'text-light-blue', 'font-dm', 'font-medium')}>
+        <a
+            href='tel:+1623-282-2530'
+            className={classnames('hover:text-white')}
+          >
+          +1-623-282-2530
+          </a>
+        </div>
         <p className={classnames('font-signika', 'font-light', 'text-2xl', 'pt-4')}>Email:</p>
-        <p className={classnames('text-xl', 'text-light-blue', 'font-dm', 'font-medium')}>info@rexinespacare.com</p>
+        <div className={classnames('text-xl', 'text-light-blue', 'font-dm', 'font-medium')}>
+          <a
+            href='mailto:info@rexinespacare.com'
+            className={classnames('hover:text-white')}
+          >
+            info@rexinespacare.com
+          </a>
+        </div>
         <p className={classnames('font-signika', 'font-light', 'text-2xl', 'pt-4')}>Regular Business Hours:</p>
         <p className={classnames('text-lg', 'text-light-blue', 'font-dm', 'font-medium')}>Monday-Friday 8:00am-6:00pm </p>
         <p className={classnames('text-lg', 'text-light-blue', 'font-dm', 'italic')}>
