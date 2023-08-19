@@ -44,8 +44,8 @@ export const Contact = () => {
                 <h1 className={classnames(
                     'pb-8',
                     'sm:pb-16',
-                    'font-bold',
-                    'font-bricolage',
+                    'font-black',
+                    'font-abeezee',
                     'text-4xl',
                     'text-green-blue',
                     'drop-shadow-sm'
@@ -204,7 +204,7 @@ export const Contact = () => {
                         'text-3xl',
                         'uppercase',
                         'tracking-widest',
-                        'font-londrina', 
+                        'font-signika', 
                         'font-light', 
                         'mt-6',
                         'drop-shadow-md'
@@ -221,8 +221,8 @@ export const Contact = () => {
                     'flex-col',
                     'place-items-center',
                     'xl:my-12',
-                    'font-bold',
-                    'font-bricolage',
+                    'font-black',
+                    'font-abeezee',
                     'text-4xl',
                     'text-green-blue',
                     'bg-white',

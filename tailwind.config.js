@@ -12,9 +12,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        'bricolage': ['Bricolage Grotesque', 'sans-serif'],
+        'abeezee': ['ABeeZee', 'sans-serif'],
         'dm': ['DM Sans', 'sans-serif'],
-        'londrina': ['Londrina Solid', 'cursive'],
+        'signika': ['Signika', 'sans-serif'],
        },
       borderRadius: {
         extraLarge: '12rem'
@@ -29,7 +29,8 @@ module.exports = {
         'light-teal': '#00bfb9',
         'medium-teal': '#029794',
         'light-green': '#00ba69',
-        'medium-green': '#029756'
+        'medium-green': '#029756',
+        'pricing-yellow': '#FFF300'
       },
     },
   },

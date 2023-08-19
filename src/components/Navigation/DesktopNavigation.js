@@ -23,7 +23,7 @@ export const DesktopNavigation = () => {
       'h-20',
       'bg-rexine-blue',
       'text-white',
-      'font-londrina',
+      'font-signika',
       'font-light'
     )}>
       <Link

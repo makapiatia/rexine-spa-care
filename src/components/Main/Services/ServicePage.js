@@ -24,20 +24,21 @@ export const ServicePage = () => {
           'm-8',
           'sm:mx-20',
           'sm:mt-20',
+          'text-center'
         )}
       >
         <h1
           className={classnames(
             'flex',
-            'font-bold',
-            'font-bricolage',
+            'font-black',
+            'font-abeezee',
             'text-3xl',
             'sm:text-4xl',
             'text-medium-blue',
             'mb-9',
             'md:mt-8',
             'md:mb-0',
-            'xl:mb-6',
+            'xl:mb-4',
             'py-5',
             'sm:py-8',
             'px-20',
@@ -48,7 +49,7 @@ export const ServicePage = () => {
             'place-self-center'
           )}
         >
-          Plans
+          Pick Your Plan
         </h1>
         <div
           className={classnames(
@@ -79,8 +80,8 @@ export const ServicePage = () => {
             <h2
               className={classnames(
                 'uppercase',
-                'font-londrina', 
-                'font-light', 
+                'font-signika',
+                'font-light',
                 'text-4xl',
                 'py-2',
                 'border-b-2',
@@ -97,12 +98,13 @@ export const ServicePage = () => {
               <h3
                 className={classnames(
                   'font-semibold',
-                  'text-3xl',
+                  'text-6xl',
+                  'drop-shadow-lg'
                 )}
               >
-                Bi-Weekly
+                $219
               </h3>
-              <p></p>
+              <p>Bi-Weekly</p>
             </div>
             <div className={classnames(
               'one-month-weekly-pricing',
@@ -111,12 +113,13 @@ export const ServicePage = () => {
               <h3
                 className={classnames(
                   'font-semibold',
-                  'text-3xl',
+                  'text-6xl',
+                  'drop-shadow-lg'
                 )}
               >
-                Weekly
+                $419
               </h3>
-              <p></p>
+              <p>Weekly</p>
             </div>
           </div>
           <div
@@ -131,8 +134,8 @@ export const ServicePage = () => {
             <h2
               className={classnames(
                 'uppercase',
-                'font-londrina', 
-                'font-light', 
+                'font-signika',
+                'font-light',
                 'text-4xl',
                 'py-2',
                 'border-b-2',
@@ -149,12 +152,13 @@ export const ServicePage = () => {
               <h3
                 className={classnames(
                   'font-semibold',
-                  'text-3xl',
+                  'text-6xl',
+                  'drop-shadow-lg'
                 )}
               >
-                Bi-Weekly
+                $629
               </h3>
-              <p></p>
+              <p>Bi-Weekly</p>
             </div>
             <div className={classnames(
               'three-month-weekly-pricing',
@@ -163,12 +167,13 @@ export const ServicePage = () => {
               <h3
                 className={classnames(
                   'font-semibold',
-                  'text-3xl',
+                  'text-6xl',
+                  'drop-shadow-lg'
                 )}
               >
-                Weekly
+                $1229
               </h3>
-              <p></p>
+              <p>Weekly</p>
             </div>
           </div>
           <div
@@ -183,8 +188,8 @@ export const ServicePage = () => {
             <h2
               className={classnames(
                 'uppercase',
-                'font-londrina', 
-                'font-light', 
+                'font-signika',
+                'font-light',
                 'text-4xl',
                 'py-2',
                 'border-b-2',
@@ -201,12 +206,13 @@ export const ServicePage = () => {
               <h3
                 className={classnames(
                   'font-semibold',
-                  'text-3xl',
+                  'text-6xl',
+                  'drop-shadow-lg'
                 )}
               >
-                Bi-Weekly
+                $1229*
               </h3>
-              <p></p>
+              <p>Bi-Weekly</p>
             </div>
             <div className={classnames(
               'six-month-weekly-pricing',
@@ -215,15 +221,27 @@ export const ServicePage = () => {
               <h3
                 className={classnames(
                   'font-semibold',
-                  'text-3xl',
+                  'text-6xl',
+                  'drop-shadow-lg'
                 )}
               >
-                Weekly
+                $2419*
               </h3>
-              <p></p>
+              <p>Weekly</p>
             </div>
           </div>
         </div>
+        <p
+          className={classnames(
+            'text-green-blue',
+            'font-dm',
+            'font-medium',
+            'text-xl',
+            'xl:mb-4'
+          )}
+        >
+          *Six month plans include one full system flush.
+        </p>
       </div>
       <div className={classnames(
         'cleaning-pricing-section',
@@ -243,8 +261,8 @@ export const ServicePage = () => {
       )}>
         <h2
           className={classnames(
-            'font-bold',
-            'font-bricolage',
+            'font-black',
+            'font-abeezee',
             'text-3xl',
             'sm:text-4xl',
             'text-medium-blue',
@@ -262,7 +280,7 @@ export const ServicePage = () => {
             'text-center'
           )}
         >
-          Full Cleaning
+          Other Services
         </h2>
         <div
           className={classnames(
@@ -276,14 +294,10 @@ export const ServicePage = () => {
           )}
         >
           <p className={classnames('xl:mt-6')}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-          <p className={classnames('my-6')}>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident,
-            sunt in culpa qui officia deserunt mollit anim id est laborum.
+            If our services and plans do not meet your needs please give us a
+            call at 623-282-2530, or send us an email at info@rexinespacare.com,
+            and we will be happy to work with you to
+            create a custom care plan.
           </p>
         </div>
       </div>
