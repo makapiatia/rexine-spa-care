@@ -227,7 +227,7 @@ export const Contact = () => {
                     'text-green-blue',
                     'bg-white',
                     'rounded-lg',
-                    'p-6',
+                    'p-8',
                     'mx-8',
                     'sm:mx-12',
                     'xl:ml-6',
@@ -237,7 +237,7 @@ export const Contact = () => {
                     'drop-shadow-md'
                 )}
             >
-                <h1 className={classnames('pt-2', 'sm:pt-6', 'pb-5', 'drop-shadow-sm')}>Service Area</h1>
+                <h1 className={classnames('pt-2', 'sm:pt-4', 'pb-5', 'drop-shadow-sm')}>Service Area</h1>
                 <ServiceArea />
             </div>
         </div>

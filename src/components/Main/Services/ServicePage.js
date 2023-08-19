@@ -1,7 +1,11 @@
 import React from 'react';
 import classnames from 'tailwindcss-classnames';
+import { useMediaQuery } from '../../../utils/hooks';
 
 export const ServicePage = () => {
+  const mdScreen = useMediaQuery('768px');
+  const plansText = mdScreen ? 'Select Your Plan' : 'Plans';
+
   return (
     <div
       className={classnames(
@@ -41,7 +45,7 @@ export const ServicePage = () => {
             'xl:mb-4',
             'py-5',
             'sm:py-8',
-            'px-20',
+            'px-8',
             'w-fit',
             'drop-shadow-md',
             'bg-white',
@@ -49,7 +53,7 @@ export const ServicePage = () => {
             'place-self-center'
           )}
         >
-          Pick Your Plan
+          {plansText}
         </h1>
         <div
           className={classnames(
@@ -64,7 +68,7 @@ export const ServicePage = () => {
             'md:my-10',
             'md:mx-10',
             'gap-8',
-            'xl:gap-16',
+            'xl:gap-12',
             'text-white'
           )}
         >
@@ -237,7 +241,9 @@ export const ServicePage = () => {
             'font-dm',
             'font-medium',
             'text-xl',
-            'xl:mb-4'
+            'xl:mb-4',
+            'mt-6',
+            'md:mt-0'
           )}
         >
           *Six month plans include one full system flush.
@@ -294,7 +300,7 @@ export const ServicePage = () => {
           )}
         >
           <div className={classnames('xl:mt-6')}>
-            If our services and plans do not meet your needs please send us an email at
+            If our services and plans do not fit your needs please send us an email at
             <a
               href='mailto:info@rexinespacare.com'
               className={classnames('pl-1', 'hover:text-medium-blue')}

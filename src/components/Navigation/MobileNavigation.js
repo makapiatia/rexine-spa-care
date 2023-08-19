@@ -50,7 +50,7 @@ export const MobileNavigation = () => {
   }
 
   return (
-    <div className={classnames('rexine-spa-care-mobile-navigation', 'flex', 'flex-col', 'md:hidden')}>
+    <div className={classnames('rexine-spa-care-mobile-navigation', 'flex', 'flex-col', 'tablet:hidden')}>
       <div className={classnames('w-full', 'h-24', 'font-signika', 'bg-rexine-blue', 'font-light')}>
         <Menu styles={menuStyles}>
           <a
