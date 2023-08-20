@@ -64,8 +64,8 @@ export const ServiceSection = () => {
           )}>
             <p className={classnames('xl:mt-6', 'mb-6')}>
               At Rexine Spa Care we are fully field experienced &
-              trained in a multitude of spa sanitation options including Spa Frog/@Ease, bromine,
-              chlorine, softsoak, and many more!
+              trained in a multitude of spa sanitation options including Spa Frog/@Ease, Soft Soak, bromine,
+              chlorine, and many more!
               Explore the services we offer which include
               bi-weekly & weekly plans, full cleanings & our Snowbird Special.
             </p>
