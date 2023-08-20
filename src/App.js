@@ -7,6 +7,7 @@ import { Footer } from './components/Footer';
 import { ServicePage } from './components/Main/Services';
 import { AboutUs } from './components/Main/AboutUs';
 import { Contact } from './components/Main/Contact';
+import ScrollToTop from './utils/ScrollToTop';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <BrowserRouter>
         <div className="rexine-spa-care-app text-blue">
           <Navigation />
+          <ScrollToTop />
           <Routes>
             <Route exact path='/' element={<Main />} />
             <Route path='/services' element={<ServicePage />} />
