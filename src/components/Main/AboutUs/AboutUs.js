@@ -24,6 +24,7 @@ export const AboutUs = () => {
   ];
 
   const certifications = [
+    'Spa Guard/Bio Guard',
     'Artesian Spas',
     'Bullfrog Spa Factory',
     'Caldera Spas',
