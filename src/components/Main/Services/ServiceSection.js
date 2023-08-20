@@ -28,8 +28,8 @@ export const ServiceSection = () => {
           'text-medium-blue',
           'text-3xl',
           'sm:text-4xl',
-          'font-black',
-          'font-abeezee',
+          'font-bold',
+          'font-dosis',
           'm-8',
           'xl:mt-8',
           'xl:mx-8',
@@ -77,7 +77,6 @@ export const ServiceSection = () => {
                   className={classnames(
                     'text-2xl',
                     'sm:text-3xl',
-                    'uppercase',
                     'font-signika',
                     'font-light',
                     'text-white',

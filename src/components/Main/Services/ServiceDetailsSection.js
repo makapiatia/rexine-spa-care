@@ -52,8 +52,8 @@ export const ServiceDetailsSection = () => {
             <h1
                 className={classnames(
                     'flex',
-                    'font-black',
-                    'font-abeezee',
+                    'font-bold',
+                    'font-dosis',
                     'text-3xl',
                     'sm:text-4xl',
                     'text-medium-blue',

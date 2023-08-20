@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        'abeezee': ['ABeeZee', 'sans-serif'],
+        'dosis': ['Dosis', 'sans-serif'],
         'dm': ['DM Sans', 'sans-serif'],
         'signika': ['Signika', 'sans-serif'],
        },
