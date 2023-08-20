@@ -32,7 +32,8 @@ export const Hero = () => {
                 <div className={classnames(
                 'max-w-[400px]',
                 'max-h-[400px]',
-                'p-12',
+                'py-12',
+                'px-9',
                 'drop-shadow-lg',
                 'bg-green-blue/25',
                 'rounded-full'
@@ -48,7 +49,8 @@ export const Hero = () => {
                 'md:hidden',
                 'max-w-[330px]',
                 'max-h-[330px]',
-                'p-8',
+                'px-6',
+                'py-8',
                 'my-12',
                 'drop-shadow-lg',
                 'bg-green-blue/25',
