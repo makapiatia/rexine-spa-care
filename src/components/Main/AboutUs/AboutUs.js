@@ -24,12 +24,13 @@ export const AboutUs = () => {
   ];
 
   const certifications = [
+    'Artesian Spas',
     'Bullfrog Spa Factory',
     'Caldera Spas',
     'Hot Spring',
-    'Artesian Spas',
-    'Tropic Seas Spas',
-    'TidalFit'
+    'Sundance Spas',
+    'TidalFit',
+    'Tropic Seas Spas'
   ];
 
   return (
@@ -113,13 +114,11 @@ export const AboutUs = () => {
               )}
             >
               Our lead technician has ten years experience in spa service and sales.
-              Much of that experience includes spa chemical, cleaning and maintenance trainings with the leading spa chemical
+              That experience includes spa chemical, cleaning and maintenance trainings with the leading spa chemical
               manufacturer Spa Guard/Bio Guard.
             </div>
-            <div className={classnames(
-              'pb-6',
-            )}>
-              He has extensive experience with numerous other spa brands and has attended several
+            <div>
+              He has extensive experience with numerous other spa brands and has attended many
               factory and vendor trainings.
               His spa brand certifications include:
               <ul
@@ -129,6 +128,7 @@ export const AboutUs = () => {
                   'grid',
                   'grid-flow-row',
                   'list-disc',
+                  'pt-2',
                   'pl-6'
                 )}
               >
@@ -136,11 +136,6 @@ export const AboutUs = () => {
                   return <li>{cert}</li>;
                 })}
               </ul>
-            </div>
-            <div>
-              At Rexine Spa Care we are fully field experienced & trained in a multitude of spa
-              sanitation options including Spa Frog/@Ease,
-              bromine, chlorine, softsoak, and many more!
             </div>
           </div>
         </div>

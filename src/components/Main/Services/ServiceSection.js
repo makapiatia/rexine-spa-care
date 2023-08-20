@@ -62,17 +62,14 @@ export const ServiceSection = () => {
             'font-dm',
             'font-medium'
           )}>
-            <p className={classnames('xl:mt-6')}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <p className={classnames('xl:mt-6', 'mb-6')}>
+              At Rexine Spa Care we are fully field experienced &
+              trained in a multitude of spa sanitation options including Spa Frog/@Ease, bromine,
+              chlorine, softsoak, and many more!
+              Explore the services we offer which include
+              bi-weekly & weekly plans, full cleanings & our Snowbird Special.
             </p>
-            <p className={classnames('my-6')}>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-              Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <div className={classnames('xl:hidden', 'pt-9', 'self-center')}>
+            <div className={classnames('pt-9', 'self-center')}>
               <Link
                 to="/services"
               >
@@ -81,8 +78,8 @@ export const ServiceSection = () => {
                     'text-2xl',
                     'sm:text-3xl',
                     'uppercase',
-                    'font-signika', 
-                    'font-light', 
+                    'font-signika',
+                    'font-light',
                     'text-white',
                     'bg-rexine-blue',
                     'hover:bg-blue-500',
@@ -93,7 +90,7 @@ export const ServiceSection = () => {
                     'w-max',
                     'drop-shadow-md'
                   )}>
-                   Services + Pricing
+                  Services + Pricing
                 </span>
               </Link>
             </div>
