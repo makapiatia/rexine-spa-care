@@ -39,14 +39,15 @@ export const ServiceDetailsSection = () => {
                 'rexine-spa-care-service-details-section',
                 'flex',
                 'flex-col',
-                'bg-light-blue',
-                'rounded-xl',
+                'md:bg-light-blue',
+                'md:rounded-xl',
                 'p-8',
                 'drop-shadow-md',
                 'mt-8',
-                'mx-8',
-                'sm:mx-20',
-                'sm:mt-20'
+                'sm:mt-12',
+                'md:mt-20',
+                'md:mx-8',
+                'lg:mx-20',
             )}
         >
             <h1
@@ -54,8 +55,7 @@ export const ServiceDetailsSection = () => {
                     'flex',
                     'font-bold',
                     'font-dosis',
-                    'text-3xl',
-                    'sm:text-4xl',
+                    'text-4xl',
                     'text-medium-blue',
                     'mb-9',
                     'md:mt-8',
