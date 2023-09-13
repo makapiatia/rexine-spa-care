@@ -96,6 +96,7 @@ export const MobileNavigation = () => {
             id="contact"
             className={classnames(
               'menu-item',
+              'border-b-2',
               'border-light-blue',
               'hover:bg-blue-500',
               'py-2',
@@ -103,6 +104,18 @@ export const MobileNavigation = () => {
             )}
             href="/contact">
             Contact
+          </a>
+          <a
+            id="call-us"
+            href='tel:+1623-282-2530'
+            className={classnames(
+              'menu-item',
+              'hover:bg-blue-500',
+              'py-2',
+              'pl-1'
+            )}
+          >
+            Call Us Today!
           </a>
         </Menu>
       </div>
