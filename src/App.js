@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="rexine-spa-care-app text-blue">
+        <div className="rexine-spa-care-app text-blue bg-extra-light-blue">
           <Navigation />
           <ScrollToTop />
           <Routes>

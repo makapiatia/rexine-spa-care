@@ -43,7 +43,7 @@ export const ServiceDetailsSection = () => {
                 'md:rounded-xl',
                 'p-8',
                 'drop-shadow-md',
-                'mt-8',
+                'mt-2',
                 'sm:mt-12',
                 'md:mt-20',
                 'md:mx-8',

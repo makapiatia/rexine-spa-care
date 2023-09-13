@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import classnames from 'tailwindcss-classnames';
 import spaJet from '../../../assets/images/spaJet.jpeg';
+import { SanitationProductLogoSection } from './SanitationProductLogoSection';
 
 
 export const ServiceSection = () => {
@@ -10,7 +11,10 @@ export const ServiceSection = () => {
       'rexine-spa-care-service-section',
       'flex',
       'flex-row',
-      'bg-extra-light-blue'
+      'bg-extra-light-blue',
+      'max-w-screen-1xl',
+      'justify-center',
+      'mx-auto'
     )}>
       <div
         className={classnames(
@@ -39,11 +43,12 @@ export const ServiceSection = () => {
           'px-6',
           'sm:px-8',
           'w-fit',
+          'sm:w-3/5',
           'bg-white',
           'rounded-2xl',
           'drop-shadow-md',
           'self-center',
-          'xl:self-start'
+          'text-center'
         )}>
           What We Do
         </h1>
@@ -56,16 +61,20 @@ export const ServiceSection = () => {
             'pb-16',
             'h-auto',
             'text-green-blue',
-            'text-xl',
+            'text-2xl',
             'items-center',
             'xl:items-start',
-            'font-dm',
-            'font-medium'
+            'font-dosis',
+            'font-medium',
+            'text-center'
           )}>
-            <p className={classnames('xl:mt-6', 'mb-6')}>
+            <p className={classnames('xl:mt-6', 'mb-8')}>
               At Rexine Spa Care we are fully field experienced &
-              trained in a multitude of spa sanitation options including FROG, Soft Soak, bromine,
-              chlorine, and many more!
+              trained in a multitude of spa sanitation options including FROG @ease, 
+              Soft Soak, bromine, chlorine, and many more!
+            </p>
+            <SanitationProductLogoSection />
+            <p className={classnames('mb-6')}>
               Explore the services we offer which include
               bi-weekly & weekly plans, full cleanings & our Snowbird Special.
             </p>

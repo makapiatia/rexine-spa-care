@@ -9,6 +9,7 @@ module.exports = {
       'tablet': '830px',
       'lg': '1024px',
       'xl': '1280px',
+      '1xl': '1476px',
       '2xl': '1536px',
     },
     extend: {

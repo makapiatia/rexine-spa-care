@@ -8,11 +8,12 @@ export const Main = () => {
     <div
       className={classnames(
         'rexine-spa-care-main-body',
-        'relative'
+        'relative',
+        'bg-extra-light-blue',
       )}
     >
-        <Hero />
-        <ServiceSection />
+      <Hero />
+      <ServiceSection />
     </div>
   );
 }

@@ -12,7 +12,10 @@ export const ServicePage = () => {
         'flex',
         'flex-col',
         'place-items-center',
-        'bg-extra-light-blue'
+        'bg-extra-light-blue',
+        'max-w-screen-1xl',
+      'justify-center',
+      'mx-auto'
       )}
     >
       <ServiceDetailsSection />
