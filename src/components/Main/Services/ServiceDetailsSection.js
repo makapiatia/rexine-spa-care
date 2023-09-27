@@ -126,10 +126,17 @@ export const ServiceDetailsSection = () => {
                                 'drop-shadow-lg'
                             )}
                         >
-                            $219
+                            $199*
                         </h3>
                     </div>
-                    <p className={classnames('pt-3', 'text-center')}>(Starting At)</p>
+                    <p className={classnames('pt-2', 'text-center', 'text-md')}>Starting At</p>
+                    <p className={classnames(
+                        'text-center',
+                        'italic',
+                        'text-sm'
+                    )}>
+                        For our six month bi-weekly savings plan
+                    </p>
                     <ul
                         className={classnames(
                             'flex',
@@ -249,7 +256,7 @@ export const ServiceDetailsSection = () => {
                             $699
                         </h3>
                     </div>
-                    <p className={classnames('pt-3', 'text-center')}>(Clean, Drain, Summerize/Winterize)</p>
+                    <p className={classnames('pt-2', 'text-center')}>(Clean, Drain, Summerize/Winterize)</p>
                     <ul
                         className={classnames(
                             'flex',

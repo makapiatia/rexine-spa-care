@@ -31,11 +31,11 @@ export const Footer = () => {
       >
         <p className={classnames('font-signika', 'font-light', 'text-2xl')}>Inquiries & Assistance:</p>
         <div className={classnames('text-lg', 'text-light-blue', 'font-dm', 'font-medium')}>
-        <a
+          <a
             href='tel:+1623-282-2530'
             className={classnames('hover:text-white')}
           >
-          +1-623-282-2530
+            +1-623-282-2530
           </a>
         </div>
         <p className={classnames('font-signika', 'font-light', 'text-2xl', 'pt-4')}>Email:</p>
@@ -51,6 +51,24 @@ export const Footer = () => {
         <p className={classnames('text-lg', 'text-light-blue', 'font-dm', 'font-medium')}>Monday-Friday 8:00am-6:00pm </p>
         <p className={classnames('text-lg', 'text-light-blue', 'font-dm', 'italic')}>
           Saturday & Sunday available by appointment.
+        </p>
+        <div
+          className={classnames('flex', 'flex-row', 'text-md', 'text-light-blue', 'font-dm', 'pt-3', 'pb-0.5')}
+        >
+          <a href="https://app.enzuzo.com/policies/tos/8f9a68b8-5d1c-11ee-9c4b-af1815b5c510"
+            className={classnames('hover:text-white', 'pr-1')}
+          >
+            Terms of Service
+          </a>
+          <p>|</p>
+          <a href="https://app.enzuzo.com/policies/privacy/8f9a68b8-5d1c-11ee-9c4b-af1815b5c510"
+          className={classnames('hover:text-white', 'pl-1')}
+          >
+            Privacy Policy
+          </a>
+        </div>
+        <p className={classnames('italic', 'text-sm', 'text-light-blue', 'font-dm')}>
+          © Rexine Spa Care LLC 2023
         </p>
       </div>
       <div
