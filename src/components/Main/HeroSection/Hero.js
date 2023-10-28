@@ -1,9 +1,13 @@
 import React from 'react';
 import classnames from 'tailwindcss-classnames';
-import hero from '../../../assets/images/hero.jpeg';
+import heroBG_3000x2000 from '../../../assets/images/heroBG_3000x2000.jpg';
+import heroBG_900x600 from '../../../assets/images/heroBG_900x600.jpg';
 import RexineSpaCareLogo_WhiteText from '../../../assets/images/RexineSpaCareLogo_WhiteText.png';
+import { useMediaQuery } from '../../../utils/hooks';
 
 export const Hero = () => {
+    const tabletScreen = useMediaQuery('900px');
+    const imageUrl = tabletScreen ? heroBG_900x600 : heroBG_3000x2000;
 
     return (
         <div
@@ -20,7 +24,7 @@ export const Hero = () => {
                 'text-center',
                 'drop-shadow-md'
             )}
-            style={{ backgroundImage: `url(${hero})` }}
+            style={{ backgroundImage: `url(${imageUrl})` }}
         >
             <div
                 className={classnames(
