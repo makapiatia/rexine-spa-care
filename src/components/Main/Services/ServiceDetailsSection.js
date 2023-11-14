@@ -135,7 +135,7 @@ export const ServiceDetailsSection = () => {
                         'italic',
                         'text-sm'
                     )}>
-                        For a singlular maintenance visit, see our plans for greater savings!
+                        For a singular maintenance visit, see our monthly plans for greater savings!
                     </p>
                     <ul
                         className={classnames(
