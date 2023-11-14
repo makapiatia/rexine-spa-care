@@ -7,7 +7,7 @@ import calderaSpasLogo from '../../../assets/images/logos/calderaSpasLogo.png';
 import hotSpringLogo from '../../../assets/images/logos/hotSpringLogo.jpeg';
 import spaGuardLogo from '../../../assets/images/logos/spaGuardLogo.jpg';
 import sundanceSpasLogo from '../../../assets/images/logos/sundanceSpasLogo.png';
-import aboutUs from '../../../assets/images/aboutUs.jpeg';
+import aboutUs from '../../../assets/images/aboutUs_450x450.jpg';
 import { useMediaQuery } from '../../../utils/hooks';
 
 export const AboutUs = () => {

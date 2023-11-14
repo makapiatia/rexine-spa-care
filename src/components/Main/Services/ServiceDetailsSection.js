@@ -78,11 +78,11 @@ export const ServiceDetailsSection = () => {
                     'service-details-section',
                     'flex',
                     'flex-col',
-                    'lg:flex-row',
+                    'xl:flex-row',
                     'grid',
                     'grid-rows-3',
-                    'lg:grid-cols-3',
-                    'lg:grid-rows-1',
+                    'xl:grid-cols-3',
+                    'xl:grid-rows-1',
                     'md:my-10',
                     'md:mx-10',
                     'gap-8',
@@ -111,7 +111,7 @@ export const ServiceDetailsSection = () => {
                             'text-center'
                         )}
                     >
-                        Monthly Service
+                        Maintenance
                     </h2>
                     <div className={classnames(
                         'full-cleaning-pricing',
@@ -126,7 +126,7 @@ export const ServiceDetailsSection = () => {
                                 'drop-shadow-lg'
                             )}
                         >
-                            $199*
+                            $129*
                         </h3>
                     </div>
                     <p className={classnames('pt-2', 'text-center', 'text-md')}>Starting At</p>
@@ -135,7 +135,7 @@ export const ServiceDetailsSection = () => {
                         'italic',
                         'text-sm'
                     )}>
-                        For our six month bi-weekly savings plan
+                        For a singlular maintenance visit, see our plans for greater savings!
                     </p>
                     <ul
                         className={classnames(

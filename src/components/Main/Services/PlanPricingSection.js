@@ -98,8 +98,8 @@ export const PlanPricingSection = () => {
               >
                 $219
               </h3>
-              <p className={classnames('text-sm', 'leading-tight')}>Two Visits</p>
-              <p className={classnames('text-lg', 'leading-tight')}>Per Month</p>
+              <p className={classnames('text-sm', 'leading-tight')}>Total Per Month</p>
+              <p className={classnames('text-lg', 'leading-tight')}>For Two Visits</p>
             </div>
             <div className={classnames(
               'one-month-weekly-pricing',
@@ -115,8 +115,8 @@ export const PlanPricingSection = () => {
               >
                 $419
               </h3>
-              <p className={classnames('text-sm', 'leading-tight')}>Four Visits</p>
-              <p className={classnames('text-lg', 'leading-tight')}>Per Month</p>
+              <p className={classnames('text-sm', 'leading-tight')}>Total Per Month</p>
+              <p className={classnames('text-lg', 'leading-tight')}>For Four Visits</p>
             </div>
           </div>
           <div
@@ -156,8 +156,8 @@ export const PlanPricingSection = () => {
               >
                 $209
               </h3>
-              <p className={classnames('text-sm', 'leading-tight')}>Two Visits</p>
-              <p className={classnames('text-lg', 'leading-tight')}>Per Month</p>
+              <p className={classnames('text-sm', 'leading-tight')}>Total Per Month</p>
+              <p className={classnames('text-lg', 'leading-tight')}>For Two Visits</p>
             </div>
             <div className={classnames(
               'three-month-weekly-pricing',
@@ -173,8 +173,8 @@ export const PlanPricingSection = () => {
               >
                 $409
               </h3>
-              <p className={classnames('text-sm', 'leading-tight')}>Four Visits</p>
-              <p className={classnames('text-lg', 'leading-tight')}>Per Month</p>
+              <p className={classnames('text-sm', 'leading-tight')}>Total Per Month</p>
+              <p className={classnames('text-lg', 'leading-tight')}>For Four Visits</p>
             </div>
           </div>
           <div
@@ -214,8 +214,8 @@ export const PlanPricingSection = () => {
               >
                 $199*
               </h3>
-              <p className={classnames('text-sm', 'leading-tight')}>Two Visits</p>
-              <p className={classnames('text-lg', 'leading-tight')}>Per Month</p>
+              <p className={classnames('text-sm', 'leading-tight')}>Total Per Month</p>
+              <p className={classnames('text-lg', 'leading-tight')}>For Two Visits</p>
             </div>
             <div className={classnames(
               'six-month-weekly-pricing',
@@ -231,8 +231,8 @@ export const PlanPricingSection = () => {
               >
                 $399*
               </h3>
-              <p className={classnames('text-sm', 'leading-tight')}>Four Visits</p>
-              <p className={classnames('text-lg', 'leading-tight')}>Per Month</p>
+              <p className={classnames('text-sm', 'leading-tight')}>Total Per Month</p>
+              <p className={classnames('text-lg', 'leading-tight')}>For Four Visits</p>
             </div>
           </div>
         </div>
