@@ -33,7 +33,7 @@ export const ServiceSection = () => {
           'text-3xl',
           'sm:text-4xl',
           'font-bold',
-          'font-dosis',
+          'font-signika',
           'm-8',
           'xl:mt-8',
           'xl:mx-8',
