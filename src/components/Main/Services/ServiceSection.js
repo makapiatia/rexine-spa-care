@@ -76,7 +76,7 @@ export const ServiceSection = () => {
             <SanitationProductLogoSection />
             <p className={classnames('mb-6')}>
               Explore the services we offer which include
-              bi-weekly & weekly plans, full cleanings & our Snowbird Special.
+              bi-weekly & weekly plans, full cleanings, drains, refills, start ups & shut downs.
             </p>
             <div className={classnames('pt-9', 'self-center')}>
               <Link

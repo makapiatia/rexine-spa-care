@@ -80,8 +80,8 @@ export const ServiceDetailsSection = () => {
                     'flex-col',
                     'xl:flex-row',
                     'grid',
-                    'grid-rows-3',
-                    'xl:grid-cols-3',
+                    'grid-rows-2',
+                    'xl:grid-cols-2',
                     'xl:grid-rows-1',
                     'md:my-10',
                     'md:mx-10',
@@ -199,6 +199,7 @@ export const ServiceDetailsSection = () => {
                             $549
                         </h3>
                     </div>
+                    <p className={classnames('pt-2', 'text-center')}>(Clean, Drain, Summerize/Winterize)</p>
                     <ul
                         className={classnames(
                             'flex',
@@ -213,65 +214,6 @@ export const ServiceDetailsSection = () => {
                         {fullCleaningDetails.map((fullCleaningItem, i) => {
                             return <li key={`full-cleaning-item-${i}`}>
                                 {fullCleaningItem}
-                            </li>;
-                        })}
-                    </ul>
-                </div>
-                <div
-                    className={classnames(
-                        'snowbird-special-details-section',
-                        'bg-medium-green',
-                        'rounded-xl',
-                        'p-8',
-                        'drop-shadow-xl'
-                    )}
-                >
-                    <h2
-                        className={classnames(
-                            'uppercase',
-                            'font-signika',
-                            'font-light',
-                            'text-4xl',
-                            'py-2',
-                            'border-b-2',
-                            'drop-shadow-md',
-                            'text-center'
-                        )}
-                    >
-                        Snowbird Special
-                    </h2>
-                    <div className={classnames(
-                        'full-cleaning-pricing',
-                        'pt-6',
-                        'font-dm',
-                        'text-center'
-                    )}>
-                        <h3
-                            className={classnames(
-                                'font-semibold',
-                                'text-6xl',
-                                'drop-shadow-lg'
-                            )}
-                        >
-                            $699
-                        </h3>
-                    </div>
-                    <p className={classnames('pt-2', 'text-center')}>(Clean, Drain, Summerize/Winterize)</p>
-                    <ul
-                        className={classnames(
-                            'flex',
-                            'flex-col',
-                            'list-disc',
-                            'pt-4',
-                            'pb-6',
-                            'font-dm',
-                            'pl-6',
-                            'justify-self-start'
-                        )}
-                    >
-                        {snowbirdSpecialDetails.map((snowbirdSpecialItem, i) => {
-                            return <li key={`snowbird-special-item-${i}`}>
-                                {snowbirdSpecialItem}
                             </li>;
                         })}
                     </ul>
