@@ -41,29 +41,19 @@ export const ServiceDetailsSection = () => {
                 'flex-col',
                 'md:bg-light-blue',
                 'md:rounded-xl',
-                'p-8',
+                'px-8 pb-8 pt-8 sm:pt-0 md:pt-8',
                 'drop-shadow-md',
-                'mt-2',
-                'sm:mt-12',
-                'md:mt-20',
-                'md:mx-8',
-                'lg:mx-20',
+                'mx-4 sm:mx-12 md:mx-20',
+                'md:mb-20'
             )}
         >
             <h1
                 className={classnames(
-                    'flex',
-                    'font-bold',
-                    'font-dosis',
-                    'text-4xl',
-                    'text-medium-blue',
-                    'mb-9',
-                    'md:mt-8',
-                    'md:mb-0',
-                    'xl:mb-4',
-                    'py-5',
-                    'sm:py-8',
-                    'px-8',
+                    'flex flex-row',
+                    'font-bold font-dosis',
+                    'text-4xl text-medium-blue',
+                    'mb-9 md:mt-4 md:mb-0 xl:mb-4',
+                    'py-5 sm:py-8 px-8',
                     'w-fit',
                     'drop-shadow-md',
                     'bg-white',
@@ -83,7 +73,7 @@ export const ServiceDetailsSection = () => {
                     'grid-rows-2',
                     'xl:grid-cols-2',
                     'xl:grid-rows-1',
-                    'md:my-10',
+                    'md:mt-10',
                     'md:mx-10',
                     'gap-8',
                     'xl:gap-4',
@@ -218,6 +208,29 @@ export const ServiceDetailsSection = () => {
                         })}
                     </ul>
                 </div>
+            </div>
+            <div className={classnames(
+                'text-green-blue',
+                'font-dm font-medium',
+                'text-md italic text-center',
+                'mt-8 px-6 md:px-24'
+            )}>
+                If our plans & services do not fit your needs please send us an email at
+                <a
+                    href='mailto:info@rexinespacare.com'
+                    className={classnames('pl-1', 'hover:text-medium-blue')}
+                >
+                    info@rexinespacare.com
+                </a>
+                , or give us a call at
+                <a
+                    href='tel:+1623-282-2530'
+                    className={classnames('pl-1', 'hover:text-medium-blue')}
+                >
+                    +1-623-282-2530
+                </a>
+                , and we will be happy to work with you to
+                create a custom care plan.
             </div>
         </div>
     );

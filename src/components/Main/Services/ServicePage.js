@@ -14,12 +14,13 @@ export const ServicePage = () => {
         'place-items-center',
         'bg-extra-light-blue',
         'max-w-screen-1xl',
-      'justify-center',
-      'mx-auto'
+        'justify-center',
+        'mx-auto'
       )}
     >
+      <PlanPricingSection />
       <ServiceDetailsSection />
-      <PlanPricingSection /> 
+      
     </div>
   );
 }
