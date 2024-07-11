@@ -147,7 +147,7 @@ export const ServiceDetailsSection = () => {
                     </ul>
                     <p className={classnames('text-center')}>
                         Monthly plans are available in weekly & bi-weekly increments to make sure that your spa
-                        remains in excellent condition. Pricing plans below.
+                        remains in excellent condition. Plan pricing above.
                     </p>
                 </div>
                 <div
