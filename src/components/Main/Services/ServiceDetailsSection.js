@@ -212,7 +212,7 @@ export const ServiceDetailsSection = () => {
             <div className={classnames(
                 'text-green-blue',
                 'font-dm font-medium',
-                'text-md italic text-center',
+                'text-sm md:text-md italic text-center',
                 'mt-8 px-6 md:px-24'
             )}>
                 If our plans & services do not fit your needs please send us an email at
