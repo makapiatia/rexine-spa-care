@@ -254,7 +254,7 @@ export const PlanPricingSection = () => {
         'px-6 md:px-24 mb-6 md:mb-0'
       )}>
         Visits are performed on a monthly, weekly, or every other week basis.
-        Some months may require one extra or one less visit depending on the alignment of the months.
+        Some months may require one extra or one less visit depending on the alignment of the dates.
         Three month (2 visits/month) plans include 6 visits total, three month (4 visits/month) plans include 12 visits total.
         Six month (2 visits/month) plans include 12 visits total, six month (4 visits/month) plans include 24 visits total.
       </div>
