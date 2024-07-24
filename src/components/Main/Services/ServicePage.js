@@ -2,6 +2,7 @@ import React from 'react';
 import classnames from 'tailwindcss-classnames';
 import { PlanPricingSection } from './PlanPricingSection';
 import { ServiceDetailsSection } from './ServiceDetailsSection';
+import { WhatToExpectSection } from './WhatToExpectSection';
 
 export const ServicePage = () => {
   return (
@@ -20,7 +21,7 @@ export const ServicePage = () => {
     >
       <PlanPricingSection />
       <ServiceDetailsSection />
-      
+      <WhatToExpectSection />
     </div>
   );
 }
