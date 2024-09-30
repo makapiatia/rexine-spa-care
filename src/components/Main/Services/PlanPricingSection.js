@@ -10,8 +10,7 @@ export const PlanPricingSection = () => {
     <div
       className={classnames(
         'rexine-spa-care-pricing-section',
-        'flex',
-        'flex-col',
+        'flex flex-col',
         'bg-white border border-light-blue',
         'px-8 pt-4 pb-2 md:pt-8 md:pb-8',
         'm-4 sm:m-12 md:m-20',
