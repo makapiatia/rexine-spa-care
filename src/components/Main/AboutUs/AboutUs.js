@@ -7,12 +7,8 @@ import calderaSpasLogo from '../../../assets/images/logos/calderaSpasLogo.png';
 import hotSpringLogo from '../../../assets/images/logos/hotSpringLogo.jpeg';
 import spaGuardLogo from '../../../assets/images/logos/spaGuardLogo.jpg';
 import sundanceSpasLogo from '../../../assets/images/logos/sundanceSpasLogo.png';
-import aboutUs from '../../../assets/images/aboutUs_450x450.jpg';
-import { useMediaQuery } from '../../../utils/hooks';
 
 export const AboutUs = () => {
-  const mdScreen = useMediaQuery('1024px');
-
   const logos = [
     { 'brand': 'bullfrog-spas-logo', 'imgSrc': bullfrogSpasLogo },
     { 'brand': 'caldera-spas-logo', 'imgSrc': calderaSpasLogo },
@@ -43,16 +39,14 @@ export const AboutUs = () => {
         'place-items-center',
         'bg-extra-light-blue',
         'max-w-screen-1xl',
-      'justify-center',
-      'mx-auto'
+        'justify-center',
+        'mx-auto'
       )}
     >
       <div
         className={classnames(
           'mx-8',
-          'my-9',
-          'md:my-16',
-          'lg:my-20',
+          'mt-9',
           'lg:px-8',
           'flex',
           'flex-col',
@@ -60,45 +54,20 @@ export const AboutUs = () => {
           'items-center'
         )}
       >
-        {!mdScreen && (
-          <img
-            src={aboutUs}
-            alt={'about-us'}
-            className={classnames(
-              'rounded-full',
-              'about-us-photo',
-              'w-70',
-              'h-70',
-              'sm:h-96',
-              'sm:w-96',
-              'drop-shadow-lg',
-              'mb-8',
-              'md:mb-16'
-            )}
-          />
-        )}
         <div
           className={classnames(
             'flex',
             'flex-col',
-            'bg-light-blue',
-            'rounded-xl',
             'p-8',
-            'drop-shadow-md'
           )}
         >
           <h1
             className={classnames(
-              'px-8',
-              'py-4',
-              'mb-8',
+              'mb-8 mt-4',
               'font-bold',
-              'font-dosis',
+              'font-josefin',
               'text-4xl',
-              'bg-white',
-              'rounded-xl',
               'w-fit',
-              'drop-shadow-md',
               'text-medium-blue',
               'self-center',
               'lg:self-start'
@@ -109,56 +78,27 @@ export const AboutUs = () => {
           <div className={classnames(
             'text-green-blue',
             'text-xl',
-            'font-dm',
-            'font-medium'
+            'font-poppins',
+            'font-light'
           )}>
             <div
               className={classnames(
                 'pb-6',
               )}
             >
-              Our lead technician has ten years experience in spa service and sales.
-              That experience includes spa chemical, cleaning and maintenance trainings with the leading spa chemical
-              manufacturer Spa Guard/Bio Guard.
+              At Rexine Spa Care, our lead technician brings a decade of experience in spa service and sales,
+              making us a trusted choice for your spa needs. His expertise encompasses spa chemicals, cleaning, and maintenance,
+              backed by extensive training with top industry leaders, including Spa Guard and Bio Guard.
             </div>
-            <div>
-              He has extensive experience with numerous other spa brands and has attended many
-              factory and vendor trainings.
-              His spa brand certifications include:
-              <ul
-                className={classnames(
-                  'flex',
-                  'flex-row',
-                  'grid',
-                  'grid-flow-row',
-                  'list-disc',
-                  'pt-2',
-                  'pl-6'
-                )}
-              >
-                {certifications.map((cert, i) => {
-                  return <li>{cert}</li>;
-                })}
-              </ul>
+            <div className={classnames(
+              'pb-2',
+            )}>
+              With a deep understanding of a wide range of spa brands, he has participated in numerous
+              factory and vendor training programs, ensuring that he stays at the forefront of the latest technologies
+              and best practices. His certifications include:
             </div>
           </div>
         </div>
-        {mdScreen && (
-          <img
-            src={aboutUs}
-            alt={'about-us'}
-            className={classnames(
-              'rounded-full',
-              'about-us-photo',
-              'h-96',
-              'w-96',
-              'drop-shadow-lg',
-              'mt-16',
-              'lg:mt-0',
-              'lg:ml-16'
-            )}
-          />
-        )}
       </div>
       <div
         className={classnames(
@@ -169,11 +109,11 @@ export const AboutUs = () => {
           'h-auto',
           'md:h-36',
           'px-6',
-          'md:px-12',
-          'mb-7',
+          'md:px-20',
+          'mb-7 lg:mt-6',
           'md:mb-16',
           'xl:mb-20',
-          'md:grid',
+          'md:grid gap-3 md:gap-2',
           'md:grid-cols-7',
           'justify-center',
           'content-center',
@@ -194,10 +134,9 @@ export const AboutUs = () => {
                 'md:h-[110px]',
                 'xl:w-[150px]',
                 'xl:h-[150px]',
-                'drop-shadow-lg',
                 'mb-2',
                 'mx-2',
-                'rounded-xl'
+                'border border-light-blue'
               )}
             />
           );

@@ -29,8 +29,8 @@ export const Footer = () => {
           'text-white',
         )}
       >
-        <p className={classnames('font-signika', 'font-light', 'text-2xl')}>Inquiries & Assistance:</p>
-        <div className={classnames('text-lg', 'text-light-blue', 'font-dm', 'font-medium')}>
+        <p className={classnames('font-josefin', 'font-light', 'text-2xl')}>Inquiries & Assistance:</p>
+        <div className={classnames('text-lg', 'text-light-blue', 'font-poppins', 'font-medium')}>
           <a
             href='tel:+1623-282-2530'
             className={classnames('hover:text-white')}
@@ -38,8 +38,8 @@ export const Footer = () => {
             +1-623-282-2530
           </a>
         </div>
-        <p className={classnames('font-signika', 'font-light', 'text-2xl', 'pt-4')}>Email:</p>
-        <div className={classnames('text-xl', 'text-light-blue', 'font-dm', 'font-medium')}>
+        <p className={classnames('font-josefin', 'font-light', 'text-2xl', 'pt-4')}>Email:</p>
+        <div className={classnames('text-xl', 'text-light-blue', 'font-poppins', 'font-medium')}>
           <a
             href='mailto:info@rexinespacare.com'
             className={classnames('hover:text-white')}
@@ -47,13 +47,13 @@ export const Footer = () => {
             info@rexinespacare.com
           </a>
         </div>
-        <p className={classnames('font-signika', 'font-light', 'text-2xl', 'pt-4')}>Regular Business Hours:</p>
-        <p className={classnames('text-lg', 'text-light-blue', 'font-dm', 'font-medium')}>Monday-Friday 8:00am-6:00pm </p>
-        <p className={classnames('text-lg', 'text-light-blue', 'font-dm', 'italic')}>
+        <p className={classnames('font-josefin', 'font-light', 'text-2xl', 'pt-4')}>Regular Business Hours:</p>
+        <p className={classnames('text-lg', 'text-light-blue', 'font-poppins', 'font-medium')}>Monday-Friday 8:00am-6:00pm </p>
+        <p className={classnames('text-lg', 'text-light-blue', 'font-poppins', 'italic')}>
           Saturday & Sunday available by appointment.
         </p>
         <div
-          className={classnames('flex', 'flex-row', 'text-md', 'text-light-blue', 'font-dm', 'pt-3', 'pb-0.5')}
+          className={classnames('flex', 'flex-row', 'text-md', 'text-light-blue', 'font-poppins', 'pt-3', 'pb-0.5')}
         >
           <a href="https://app.enzuzo.com/policies/tos/8f9a68b8-5d1c-11ee-9c4b-af1815b5c510"
             className={classnames('hover:text-white', 'pr-1')}
@@ -67,7 +67,7 @@ export const Footer = () => {
             Privacy Policy
           </a>
         </div>
-        <p className={classnames('italic', 'text-sm', 'text-light-blue', 'font-dm')}>
+        <p className={classnames('italic', 'text-sm', 'text-light-blue', 'font-poppins')}>
           © Rexine Spa Care LLC 2023
         </p>
       </div>
@@ -80,7 +80,7 @@ export const Footer = () => {
           'md:place-self-end',
           'text-lg',
           'text-light-blue',
-          'font-dm'
+          'font-poppins'
         )}>
         <p>Follow us on social media!</p>
         <div

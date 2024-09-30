@@ -17,7 +17,7 @@ export const Contact = () => {
             'xl:flex-row',
             'min-h-max',
             'w-full',
-            'bg-light-blue',
+            'bg-extra-light-blue',
             'justify-center',
             'xl:py-8'
         )}>
@@ -36,15 +36,14 @@ export const Contact = () => {
                     'sm:p-12',
                     'xl:px-24',
                     'items-center',
-                    'rounded-lg',
-                    'drop-shadow-md'
+                    'border border-light-blue'
                 )}
                 onSubmit={handleSubmit}
             >
                 <h1 className={classnames(
                     'pb-8',
                     'sm:pb-16',
-                    'font-dosis',
+                    'font-josefin',
                     'font-bold',
                     'text-4xl',
                     'text-green-blue',
@@ -59,7 +58,7 @@ export const Contact = () => {
                         'flex-col',
                         'pb-8',
                         'w-full',
-                        'font-dm',
+                        'font-poppins',
                         'font-medium',
                         'text-xl'
                     )}
@@ -88,7 +87,7 @@ export const Contact = () => {
                         'flex-col',
                         'pb-8',
                         'w-full',
-                        'font-dm',
+                        'font-poppins',
                         'font-medium',
                         'text-xl'
                     )}>
@@ -111,7 +110,7 @@ export const Contact = () => {
                         'flex-col',
                         'pb-8',
                         'w-full',
-                        'font-dm',
+                        'font-poppins',
                         'font-medium',
                         'text-xl'
                     )}
@@ -140,7 +139,7 @@ export const Contact = () => {
                         'flex-col',
                         'pb-8',
                         'w-full',
-                        'font-dm',
+                        'font-poppins',
                         'font-medium',
                         'text-xl'
                     )}
@@ -168,7 +167,7 @@ export const Contact = () => {
                         'flex-col',
                         'pb-8',
                         'w-full',
-                        'font-dm',
+                        'font-poppins',
                         'font-medium',
                         'text-xl',
                     )}
@@ -203,7 +202,7 @@ export const Contact = () => {
                         'text-white',
                         'text-3xl',
                         'tracking-wider',
-                        'font-signika', 
+                        'font-josefin', 
                         'font-light', 
                         'mt-6',
                         'drop-shadow-md'
@@ -221,11 +220,10 @@ export const Contact = () => {
                     'place-items-center',
                     'xl:my-12',
                     'font-bold',
-                    'font-dosis',
+                    'font-josefin',
                     'text-4xl',
                     'text-green-blue',
                     'bg-white',
-                    'rounded-lg',
                     'p-8',
                     'mx-8',
                     'sm:mx-12',
@@ -233,7 +231,7 @@ export const Contact = () => {
                     'xl:mr-12',
                     'mb-8',
                     'sm:mb-12',
-                    'drop-shadow-md'
+                    'border border-light-blue'
                 )}
             >
                 <h1 className={classnames('pt-2', 'sm:pt-4', 'pb-5', 'drop-shadow-sm')}>Service Area</h1>

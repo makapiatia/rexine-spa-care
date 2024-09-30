@@ -17,39 +17,36 @@ export const SanitationProductLogoSection = () => {
             className={classnames(
                 'sanitation-product-logo-section',
                 'flex',
-                'flex-col',
-                'sm:flex-row',
-                'place-items-center',
-                'max-w-screen-1xl',
-                'justify-center',
+                'flex-row',
                 'mx-auto',
-                'mb-6',
-                'gap-3'
+                'my-6',
+                'sm:gap-3'
             )}
         >
             {sanitationProducts?.map((product, i) => {
                 return (
+                    <div className={classnames(
+                        'bg-white',
+                        'w-[80px]',
+                        'h-[80px]',
+                        'sm:w-[120px]',
+                        'sm:h-[120px]',
+                        'xl:w-[190px]',
+                        'xl:h-[190px]',
+                        'mb-2',
+                        'mx-2',
+                        'md:mx-4',
+                        'p-4 xl:p-8',
+                        'object-contain',
+                        'flex items-center',
+                        'border border-light-blue'
+                    )}>
                     <img
                         src={product?.imgSrc}
                         alt={product?.brand + i}
                         key={product?.brand + i}
-                        className={classnames(
-                            'bg-white',
-                            'w-[190px]',
-                            'h-[120px]',
-                            'sm:w-[120px]',
-                            'sm:h-[100px]',
-                            'xl:w-[190px]',
-                            'xl:h-[160px]',
-                            'drop-shadow-lg',
-                            'mb-2',
-                            'mx-2',
-                            'p-2',
-                            'md:mx-4',
-                            'rounded-xl',
-                            'object-contain'
-                        )}
                     />
+                    </div>
                 );
             })}
         </div>

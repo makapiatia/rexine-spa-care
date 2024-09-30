@@ -39,26 +39,19 @@ export const ServiceDetailsSection = () => {
                 'rexine-spa-care-service-details-section',
                 'flex',
                 'flex-col',
-                'md:bg-light-blue',
-                'md:rounded-xl',
-                'px-8 pb-8 pt-8 sm:pt-0 md:pt-8',
-                'drop-shadow-md',
-                'mx-4 sm:mx-12 md:mx-20',
+                'bg-white border border-light-blue',
+                'px-8 pb-8 pt-8 sm:pt-0 md:pt-0',
+                'mx-4 mb-12 sm:mx-12 md:mx-20',
                 'md:mb-20'
             )}
         >
             <h1
                 className={classnames(
                     'flex flex-row',
-                    'font-bold font-dosis',
+                    'font-bold font-josefin',
                     'text-4xl text-medium-blue',
-                    'mb-9 md:mt-4 md:mb-0 xl:mb-4',
-                    'py-5 sm:py-8 px-8',
-                    'w-fit',
-                    'drop-shadow-md',
-                    'bg-white',
-                    'rounded-xl',
-                    'place-self-center'
+                    'mb-8 md:mt-2 md:mb-0 md:pl-6',
+                    'w-fit pt-10 place-self-center md:place-self-start',
                 )}
             >
                 {servicesText}
@@ -77,22 +70,21 @@ export const ServiceDetailsSection = () => {
                     'md:mx-10',
                     'gap-8',
                     'xl:gap-4',
-                    'text-white'
+                    'text-white',
+                    'font-josefin'
                 )}
             >
                 <div
                     className={classnames(
                         'monthly-details-section',
                         'bg-green-blue',
-                        'rounded-xl',
                         'p-8',
-                        'drop-shadow-xl'
                     )}
                 >
                     <h2
                         className={classnames(
                             'uppercase',
-                            'font-signika',
+                            'font-josefin',
                             'font-light',
                             'text-4xl',
                             'py-2',
@@ -106,7 +98,6 @@ export const ServiceDetailsSection = () => {
                     <div className={classnames(
                         'full-cleaning-pricing',
                         'pt-6',
-                        'font-dm',
                         'text-center'
                     )}>
                         <h3
@@ -134,7 +125,6 @@ export const ServiceDetailsSection = () => {
                             'list-disc',
                             'pt-4',
                             'pb-6',
-                            'font-dm',
                             'pl-6',
                             'justify-self-start'
                         )}
@@ -154,15 +144,13 @@ export const ServiceDetailsSection = () => {
                     className={classnames(
                         'full-cleaning-details-section',
                         'bg-medium-teal',
-                        'rounded-xl',
                         'p-8',
-                        'drop-shadow-xl'
+                        'font-josefin'
                     )}
                 >
                     <h2
                         className={classnames(
                             'uppercase',
-                            'font-signika',
                             'font-light',
                             'text-4xl',
                             'py-2',
@@ -176,7 +164,6 @@ export const ServiceDetailsSection = () => {
                     <div className={classnames(
                         'full-cleaning-pricing',
                         'pt-6',
-                        'font-dm',
                         'text-center'
                     )}>
                         <h3
@@ -196,7 +183,6 @@ export const ServiceDetailsSection = () => {
                             'flex-col',
                             'list-disc',
                             'py-6',
-                            'font-dm',
                             'pl-6',
                             'justify-self-start'
                         )}
@@ -211,7 +197,7 @@ export const ServiceDetailsSection = () => {
             </div>
             <div className={classnames(
                 'text-green-blue',
-                'font-dm font-medium',
+                'font-poppins font-medium',
                 'text-sm md:text-md italic text-center',
                 'mt-8 px-6 md:px-24'
             )}>

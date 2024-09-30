@@ -14,9 +14,9 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        'dosis': ['Dosis', 'sans-serif'],
-        'dm': ['DM Sans', 'sans-serif'],
-        'signika': ['Signika', 'sans-serif'],
+        'dosis': ['Poppins', 'sans-serif'],
+        'dm': ['Poppins', 'sans-serif'],
+        'josefin': ['Josefin Sans', 'sans-serif'],
        },
       borderRadius: {
         extraLarge: '12rem'

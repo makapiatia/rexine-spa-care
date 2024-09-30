@@ -12,10 +12,8 @@ export const PlanPricingSection = () => {
         'rexine-spa-care-pricing-section',
         'flex',
         'flex-col',
-        'md:bg-light-blue',
-        'md:rounded-xl',
-        'px-8 pt-8 md:pb-8',
-        'drop-shadow-md',
+        'bg-white border border-light-blue',
+        'px-8 pt-4 pb-2 md:pt-8 md:pb-8',
         'm-4 sm:m-12 md:m-20',
         'text-center',
       )}
@@ -24,21 +22,15 @@ export const PlanPricingSection = () => {
         className={classnames(
           'flex',
           'font-bold',
-          'font-dosis',
+          'font-josefin',
           'text-4xl',
           'text-medium-blue',
           'mb-9',
-          'md:mt-4',
           'md:mb-0',
-          'xl:mb-4',
-          'py-5',
-          'sm:py-8',
+          'pt-6',
           'px-8',
           'w-fit',
-          'drop-shadow-md',
-          'bg-white',
-          'rounded-xl',
-          'place-self-center',
+          'place-self-center md:place-self-start',
         )}
       >
         {plansText}
@@ -64,20 +56,17 @@ export const PlanPricingSection = () => {
           className={classnames(
             'six-month-pricing-section',
             'bg-medium-green',
-            'rounded-xl',
             'p-8',
-            'drop-shadow-xl'
           )}
         >
           <h2
             className={classnames(
               'uppercase',
-              'font-signika',
+              'font-poppins',
               'font-light',
               'text-3xl',
               'py-2',
               'border-b-2',
-              'drop-shadow-md'
             )}
           >
             Six Month Plan
@@ -85,13 +74,12 @@ export const PlanPricingSection = () => {
           <div className={classnames(
             'six-month-bi-weekly-pricing',
             'py-6',
-            'font-dm',
+            'font-josefin',
           )}>
             <h3
               className={classnames(
                 'font-semibold',
                 'text-6xl',
-                'drop-shadow-lg',
                 'pb-1'
               )}
             >
@@ -102,13 +90,12 @@ export const PlanPricingSection = () => {
           </div>
           <div className={classnames(
             'six-month-weekly-pricing',
-            'font-dm',
+            'font-josefin',
           )}>
             <h3
               className={classnames(
                 'font-semibold',
                 'text-6xl',
-                'drop-shadow-lg',
                 'pb-1'
               )}
             >
@@ -120,7 +107,7 @@ export const PlanPricingSection = () => {
           <p
             className={classnames(
               'text-white',
-              'font-dm',
+              'font-poppins',
               'font-medium',
               'text-sm',
               'xl:mb-4',
@@ -134,20 +121,17 @@ export const PlanPricingSection = () => {
           className={classnames(
             'three-month-pricing-section',
             'bg-medium-teal',
-            'rounded-xl',
             'p-8',
-            'drop-shadow-xl'
           )}
         >
           <h2
             className={classnames(
               'uppercase',
-              'font-signika',
+              'font-poppins',
               'font-light',
               'text-3xl',
               'py-2',
               'border-b-2',
-              'drop-shadow-md'
             )}
           >
             Three Month Plan
@@ -155,13 +139,12 @@ export const PlanPricingSection = () => {
           <div className={classnames(
             'three-month-bi-weekly-pricing',
             'py-6',
-            'font-dm',
+            'font-josefin',
           )}>
             <h3
               className={classnames(
                 'font-semibold',
                 'text-6xl',
-                'drop-shadow-lg',
                 'pb-1'
               )}
             >
@@ -172,13 +155,12 @@ export const PlanPricingSection = () => {
           </div>
           <div className={classnames(
             'three-month-weekly-pricing',
-            'font-dm',
+            'font-josefin',
           )}>
             <h3
               className={classnames(
                 'font-semibold',
                 'text-6xl',
-                'drop-shadow-lg',
                 'pb-1'
               )}
             >
@@ -192,20 +174,17 @@ export const PlanPricingSection = () => {
           className={classnames(
             'one-month-pricing-section',
             'bg-green-blue',
-            'rounded-xl',
             'p-8',
-            'drop-shadow-xl'
           )}
         >
           <h2
             className={classnames(
               'uppercase',
-              'font-signika',
+              'font-poppins',
               'font-light',
               'text-3xl',
               'py-2',
               'border-b-2',
-              'drop-shadow-md'
             )}
           >
             One Month Plan
@@ -213,13 +192,12 @@ export const PlanPricingSection = () => {
           <div className={classnames(
             'one-month-bi-weekly-pricing',
             'py-6',
-            'font-dm',
+            'font-josefin',
           )}>
             <h3
               className={classnames(
                 'font-semibold',
                 'text-6xl',
-                'drop-shadow-lg',
                 'pb-1'
               )}
             >
@@ -230,13 +208,12 @@ export const PlanPricingSection = () => {
           </div>
           <div className={classnames(
             'one-month-weekly-pricing',
-            'font-dm',
+            'font-josefin',
           )}>
             <h3
               className={classnames(
                 'font-semibold',
                 'text-6xl',
-                'drop-shadow-lg',
                 'pb-1'
               )}
             >
@@ -249,7 +226,7 @@ export const PlanPricingSection = () => {
       </div>
       <div className={classnames(
         'text-green-blue',
-        'font-dm font-medium',
+        'font-poppins font-medium',
         'text-sm md:text-md italic text-center',
         'px-6 md:px-24 mb-6 md:mb-0'
       )}>

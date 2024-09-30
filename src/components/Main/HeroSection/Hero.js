@@ -24,7 +24,6 @@ export const Hero = () => {
                 'items-center',
                 'justify-center',
                 'text-center',
-                'drop-shadow-md'
             )}
             style={{ backgroundImage: `url(${imageUrl})` }}
         >
@@ -40,7 +39,6 @@ export const Hero = () => {
                     'max-h-[400px]',
                     'py-12',
                     'px-9',
-                    'drop-shadow-lg',
                     'bg-green-blue/25',
                     'rounded-full'
                 )}>

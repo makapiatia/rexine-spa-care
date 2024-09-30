@@ -23,28 +23,27 @@ export const WhatToExpectSection = () => {
             className={classnames(
                 'rexine-spa-care-what-to-expect',
                 'flex flex-col',
-                'bg-light-blue',
-                'rounded-xl',
-                'px-8 pt-8 md:pb-8',
-                'drop-shadow-md',
+                'bg-white border border-light-blue',
+                'px-8 pt-8 md:pt-5 md:pb-8',
                 'mx-4 mb-4 sm:mx-12 sm:mb-12 md:mx-20 md:mb-20',
             )}
         >
             <h1
                 className={classnames(
-                    'flex place-self-center',
-                    'px-4 md:px-8 py-4 mb-8 mt-4',
-                    'font-bold font-dosis',
-                    'text-4xl bg-white',
-                    'rounded-xl w-fit drop-shadow-md',
-                    'text-medium-blue text-center',
+                    'flex',
+                    'mb-6 mt-4 md:pt-4 md:pl-4',
+                    'font-bold font-josefin',
+                    'text-4xl',
+                    'w-fit',
+                    'text-medium-blue',
+                    'place-self-center md:place-self-start'
                 )}
             >
                 What To Expect
             </h1>
             <div className={classnames(
                 'text-green-blue text-md',
-                'font-dm font-medium md:px-8'
+                'font-poppins font-medium md:px-8'
             )}>
                 <ul className={classnames(
                     'flex flex-row',
