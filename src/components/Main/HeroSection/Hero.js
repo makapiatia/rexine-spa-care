@@ -56,7 +56,6 @@ export const Hero = () => {
                 'px-6',
                 'py-8',
                 'my-12',
-                'drop-shadow-lg',
                 'bg-green-blue/25',
                 'rounded-full'
             )}>

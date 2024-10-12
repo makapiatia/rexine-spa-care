@@ -1,10 +1,13 @@
 import React from 'react';
 import classnames from 'tailwindcss-classnames';
 import { PlanPricingSection } from './PlanPricingSection';
-import { ServiceDetailsSection } from './ServiceDetailsSection';
+import { ServiceDetailsSectionDesktop } from './ServiceDetailsSectionDesktop';
 import { WhatToExpectSection } from './WhatToExpectSection';
+import { useMediaQuery } from '../../../utils/hooks';
 
 export const ServicePage = () => {
+  const mdScreen = useMediaQuery('768px');
+  
   return (
     <div
       className={classnames(
@@ -20,7 +23,7 @@ export const ServicePage = () => {
       )}
     >
       <PlanPricingSection />
-      <ServiceDetailsSection />
+      <ServiceDetailsSectionDesktop />
       <WhatToExpectSection />
     </div>
   );

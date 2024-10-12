@@ -2,7 +2,7 @@ import React from 'react';
 import classnames from 'tailwindcss-classnames';
 import { useMediaQuery } from '../../../utils/hooks';
 
-export const ServiceDetailsSection = () => {
+export const ServiceDetailsSectionDesktop = () => {
     const mdScreen = useMediaQuery('768px');
     const servicesText = mdScreen ? 'Explore Our Services' : 'Services';
     const monthlyServiceDetails = [
@@ -12,6 +12,7 @@ export const ServiceDetailsSection = () => {
         'Clean Shell, Waterline, Pillows & Interior Of Cover',
         'Check Computer Programming, Equipment, Sanitizing Systems & Settings'
     ];
+    
     const fullCleaningDetails = [
         'Clean & Flush',
         'Cover Interior Cleaning',
@@ -22,33 +23,22 @@ export const ServiceDetailsSection = () => {
         'Clean Shell, Waterline, Pillow, Jets, Diverter & Velocity Valves',
         'Check Computer Programming, Equipment, Sanitizing Systems Settings Upon Start Up After Refill'
     ];
-    const snowbirdSpecialDetails = [
-        'Shop-Vac Spa Jets',
-        'Clean & Flush',
-        'Cover Interior Cleaning',
-        'Apply Exterior Protectants',
-        'System Analysis',
-        'Degrease & Clean Filter System',
-        'Clean Shell, Waterline, Pillows (Pillows Removed, Cleaned & Stored If Applicable), Jets, Diverter &Velocity Valves',
-        'Check Computer Programming, Equipment, Sanitizing Systems Before Shutdown'
-    ];
 
     return (
         <div
             className={classnames(
                 'rexine-spa-care-service-details-section',
-                'flex',
-                'flex-col',
+                'flex flex-col',
                 'bg-white border border-light-blue',
                 'px-8 pb-8 pt-8 sm:pt-0 md:pt-0',
-                'mx-4 mb-12 sm:mx-12 md:mx-20',
+                'mx-4 mb-4 sm:mb-12 sm:mx-12 md:mx-20',
                 'md:mb-20'
             )}
         >
             <h1
                 className={classnames(
                     'flex flex-row',
-                    'font-bold font-josefin',
+                    'font-bold font-fraunces',
                     'text-4xl text-medium-blue',
                     'mb-8 md:mt-2 md:mb-0 md:pl-6',
                     'w-fit pt-10 place-self-center md:place-self-start',
@@ -71,7 +61,7 @@ export const ServiceDetailsSection = () => {
                     'gap-8',
                     'xl:gap-4',
                     'text-white',
-                    'font-josefin'
+                    'font-mulish'
                 )}
             >
                 <div
@@ -84,12 +74,10 @@ export const ServiceDetailsSection = () => {
                     <h2
                         className={classnames(
                             'uppercase',
-                            'font-josefin',
                             'font-light',
-                            'text-4xl',
+                            'text-2xl lg:text-3xl',
                             'py-2',
                             'border-b-2',
-                            'drop-shadow-md',
                             'text-center'
                         )}
                     >
@@ -102,9 +90,8 @@ export const ServiceDetailsSection = () => {
                     )}>
                         <h3
                             className={classnames(
-                                'font-semibold',
+                                'font-semibold font-fraunces',
                                 'text-6xl',
-                                'drop-shadow-lg'
                             )}
                         >
                             $129*
@@ -145,17 +132,16 @@ export const ServiceDetailsSection = () => {
                         'full-cleaning-details-section',
                         'bg-medium-teal',
                         'p-8',
-                        'font-josefin'
+                        'font-mulish'
                     )}
                 >
                     <h2
                         className={classnames(
                             'uppercase',
                             'font-light',
-                            'text-4xl',
+                            'text-2xl lg:text-3xl',
                             'py-2',
                             'border-b-2',
-                            'drop-shadow-md',
                             'text-center'
                         )}
                     >
@@ -168,9 +154,8 @@ export const ServiceDetailsSection = () => {
                     )}>
                         <h3
                             className={classnames(
-                                'font-semibold',
+                                'font-semibold font-fraunces',
                                 'text-6xl',
-                                'drop-shadow-lg'
                             )}
                         >
                             $549
@@ -197,7 +182,7 @@ export const ServiceDetailsSection = () => {
             </div>
             <div className={classnames(
                 'text-green-blue',
-                'font-poppins font-medium',
+                'font-mulish font-medium',
                 'text-sm md:text-md italic text-center',
                 'mt-8 px-6 md:px-24'
             )}>

@@ -43,11 +43,10 @@ export const Contact = () => {
                 <h1 className={classnames(
                     'pb-8',
                     'sm:pb-16',
-                    'font-josefin',
+                    'font-fraunces',
                     'font-bold',
                     'text-4xl',
                     'text-green-blue',
-                    'drop-shadow-sm'
                 )}
                 >
                     Get In Touch
@@ -58,7 +57,7 @@ export const Contact = () => {
                         'flex-col',
                         'pb-8',
                         'w-full',
-                        'font-poppins',
+                        'font-mulish',
                         'font-medium',
                         'text-xl'
                     )}
@@ -87,7 +86,7 @@ export const Contact = () => {
                         'flex-col',
                         'pb-8',
                         'w-full',
-                        'font-poppins',
+                        'font-mulish',
                         'font-medium',
                         'text-xl'
                     )}>
@@ -110,7 +109,7 @@ export const Contact = () => {
                         'flex-col',
                         'pb-8',
                         'w-full',
-                        'font-poppins',
+                        'font-mulish',
                         'font-medium',
                         'text-xl'
                     )}
@@ -139,7 +138,7 @@ export const Contact = () => {
                         'flex-col',
                         'pb-8',
                         'w-full',
-                        'font-poppins',
+                        'font-mulish',
                         'font-medium',
                         'text-xl'
                     )}
@@ -167,7 +166,7 @@ export const Contact = () => {
                         'flex-col',
                         'pb-8',
                         'w-full',
-                        'font-poppins',
+                        'font-mulish',
                         'font-medium',
                         'text-xl',
                     )}
@@ -202,10 +201,9 @@ export const Contact = () => {
                         'text-white',
                         'text-3xl',
                         'tracking-wider',
-                        'font-josefin', 
+                        'font-fraunces', 
                         'font-light', 
                         'mt-6',
-                        'drop-shadow-md'
                     )}
                 >
                     Send
@@ -214,27 +212,13 @@ export const Contact = () => {
             <div
                 className={classnames(
                     'rexine-spa-care-service-page',
-                    'relative',
-                    'flex',
-                    'flex-col',
-                    'place-items-center',
-                    'xl:my-12',
-                    'font-bold',
-                    'font-josefin',
-                    'text-4xl',
-                    'text-green-blue',
-                    'bg-white',
-                    'p-8',
-                    'mx-8',
-                    'sm:mx-12',
-                    'xl:ml-6',
-                    'xl:mr-12',
-                    'mb-8',
-                    'sm:mb-12',
-                    'border border-light-blue'
+                    'relative flex flex-col place-items-center',
+                    'xl:my-12 font-bold font-fraunces text-4xl',
+                    'text-green-blue bg-white border border-light-blue',
+                    'p-8 mx-8 sm:mx-12 xl:ml-6 xl:mr-12 mb-8 sm:mb-12',
                 )}
             >
-                <h1 className={classnames('pt-2', 'sm:pt-4', 'pb-5', 'drop-shadow-sm')}>Service Area</h1>
+                <h1 className={classnames('pt-2 sm:pt-4 pb-5')}>Service Area</h1>
                 <ServiceArea />
             </div>
         </div>

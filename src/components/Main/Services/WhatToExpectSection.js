@@ -32,18 +32,18 @@ export const WhatToExpectSection = () => {
                 className={classnames(
                     'flex',
                     'mb-6 mt-4 md:pt-4 md:pl-4',
-                    'font-bold font-josefin',
+                    'font-bold font-fraunces',
                     'text-4xl',
                     'w-fit',
                     'text-medium-blue',
-                    'place-self-center md:place-self-start'
+                    'text-center md:text-start'
                 )}
             >
                 What To Expect
             </h1>
             <div className={classnames(
                 'text-green-blue text-md',
-                'font-poppins font-medium md:px-8'
+                'font-mulish font-medium md:px-8'
             )}>
                 <ul className={classnames(
                     'flex flex-row',
