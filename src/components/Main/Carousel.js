@@ -31,16 +31,15 @@ const Chevron = ({ direction }) => (
 
 // Swipeable, looping carousel.
 // `inactiveFrom` is a media query where it turns off and the slides sit side by side.
-export const Carousel = ({ children, label, slideClassName, inactiveFrom, align = 'center' }) => {
+// `minSlides` repeats the slides so Embla has enough of them to loop endlessly.
+export const Carousel = ({ children, label, slideClassName, inactiveFrom, align = 'center', minSlides = 0 }) => {
   const breakpoints = inactiveFrom ? { [inactiveFrom]: { active: false } } : {};
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align, breakpoints });
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [snapCount, setSnapCount] = useState(0);
   const [isActive, setIsActive] = useState(true);
 
   const updateState = useCallback((api) => {
     setSelectedIndex(api.selectedScrollSnap());
-    setSnapCount(api.scrollSnapList().length);
     setIsActive(api.internalEngine().options.active);
   }, []);
 
@@ -55,7 +54,35 @@ export const Carousel = ({ children, label, slideClassName, inactiveFrom, align 
     };
   }, [emblaApi, updateState]);
 
-  const slides = Children.toArray(children);
+  // Embla turns looping off when there aren't enough slides to fill the
+  // viewport, so wrap the arrows around ourselves in that case
+  const scrollPrev = () => {
+    if (!emblaApi) {
+      return;
+    }
+    if (emblaApi.canScrollPrev()) {
+      emblaApi.scrollPrev();
+    } else {
+      emblaApi.scrollTo(emblaApi.scrollSnapList().length - 1);
+    }
+  };
+
+  const scrollNext = () => {
+    if (!emblaApi) {
+      return;
+    }
+    if (emblaApi.canScrollNext()) {
+      emblaApi.scrollNext();
+    } else {
+      emblaApi.scrollTo(0);
+    }
+  };
+
+  const originals = Children.toArray(children);
+  const slideCount = originals.length;
+  const copies = isActive && minSlides > slideCount ? Math.ceil(minSlides / slideCount) : 1;
+  const slides = Array.from({ length: copies }, () => originals).flat();
+  const currentSlide = selectedIndex % slideCount;
 
   return (
     <div role="region" aria-roledescription="carousel" aria-label={label}>
@@ -66,7 +93,7 @@ export const Carousel = ({ children, label, slideClassName, inactiveFrom, align 
               key={i}
               role="group"
               aria-roledescription="slide"
-              aria-label={`${i + 1} of ${slides.length}`}
+              aria-label={`${(i % slideCount) + 1} of ${slideCount}`}
               className={classnames('min-w-0', 'shrink-0', 'grow-0', 'px-3', 'pt-9', 'pb-3', slideClassName)}
             >
               {slide}
@@ -75,23 +102,23 @@ export const Carousel = ({ children, label, slideClassName, inactiveFrom, align 
         </div>
       </div>
 
-      {isActive && snapCount > 1 && (
+      {isActive && slideCount > 1 && (
         <div className={classnames('mt-1', 'flex', 'items-center', 'justify-center', 'gap-2')}>
           <button
             type="button"
             aria-label="Previous slide"
             className={controlButtonClassName}
-            onClick={() => emblaApi?.scrollPrev()}
+            onClick={scrollPrev}
           >
             <Chevron direction="left" />
           </button>
           <div className={classnames('flex', 'items-center')}>
-            {Array.from({ length: snapCount }).map((_, i) => (
+            {Array.from({ length: slideCount }).map((_, i) => (
               <button
                 key={i}
                 type="button"
                 aria-label={`Go to slide ${i + 1}`}
-                aria-current={i === selectedIndex ? 'true' : undefined}
+                aria-current={i === currentSlide ? 'true' : undefined}
                 onClick={() => emblaApi?.scrollTo(i)}
                 className={classnames('group', 'px-1', 'py-3')}
               >
@@ -101,7 +128,7 @@ export const Carousel = ({ children, label, slideClassName, inactiveFrom, align 
                   'rounded-full',
                   'transition-all',
                   'duration-300',
-                  i === selectedIndex ? 'w-8 bg-deep-blue' : 'w-4 bg-deep-blue/20 group-hover:bg-deep-blue/40'
+                  i === currentSlide ? 'w-8 bg-deep-blue' : 'w-4 bg-deep-blue/20 group-hover:bg-deep-blue/40'
                 )} />
               </button>
             ))}
@@ -110,7 +137,7 @@ export const Carousel = ({ children, label, slideClassName, inactiveFrom, align 
             type="button"
             aria-label="Next slide"
             className={controlButtonClassName}
-            onClick={() => emblaApi?.scrollNext()}
+            onClick={scrollNext}
           >
             <Chevron direction="right" />
           </button>

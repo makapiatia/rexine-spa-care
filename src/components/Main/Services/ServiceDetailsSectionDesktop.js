@@ -72,6 +72,7 @@ export const ServiceDetailsSectionDesktop = () => {
             )}>
                 <Carousel
                     label="Services"
+                    minSlides={4}
                     inactiveFrom="(min-width: 1024px)"
                     slideClassName={classnames('basis-[92%]', 'sm:basis-[75%]', 'lg:basis-1/2')}
                 >
@@ -103,8 +104,7 @@ export const ServiceDetailsSectionDesktop = () => {
                         'text-sm',
                         'md:text-base'
                     )}>
-                        Monthly plans are available in weekly & bi-weekly increments to make sure that your spa
-                        remains in excellent condition. Plan pricing above.
+                        Prefer regular visits? Monthly plans come in weekly & bi-weekly options. See plan pricing above.
                     </p>
                 </div>
 
