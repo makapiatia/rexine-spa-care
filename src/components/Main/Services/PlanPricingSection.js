@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'tailwindcss-classnames';
 import { Carousel } from '../Carousel';
-import { Bubbles, Drop, Sparkle } from '../Stickers';
+import { Bubbles, Drop, Sparkle, stickerTilt } from '../Stickers';
 import { fullBleedClassName, SectionHeading } from './servicePageStyles';
 
 const plans = [
@@ -71,7 +71,10 @@ export const PlanPricingSection = () => {
               cardClassName
             )}
           >
-            <Sticker className={classnames('absolute z-10 -top-8 left-6 w-16 h-16')} />
+            <Sticker className={classnames(
+              'absolute z-10 -top-8 left-6 w-16 h-16',
+              stickerTilt(Sticker)
+            )} />
             {badge && (
               <p className={classnames(
                 'absolute z-20 -top-4 right-5 px-3 py-1',
@@ -111,7 +114,7 @@ export const PlanPricingSection = () => {
         <table className={classnames('text-center text-sm')}>
           <caption className={classnames('sr-only')}>Total visits per plan</caption>
           <thead>
-            <tr className={classnames('font-bold uppercase tracking-wider text-xs text-green-blue')}>
+            <tr className={classnames('font-bold uppercase tracking-wider text-xs text-medium-blue')}>
               <th scope="col" className={classnames('px-3 pb-2 whitespace-nowrap')}><span className={classnames(
                 'sr-only'
               )}>Plan</span></th>

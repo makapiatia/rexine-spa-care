@@ -7,7 +7,7 @@ import classnames from 'tailwindcss-classnames';
 const controlButtonClassName = classnames(
   'flex items-center justify-center h-8 w-8',
   'rounded-full',
-  'text-deep-blue/50 hover:text-deep-blue',
+  'text-deep-blue/70 hover:text-deep-blue',
   'transition'
 );
 
@@ -91,6 +91,9 @@ export const Carousel = ({ children, label, slideClassName, inactiveFrom, align 
               role="group"
               aria-roledescription="slide"
               aria-label={`${(i % slideCount) + 1} of ${slideCount}`}
+              // Repeated copies only exist so the loop works, so screen readers skip them
+              aria-hidden={i >= slideCount || undefined}
+              inert={i >= slideCount || undefined}
               className={classnames('shrink-0 grow-0 min-w-0 px-3 pt-9 pb-3', slideClassName)}
             >
               {slide}
@@ -117,13 +120,13 @@ export const Carousel = ({ children, label, slideClassName, inactiveFrom, align 
                 aria-label={`Go to slide ${i + 1}`}
                 aria-current={i === currentSlide ? 'true' : undefined}
                 onClick={() => emblaApi?.scrollTo(i)}
-                className={classnames('group px-1 py-3')}
+                className={classnames('group px-1.5 py-3')}
               >
                 <span className={classnames(
                   'block h-[3px]',
                   'rounded-full',
                   'transition-all duration-300',
-                  i === currentSlide ? 'w-8 bg-deep-blue' : 'w-4 bg-deep-blue/20 group-hover:bg-deep-blue/40'
+                  i === currentSlide ? 'w-8 bg-deep-blue' : 'w-4 bg-deep-blue/60 group-hover:bg-deep-blue/80'
                 )} />
               </button>
             ))}

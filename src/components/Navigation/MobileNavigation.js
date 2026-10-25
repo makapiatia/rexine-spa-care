@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import classnames from 'tailwindcss-classnames';
@@ -17,6 +17,7 @@ const burgerBarClassName = classnames('absolute left-0 h-1 w-full rounded-full b
 export const MobileNavigation = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const menuButtonRef = useRef(null);
 
   useEffect(() => {
     setIsOpen(false);
@@ -29,6 +30,7 @@ export const MobileNavigation = () => {
     const closeOnEscape = (event) => {
       if (event.key === 'Escape') {
         setIsOpen(false);
+        menuButtonRef.current?.focus();
       }
     };
     window.addEventListener('keydown', closeOnEscape);
@@ -39,8 +41,9 @@ export const MobileNavigation = () => {
     <div className={classnames('rexine-spa-care-mobile-navigation relative lg:hidden')}>
       <div className={classnames('flex items-center justify-between w-full h-20 px-7 bg-rexine-blue font-fraunces')}>
         <button
+          ref={menuButtonRef}
           type="button"
-          aria-label={isOpen ? 'Close menu' : 'Open menu'}
+          aria-label="Menu"
           aria-expanded={isOpen}
           aria-controls="mobile-navigation-menu"
           onClick={() => setIsOpen(!isOpen)}
@@ -70,7 +73,7 @@ export const MobileNavigation = () => {
         )}
       >
         <div className={classnames('overflow-hidden')}>
-          <nav className={classnames(
+          <nav aria-label="Main" className={classnames(
             'flex flex-col gap-2 px-6 pt-4 pb-8',
             'border-b-4 border-deep-blue bg-rexine-blue',
             'font-fraunces text-2xl text-white'

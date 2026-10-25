@@ -18,7 +18,7 @@ export const PageBanner = ({ title, description }) => (
         )}>
           <img
             src={RexineSpaCareLogo_WhiteText.src}
-            alt={'rexine-spa-care-logo'}
+            alt="Rexine Spa Care logo"
           />
         </div>
         <div>

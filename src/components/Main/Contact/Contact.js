@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import classnames from 'tailwindcss-classnames';
 import { PageBanner } from '../PageBanner';
-import { Bubbles, Drop, HoverBubbles, Sparkle, Sun } from '../Stickers';
+import { Bubbles, Drop, HoverBubbles, Sparkle, Sun, stickerTilt } from '../Stickers';
 import { ServiceArea } from './ServiceArea';
 
 // After activating the form, the email can be swapped for the random string FormSubmit provides
@@ -55,8 +55,8 @@ const labelClassName = classnames('block mb-1 font-mulish font-extrabold upperca
 
 const inputClassName = classnames(
     'w-full px-4 py-3',
-    'rounded-2xl border-2 focus:border-deep-blue focus:outline-hidden bg-extra-light-blue focus:bg-white',
-    'font-mulish text-lg placeholder:text-deep-blue/40',
+    'rounded-2xl border-2 focus:border-deep-blue bg-extra-light-blue focus:bg-white',
+    'font-mulish text-lg placeholder:text-deep-blue/70',
     'transition'
 );
 
@@ -121,7 +121,10 @@ const ContactLayout = ({ children }) => (
                             quickCardClassName
                         )}
                     >
-                        <Sticker fill="#FFFFFF" className={classnames('shrink-0 w-10')} />
+                        <Sticker fill="#FFFFFF" className={classnames(
+                            'shrink-0 w-10',
+                            stickerTilt(Sticker)
+                        )} />
                         <div className={classnames('min-w-0 font-mulish')}>
                             <p className={classnames('font-extrabold uppercase tracking-wider text-sm')}>{label}</p>
                             {href ? (
@@ -145,6 +148,14 @@ const ContactLayout = ({ children }) => (
 export const Contact = () => {
     const [state, setState] = useState({ submitting: false, succeeded: false, error: null });
     const [fieldErrors, setFieldErrors] = useState({});
+    const thankYouHeadingRef = useRef(null);
+
+    // The form is replaced by the thank-you card, so move focus there for keyboard & screen reader users
+    useEffect(() => {
+        if (state.succeeded) {
+            thankYouHeadingRef.current?.focus();
+        }
+    }, [state.succeeded]);
 
     const clearFieldError = (event) => {
         const { name } = event.target;
@@ -163,7 +174,7 @@ export const Contact = () => {
 
     const fieldClassName = (name) => classnames(
         inputClassName,
-        fieldErrors[name] ? 'border-red-600' : 'border-deep-blue/20'
+        fieldErrors[name] ? 'border-red-600' : 'border-deep-blue/60'
     );
 
     const handleSubmit = async (event) => {
@@ -212,9 +223,12 @@ export const Contact = () => {
                     'text-center',
                     cardClassName
                 )}>
-                    <Sparkle className={classnames('absolute z-10 -top-8 left-8 w-16 motion-safe:animate-bob')} />
+                    <Sparkle className={classnames(
+                        'absolute z-10 -top-8 left-8 rotate-20 w-16',
+                        'motion-safe:animate-bob'
+                    )} />
                     <Bubbles className={classnames('w-24 mb-6')} />
-                    <h2 className={headingClassName}>
+                    <h2 ref={thankYouHeadingRef} tabIndex={-1} className={headingClassName}>
                         Thank You!
                     </h2>
                     <p className={classnames('mt-3 font-mulish font-medium text-xl')}>
@@ -231,11 +245,11 @@ export const Contact = () => {
                 'rexine-spa-care-contact-form',
                 cardClassName
             )} onSubmit={handleSubmit} noValidate>
-                <Sparkle className={classnames('absolute z-10 -top-8 left-8 w-16')} />
+                <Sparkle className={classnames('absolute z-10 -top-8 left-8 rotate-20 w-16')} />
                 <input type="hidden" name="_subject" value="New Rexine Spa Care inquiry" />
                 <input type="hidden" name="_template" value="table" />
                 <h2 className={headingClassName}>Get In Touch</h2>
-                <p className={classnames('mt-2 font-mulish text-green-blue')}>
+                <p className={classnames('mt-2 font-mulish text-medium-blue')}>
                     Fill out the form and we'll reach out to you.
                 </p>
 
@@ -283,13 +297,16 @@ export const Contact = () => {
                             name="message"
                             rows={4}
                             placeholder="Spa make or model, gate codes, preferred visit times…"
-                            className={classnames('border-deep-blue/20 resize-y', inputClassName)}
+                            className={classnames('border-deep-blue/60 resize-y', inputClassName)}
                         />
                     </Field>
                 </div>
 
                 {state.error && (
-                    <p className={classnames('mt-6 font-mulish font-semibold text-red-600')}>{state.error}</p>
+                    <p role="alert" className={classnames(
+                        'mt-6',
+                        'font-mulish font-semibold text-red-600'
+                    )}>{state.error}</p>
                 )}
                 <button
                     type="submit"
@@ -301,7 +318,7 @@ export const Contact = () => {
                         'transition hover:-translate-y-1 disabled:hover:translate-y-0'
                     )}
                 >
-                    {state.submitting ? 'Sending…' : 'Send ➚'}
+                    {state.submitting ? 'Sending…' : <>Send <span aria-hidden="true">➚</span></>}
                     <HoverBubbles />
                 </button>
             </form>

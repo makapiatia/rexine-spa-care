@@ -8,7 +8,7 @@ import heroBGTablet from '../../../assets/images/heroBG_900x600.jpg';
 import heroBGMobile from '../../../assets/images/heroBG_600x400.jpg';
 import RexineSpaCareLogo_WhiteText from '../../../assets/images/RexineSpaCareLogo_WhiteText.png';
 import { useMediaQuery } from '../../../utils/hooks';
-import { Bubbles, HoverBubbles, Sparkle } from '../Stickers';
+import { Bubbles, darkOutline, HoverBubbles, Sparkle } from '../Stickers';
 
 export const Hero = () => {
     const tabletScreen = useMediaQuery('900px');
@@ -36,22 +36,25 @@ export const Hero = () => {
                     'rounded-full bg-green-blue/25',
                     'backdrop-blur-[2px]'
                 )}>
-                    <img
-                        src={RexineSpaCareLogo_WhiteText.src}
-                        alt={'rexine-spa-care-logo'}
-                    />
-                    <Sparkle className={classnames(
+                    <h1>
+                        <img
+                            src={RexineSpaCareLogo_WhiteText.src}
+                            alt="Rexine Spa Care"
+                        />
+                    </h1>
+                    <Sparkle outline={darkOutline} className={classnames(
                         'absolute z-10 -top-2 -left-4 md:-top-10 md:-left-44 rotate-12 w-14 md:w-28',
                         'motion-safe:animate-bob'
                     )} />
                     <Sparkle
+                        outline={darkOutline}
                         fill="var(--color-pop-periwinkle)"
                         className={classnames(
                             'absolute z-10 top-1/2 -right-3 md:-right-44 -rotate-12 w-8 md:w-16',
                             'motion-safe:animate-bob [animation-delay:0.8s]'
                         )}
                     />
-                    <Bubbles className={classnames(
+                    <Bubbles outline={darkOutline} className={classnames(
                         'absolute z-10 -bottom-1 -left-1 md:bottom-0 md:-left-36 w-12 md:w-24',
                         'motion-safe:animate-bob [animation-delay:1.5s]'
                     )} />
@@ -63,7 +66,9 @@ export const Hero = () => {
                     'text-deep-blue font-fraunces font-wonky font-semibold whitespace-nowrap text-xl xs:text-2xl',
                     'md:text-4xl'
                 )}>
-                    a clean spa is a <span className={classnames('text-pop-cobalt italic')}>happy</span> spa ✹
+                    a clean spa is a{' '}
+                    <span className={classnames('text-pop-cobalt italic')}>happy</span>
+                    {' '}spa <span aria-hidden="true">✹</span>
                 </p>
 
                 <div className={classnames(
@@ -79,8 +84,8 @@ export const Hero = () => {
                             'transition hover:-translate-y-1'
                         )}
                     >
-                        Services + Pricing ➚
-                        <HoverBubbles />
+                        Services + Pricing <span aria-hidden="true">➚</span>
+                        <HoverBubbles dark />
                     </Link>
                     <a
                         href="tel:+1623-282-2530"
@@ -92,7 +97,7 @@ export const Hero = () => {
                         )}
                     >
                         Call Us Today!
-                        <HoverBubbles />
+                        <HoverBubbles dark />
                     </a>
                 </div>
             </div>

@@ -7,9 +7,9 @@ import spaguardLogo from '../../../assets/images/sanitationImages/spaguardLogo.p
 export const SanitationProductLogoSection = () => {
 
     const sanitationProducts = [
-        { 'brand': 'soft-soak-trio', 'imgSrc': softSoakTrio, 'tilt': '-rotate-3' },
-        { 'brand': 'spa-guard-logo', 'imgSrc': spaguardLogo, 'tilt': 'rotate-2 translate-y-4' },
-        { 'brand': 'frog-@ease-logo', 'imgSrc': frogEase, 'tilt': '-rotate-1' }
+        { 'brand': 'soft-soak-trio', 'name': 'Soft Soak Trio', 'imgSrc': softSoakTrio },
+        { 'brand': 'spa-guard-logo', 'name': 'SpaGuard', 'imgSrc': spaguardLogo },
+        { 'brand': 'frog-@ease-logo', 'name': 'FROG @ease', 'imgSrc': frogEase }
     ];
 
     return (
@@ -24,13 +24,12 @@ export const SanitationProductLogoSection = () => {
                             'object-contain flex items-center',
                             'w-[90px] h-[90px] sm:w-[140px] sm:h-[140px] xl:w-[150px] xl:h-[150px] p-3 sm:p-5',
                             'rounded-2xl border-4 border-deep-blue shadow-[4px_4px_0_var(--color-deep-blue)] bg-white',
-                            'transition duration-300 hover:rotate-0 hover:scale-105',
-                            product?.tilt
+                            'transition duration-300 hover:scale-105'
                         )}
                     >
                         <img
                             src={product?.imgSrc?.src}
-                            alt={product?.brand + i}
+                            alt={`${product?.name} logo`}
                         />
                     </div>
                 );

@@ -13,17 +13,17 @@ import spaGuardLogo from '../../../assets/images/logos/spaGuardLogo.jpg';
 import sundanceSpasLogo from '../../../assets/images/logos/sundanceSpasLogo.png';
 import { PageBanner } from '../PageBanner';
 import { SectionHeading } from '../Services/servicePageStyles';
-import { Bubbles, Drop, HoverBubbles, Sparkle, Sun, Wave } from '../Stickers';
+import { Bubbles, Drop, HoverBubbles, Sparkle, Sun, stickerTilt, Wave } from '../Stickers';
 
 const logos = [
-  { brand: 'Bullfrog Spas', imgSrc: bullfrogSpasLogo, tilt: '-rotate-3' },
+  { brand: 'Bullfrog Spas', imgSrc: bullfrogSpasLogo },
   // White logo on a transparent background, so it needs a dark tile
-  { brand: 'Caldera Spas', imgSrc: calderaSpasLogo, tilt: 'rotate-2', tileClassName: 'bg-green-blue p-4' },
-  { brand: 'Artesian Spas', imgSrc: artesianSpasLogo, tilt: '-rotate-1' },
-  { brand: 'HotSpring', imgSrc: hotSpringLogo, tilt: 'rotate-3' },
-  { brand: 'SpaGuard', imgSrc: spaGuardLogo, tilt: '-rotate-2' },
-  { brand: 'BioGuard', imgSrc: bioGuardLogo, tilt: 'rotate-1' },
-  { brand: 'Sundance Spas', imgSrc: sundanceSpasLogo, tilt: '-rotate-3' }
+  { brand: 'Caldera Spas', imgSrc: calderaSpasLogo, tileClassName: 'bg-green-blue p-4' },
+  { brand: 'Artesian Spas', imgSrc: artesianSpasLogo },
+  { brand: 'HotSpring', imgSrc: hotSpringLogo },
+  { brand: 'SpaGuard', imgSrc: spaGuardLogo },
+  { brand: 'BioGuard', imgSrc: bioGuardLogo },
+  { brand: 'Sundance Spas', imgSrc: sundanceSpasLogo }
 ];
 
 const funFacts = [
@@ -31,19 +31,19 @@ const funFacts = [
     stat: '10+',
     label: 'Years in spa service & sales',
     Sticker: Sparkle,
-    cardClassName: 'bg-pop-sky -rotate-2'
+    cardClassName: 'bg-pop-sky'
   },
   {
     stat: 'Spa Brands',
     label: 'Hands-on experience with a wide range of makes & models',
     Sticker: Sun,
-    cardClassName: 'bg-pop-aqua rotate-1'
+    cardClassName: 'bg-pop-aqua'
   },
   {
     stat: 'Water Care',
     label: 'Know-how in spa chemicals, cleaning & maintenance',
     Sticker: Drop,
-    cardClassName: 'bg-pop-periwinkle -rotate-1'
+    cardClassName: 'bg-pop-periwinkle'
   }
 ];
 
@@ -78,9 +78,8 @@ export const AboutUs = () => {
               'motion-safe:animate-bob [animation-delay:1.2s]'
             )} />
             <div className={classnames(
-              'overflow-hidden -rotate-2',
-              'rounded-[2rem] border-4 border-deep-blue shadow-[8px_8px_0_var(--color-deep-blue)]',
-              'transition duration-300 hover:rotate-0'
+              'overflow-hidden',
+              'rounded-4xl border-4 border-deep-blue shadow-[8px_8px_0_var(--color-deep-blue)]'
             )}>
               <Image
                 src={aboutUsPhoto}
@@ -122,13 +121,14 @@ export const AboutUs = () => {
                   'group relative p-7 pt-10',
                   'rounded-3xl border-4 border-deep-blue shadow-[6px_6px_0_var(--color-deep-blue)]',
                   'text-center',
-                  'transition duration-300 hover:rotate-0 hover:-translate-y-2',
+                  'transition duration-300 hover:-translate-y-2',
                   cardClassName
                 )}
               >
                 <Sticker className={classnames(
                   'absolute z-10 -top-7 left-1/2 -translate-x-1/2 w-14',
-                  'motion-safe:group-hover:animate-wiggle'
+                  'motion-safe:group-hover:animate-wiggle',
+                  stickerTilt(Sticker)
                 )} />
                 <p className={classnames(
                   'font-fraunces font-wonky font-bold',
@@ -150,15 +150,14 @@ export const AboutUs = () => {
             Brands he knows well include:
           </p>
           <ul className={classnames('flex flex-wrap justify-center gap-3 sm:gap-5 md:gap-6 mt-10')}>
-            {logos.map(({ brand, imgSrc, tilt, tileClassName }) => (
+            {logos.map(({ brand, imgSrc, tileClassName }) => (
               <li
                 key={brand}
                 className={classnames(
                   'flex aspect-square items-center justify-center overflow-hidden',
-                  'w-[21%] sm:w-[20%] lg:w-[11%] max-w-[150px]',
+                  'w-[21%] sm:w-[20%] lg:w-[11%] max-w-37.5',
                   'rounded-2xl border-4 border-deep-blue shadow-[4px_4px_0_var(--color-deep-blue)]',
                   'motion-safe:hover:animate-wiggle',
-                  tilt,
                   tileClassName || 'bg-white'
                 )}
               >
@@ -185,7 +184,7 @@ export const AboutUs = () => {
             sizes="(min-width: 1024px) 896px, 100vw"
             className={classnames('object-cover')}
           />
-          <div className={classnames('absolute inset-0 bg-deep-blue/55')} />
+          <div className={classnames('absolute inset-0 bg-deep-blue/70')} />
           <div className={classnames(
             'relative flex flex-col md:flex-row md:items-center md:justify-between gap-5 px-6 py-6 md:px-8'
           )}>
@@ -193,7 +192,7 @@ export const AboutUs = () => {
               <p className={classnames('font-fraunces font-wonky font-semibold text-2xl')}>
                 Ready to dive in?
               </p>
-              <p className={classnames('mt-1 font-mulish text-light-blue')}>
+              <p className={classnames('mt-1 font-mulish text-white')}>
                 Let us help you maintain your oasis of relaxation!
               </p>
             </div>

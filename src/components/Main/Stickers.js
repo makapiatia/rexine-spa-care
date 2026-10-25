@@ -1,9 +1,11 @@
 import React from 'react';
 import classnames from 'tailwindcss-classnames';
 
-const outline = 'var(--color-deep-blue)';
+// Brighter than the deep blue card borders so stickers stand out where they overlap them
+const defaultOutline = 'var(--color-medium-blue)';
+export const darkOutline = 'var(--color-deep-blue)';
 
-export const Sparkle = ({ className, fill = 'var(--color-pop-sky)' }) => (
+export const Sparkle = ({ className, fill = 'var(--color-pop-sky)', outline = defaultOutline }) => (
   <svg viewBox="0 0 100 100" className={className} aria-hidden="true">
     <path
       d="M50 4 C55 34 66 45 96 50 C66 55 55 66 50 96 C45 66 34 55 4 50 C34 45 45 34 50 4 Z"
@@ -15,7 +17,7 @@ export const Sparkle = ({ className, fill = 'var(--color-pop-sky)' }) => (
   </svg>
 );
 
-export const Bubbles = ({ className, fill = 'var(--color-pop-aqua)' }) => (
+export const Bubbles = ({ className, fill = 'var(--color-pop-aqua)', outline = defaultOutline }) => (
   <svg viewBox="0 0 100 100" className={className} aria-hidden="true">
     <circle cx="38" cy="58" r="28" fill={fill} stroke={outline} strokeWidth="5" />
     <circle cx="74" cy="30" r="16" fill={fill} stroke={outline} strokeWidth="5" />
@@ -25,7 +27,7 @@ export const Bubbles = ({ className, fill = 'var(--color-pop-aqua)' }) => (
   </svg>
 );
 
-export const Drop = ({ className, fill = 'var(--color-pop-periwinkle)' }) => (
+export const Drop = ({ className, fill = 'var(--color-pop-periwinkle)', outline = defaultOutline }) => (
   <svg viewBox="0 0 100 100" className={className} aria-hidden="true">
     <path
       d="M50 6 C50 6 18 46 18 64 A32 32 0 0 0 82 64 C82 46 50 6 50 6 Z"
@@ -38,7 +40,7 @@ export const Drop = ({ className, fill = 'var(--color-pop-periwinkle)' }) => (
   </svg>
 );
 
-export const Sun = ({ className, fill = 'var(--color-pop-sky)' }) => (
+export const Sun = ({ className, fill = 'var(--color-pop-sky)', outline = defaultOutline }) => (
   <svg viewBox="0 0 100 100" className={className} aria-hidden="true">
     {[0, 45, 90, 135, 180, 225, 270, 315].map((angle) => (
       <line
@@ -78,14 +80,15 @@ const hoverBubbles = [
 ];
 
 // Bubbles that float up out of a button on hover; the button needs `group relative`
-export const HoverBubbles = () => (
+export const HoverBubbles = ({ dark = false }) => (
   <span aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0">
     {hoverBubbles.map(({ left, size, delay }) => (
       <span
         key={left}
         className={classnames(
           'absolute top-0',
-          'rounded-full border-2 border-deep-blue bg-pop-aqua opacity-0',
+          'rounded-full border-2 bg-pop-aqua opacity-0',
+          dark ? 'border-deep-blue' : 'border-medium-blue',
           'motion-safe:group-hover:animate-bubble motion-safe:group-focus-visible:animate-bubble',
           size
         )}
@@ -94,3 +97,7 @@ export const HoverBubbles = () => (
     ))}
   </span>
 );
+
+// How much a sticker tilts when it sits on a card
+const stickerTilts = new Map([[Sparkle, 'rotate-20'], [Sun, 'rotate-12']]);
+export const stickerTilt = (Sticker) => stickerTilts.get(Sticker);

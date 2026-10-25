@@ -53,7 +53,7 @@ export const ServiceDetailsSectionDesktop = () => {
                     slideClassName={classnames('basis-[92%] sm:basis-[75%] lg:basis-1/2')}
                 >
                 <div className={classnames('monthly-details-section bg-white text-deep-blue', cardClassName)}>
-                    <Sparkle className={classnames('absolute z-10 -top-8 left-8 w-16')} />
+                    <Sparkle className={classnames('absolute z-10 -top-8 left-8 rotate-20 w-16')} />
                     <h3 className={classnames('font-fraunces font-wonky font-bold text-3xl')}>
                         Maintenance
                     </h3>
@@ -63,7 +63,7 @@ export const ServiceDetailsSectionDesktop = () => {
                         )}>Starting At</p>
                         <p className={classnames('text-rexine-blue', priceClassName)}>$129*</p>
                     </div>
-                    <p className={classnames('mt-2 italic text-sm md:text-base text-green-blue')}>
+                    <p className={classnames('mt-2 italic text-sm md:text-base text-medium-blue')}>
                         For a singular maintenance visit, see our monthly plans for greater savings!
                     </p>
                     <ul className={classnames('flex flex-col gap-2 md:gap-3 my-6 md:my-8')}>
@@ -80,16 +80,16 @@ export const ServiceDetailsSectionDesktop = () => {
                     </p>
                 </div>
 
-                <div className={classnames('full-cleaning-details-section bg-rexine-blue text-white', cardClassName)}>
-                    <Sun fill="var(--color-pop-aqua)" className={classnames('absolute -top-8 left-8 w-16')} />
+                <div className={classnames('full-cleaning-details-section bg-pop-aqua text-deep-blue', cardClassName)}>
+                    <Sun className={classnames('absolute z-10 -top-8 left-8 rotate-12 w-16')} />
                     <h3 className={classnames('font-fraunces font-wonky font-bold text-3xl')}>
                         Full Cleaning
                     </h3>
-                    <p className={classnames('mt-4 text-pop-aqua', priceClassName)}>$549</p>
-                    <p className={classnames('mt-2 text-light-blue')}>(Clean, Drain, Summerize/Winterize)</p>
+                    <p className={classnames('mt-4 text-rexine-blue', priceClassName)}>$549</p>
+                    <p className={classnames('mt-2')}>(Clean, Drain, Summerize/Winterize)</p>
                     <ul className={classnames('flex flex-col gap-2 md:gap-3 mt-6 md:mt-8')}>
                         {fullCleaningDetails.map((fullCleaningItem) => (
-                            <ChecklistItem key={fullCleaningItem} sparkleFill="var(--color-pop-aqua)">
+                            <ChecklistItem key={fullCleaningItem}>
                                 {fullCleaningItem}
                             </ChecklistItem>
                         ))}

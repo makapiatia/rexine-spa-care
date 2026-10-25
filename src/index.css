@@ -107,3 +107,14 @@
     border-color: var(--color-gray-200, currentcolor);
   }
 }
+/*
+  A two-tone focus ring (deep blue with a white halo) so keyboard focus stays visible
+  on both the light and the dark blue sections.
+*/
+@layer base {
+  :focus-visible {
+    outline: 3px solid var(--color-deep-blue);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 5px #fff;
+  }
+}

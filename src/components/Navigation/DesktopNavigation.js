@@ -32,7 +32,7 @@ export const DesktopNavigation = () => {
           Rexine Spa Care
         </span>
       </Link>
-      <nav className={classnames('flex items-center gap-2')}>
+      <nav aria-label="Main" className={classnames('flex items-center gap-2')}>
         {navigationSections.map((tab, i) => {
           const isActive = pathname === tab?.url;
 

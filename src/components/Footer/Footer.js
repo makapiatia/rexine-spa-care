@@ -3,16 +3,16 @@ import classnames from 'tailwindcss-classnames';
 import linkedin from '../../assets/images/socials/linkedin.svg';
 import squareFacebook from '../../assets/images/socials/squareFacebook.svg';
 import squareInstagram from '../../assets/images/socials/squareInstagram.svg';
-import { Bubbles, HoverBubbles, Sparkle } from '../Main/Stickers';
+import { Bubbles, darkOutline, HoverBubbles, Sparkle } from '../Main/Stickers';
 
 const headingClassName = classnames('font-fraunces font-wonky font-semibold text-2xl text-white');
 
 const detailClassName = classnames('text-lg text-light-blue font-mulish font-medium');
 
 const socialLinks = [
-  { href: 'https://www.linkedin.com/company/rexine-spa-care/', icon: linkedin, alt: 'linkedin-logo' },
-  { href: 'https://www.facebook.com/rexinespacare/', icon: squareFacebook, alt: 'facebook-logo' },
-  { href: 'https://www.instagram.com/rexinespacare/', icon: squareInstagram, alt: 'instagram-logo' }
+  { href: 'https://www.linkedin.com/company/rexine-spa-care/', icon: linkedin, alt: 'Rexine Spa Care on LinkedIn' },
+  { href: 'https://www.facebook.com/rexinespacare/', icon: squareFacebook, alt: 'Rexine Spa Care on Facebook' },
+  { href: 'https://www.instagram.com/rexinespacare/', icon: squareInstagram, alt: 'Rexine Spa Care on Instagram' }
 ];
 
 export const Footer = () => {
@@ -37,7 +37,7 @@ export const Footer = () => {
         />
       </svg>
       <div className={classnames('relative overflow-hidden px-8 sm:px-12 pt-8 pb-10 bg-rexine-blue')}>
-        <Bubbles className={classnames(
+        <Bubbles outline={darkOutline} className={classnames(
           'absolute hidden sm:block right-6 top-4 w-20 md:w-28',
           'opacity-90',
           'motion-safe:animate-bob'
@@ -48,7 +48,7 @@ export const Footer = () => {
             'flex items-center gap-3 mb-10',
             'font-fraunces font-wonky font-semibold text-3xl sm:text-4xl md:text-5xl text-white'
           )}>
-            <Sparkle className={classnames('shrink-0 w-10 md:w-12')} />
+            <Sparkle outline={darkOutline} className={classnames('shrink-0 w-10 md:w-12')} />
             Rexine Spa Care
           </p>
 
@@ -86,7 +86,7 @@ export const Footer = () => {
                     )}
                   >
                     <img src={icon.src} width='40px' height='40px' alt={alt} />
-                    <HoverBubbles />
+                    <HoverBubbles dark />
                   </a>
                 ))}
               </div>
@@ -105,7 +105,7 @@ export const Footer = () => {
               >
                 Terms of Service
               </a>
-              <span className={classnames('text-pop-sky')}>✹</span>
+              <span aria-hidden="true" className={classnames('text-pop-sky')}>✹</span>
               <a
                 href="https://app.enzuzo.com/policies/privacy/8f9a68b8-5d1c-11ee-9c4b-af1815b5c510"
                 className={classnames('hover:text-white')}

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import classnames from 'tailwindcss-classnames';
 import { SanitationProductLogoSection } from './SanitationProductLogoSection';
-import { Bubbles, Drop, HoverBubbles, Sparkle, Sun, Wave } from '../Stickers';
+import { Bubbles, darkOutline, Drop, HoverBubbles, Sparkle, stickerTilt, Sun, Wave } from '../Stickers';
 
 const services = [
   {
@@ -10,28 +10,28 @@ const services = [
     description: 'Regular visits on a weekly or bi-weekly schedule to test and balance your water'
       + ' and keep up with routine maintenance between deeper cleanings.',
     Sticker: Bubbles,
-    cardClassName: 'bg-pop-sky -rotate-2'
+    cardClassName: 'bg-pop-sky'
   },
   {
     title: 'Full Cleanings',
     description: 'A deeper clean of your spa, including the shell, filters and cover,'
       + ' to help get it fresh and ready to enjoy.',
     Sticker: Sparkle,
-    cardClassName: 'bg-pop-aqua rotate-1'
+    cardClassName: 'bg-pop-aqua'
   },
   {
     title: 'Drains & Refills',
     description: 'When it\'s time for fresh water, we\'ll drain and refill your spa'
       + ' and balance the new water so it\'s ready to use.',
     Sticker: Drop,
-    cardClassName: 'bg-pop-periwinkle -rotate-1'
+    cardClassName: 'bg-pop-periwinkle'
   },
   {
     title: 'Start Ups & Shut Downs',
     description: 'Changing seasons? We\'ll help get your spa up and running for the season,'
       + ' or prepare it to sit unused during the off-season.',
     Sticker: Sun,
-    cardClassName: 'bg-white rotate-2'
+    cardClassName: 'bg-white'
   }
 ];
 
@@ -60,7 +60,7 @@ export const ServiceSection = () => {
             <span className={classnames('px-1 rounded-lg bg-pop-aqua')}>relaxing and worry-free</span>
             {' '}as possible.
           </p>
-          <p className={classnames('mt-6 font-mulish text-xl text-green-blue')}>
+          <p className={classnames('mt-6 font-mulish text-xl text-medium-blue')}>
             With extensive field experience and training in a variety of spa sanitation options including
             FROG @ease, Soft Soak, bromine, chlorine, and more. We are equipped to handle all your spa care needs
             with expertise and precision.
@@ -76,7 +76,7 @@ export const ServiceSection = () => {
         'rexine-spa-care-home-services max-w-(--breakpoint-1xl) mx-auto px-8 pb-16 xl:px-16 xl:pb-24'
       )}>
         <h2 className={classnames('mb-10 font-fraunces font-wonky font-bold text-4xl md:text-5xl text-rexine-blue')}>
-          Our Services <span className={classnames('text-pop-cobalt')}>✹</span>
+          Our Services <span aria-hidden="true" className={classnames('text-pop-cobalt')}>✹</span>
         </h2>
         <ul className={classnames('grid gap-8 md:grid-cols-2 xl:grid-cols-4')}>
           {services.map(({ title, description, Sticker, cardClassName }) => (
@@ -86,11 +86,14 @@ export const ServiceSection = () => {
                 'relative flex flex-col p-7 pt-12',
                 'rounded-3xl border-4 border-deep-blue shadow-[6px_6px_0_var(--color-deep-blue)]',
                 'hover:shadow-[10px_10px_0_var(--color-deep-blue)]',
-                'transition duration-300 hover:rotate-0 hover:-translate-y-2',
+                'transition duration-300 hover:-translate-y-2',
                 cardClassName
               )}
             >
-              <Sticker className={classnames('absolute z-10 -top-8 left-6 w-16 h-16')} />
+              <Sticker className={classnames(
+                'absolute z-10 -top-8 left-6 w-16 h-16',
+                stickerTilt(Sticker)
+              )} />
               <h3 className={classnames('mb-3 font-fraunces font-wonky font-bold text-2xl')}>
                 {title}
               </h3>
@@ -110,6 +113,7 @@ export const ServiceSection = () => {
         )}>
           <Sparkle
             fill="var(--color-pop-aqua)"
+            outline={darkOutline}
             className={classnames('absolute z-10 top-4 right-4 md:right-8 w-8 md:w-10 motion-safe:animate-spin-slow')}
           />
           <p className={classnames(
@@ -128,14 +132,14 @@ export const ServiceSection = () => {
               href="/services"
               className={classnames('bg-pop-sky hover:bg-pop-aqua text-deep-blue', pillClassName)}
             >
-              Services + Pricing ➚
+              Services + Pricing <span aria-hidden="true">➚</span>
               <HoverBubbles />
             </Link>
             <Link
               href="/contact"
               className={classnames('bg-white hover:bg-extra-light-blue text-deep-blue', pillClassName)}
             >
-              Contact ➚
+              Contact <span aria-hidden="true">➚</span>
               <HoverBubbles />
             </Link>
           </div>
