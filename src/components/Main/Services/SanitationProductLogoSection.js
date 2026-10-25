@@ -7,29 +7,34 @@ import spaguardLogo from '../../../assets/images/sanitationImages/spaguardLogo.p
 export const SanitationProductLogoSection = () => {
 
     const sanitationProducts = [
-        { 'brand': 'soft-soak-trio', 'imgSrc': softSoakTrio },
-        { 'brand': 'spa-guard-logo', 'imgSrc': spaguardLogo },
-        { 'brand': 'frog-@ease-logo', 'imgSrc': frogEase }
+        { 'brand': 'soft-soak-trio', 'imgSrc': softSoakTrio, 'tilt': '-rotate-3' },
+        { 'brand': 'spa-guard-logo', 'imgSrc': spaguardLogo, 'tilt': 'rotate-2 translate-y-4' },
+        { 'brand': 'frog-@ease-logo', 'imgSrc': frogEase, 'tilt': '-rotate-1' }
     ];
 
     return (
         <div
             className={classnames(
                 'sanitation-product-logo-section',
-                'flex flex-row mx-auto my-6 sm:gap-3'
+                'flex flex-row justify-center gap-3 sm:gap-6'
             )}
         >
             {sanitationProducts?.map((product, i) => {
                 return (
-                    <div className={classnames(
-                        'w-[80px] h-[80px] sm:w-[120px] sm:h-[120px] xl:w-[190px] xl:h-[190px]',
-                        'mb-2 mx-2 md:mx-4 p-4 xl:p-8 bg-white',
-                        'object-contain flex items-center border border-light-blue'
-                    )}>
+                    <div
+                        key={product?.brand + i}
+                        className={classnames(
+                            'w-[90px] h-[90px] sm:w-[140px] sm:h-[140px] xl:w-[150px] xl:h-[150px]',
+                            'p-3 sm:p-5 bg-white rounded-2xl border-4 border-deep-blue',
+                            'shadow-[4px_4px_0_var(--color-deep-blue)]',
+                            'object-contain flex items-center',
+                            'transition duration-300 hover:rotate-0 hover:scale-105',
+                            product?.tilt
+                        )}
+                    >
                         <img
                             src={product?.imgSrc?.src}
                             alt={product?.brand + i}
-                            key={product?.brand + i}
                         />
                     </div>
                 );

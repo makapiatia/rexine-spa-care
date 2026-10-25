@@ -27,6 +27,53 @@
   --color-light-green: #00ba69;
   --color-medium-green: #029756;
   --color-pricing-yellow: #fff300;
+
+  --color-pop-sky: #5cc8ff;
+  --color-pop-aqua: #a6f1ff;
+  --color-pop-periwinkle: #a9b8ff;
+  --color-pop-cobalt: #2f6bff;
+
+  --animate-marquee: marquee 80s linear infinite;
+  --animate-spin-slow: spin 18s linear infinite;
+  --animate-bubble: bubble 1.4s ease-out infinite;
+  --animate-bob: bob 4s ease-in-out infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes bubble {
+    0% {
+      opacity: 0;
+      transform: translateY(0) scale(0.5);
+    }
+    20% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-42px) scale(1.1);
+    }
+  }
+
+  @keyframes bob {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+@utility font-wonky {
+  font-variation-settings: 'SOFT' 100, 'WONK' 1;
 }
 
 /*

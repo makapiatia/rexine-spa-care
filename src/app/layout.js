@@ -13,7 +13,7 @@ const mulish = Mulish({
 const fraunces = Fraunces({
   subsets: ['latin'],
   style: ['normal', 'italic'],
-  axes: ['opsz'],
+  axes: ['opsz', 'SOFT', 'WONK'],
   variable: '--font-fraunces-loaded'
 });
 
