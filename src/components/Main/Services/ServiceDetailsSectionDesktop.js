@@ -1,210 +1,130 @@
-'use client';
-
 import React from 'react';
 import classnames from 'tailwindcss-classnames';
-import { useMediaQuery } from '../../../utils/hooks';
+import { Carousel } from '../Carousel';
+import { Sparkle, Sun } from '../Stickers';
+import { fullBleedClassName, SectionHeading } from './servicePageStyles';
+
+const monthlyServiceDetails = [
+    'System Analysis',
+    'Water Test & Balance',
+    'Degrease & Clean Filter System',
+    'Clean Shell, Waterline, Pillows & Interior Of Cover',
+    'Check Computer Programming, Equipment, Sanitizing Systems & Settings'
+];
+
+const fullCleaningDetails = [
+    'Clean & Flush',
+    'Cover Interior Cleaning',
+    'Apply Exterior Protectants',
+    'System Analysis',
+    'Water Test & Balance',
+    'Degrease & Clean Filter System',
+    'Clean Shell, Waterline, Pillow, Jets, Diverter & Velocity Valves',
+    'Check Computer Programming, Equipment, Sanitizing Systems Settings Upon Start Up After Refill'
+];
+
+const cardClassName = classnames(
+    'relative',
+    'flex',
+    'flex-col',
+    'h-full',
+    'rounded-3xl',
+    'border-4',
+    'border-deep-blue',
+    'p-6',
+    'pt-10',
+    'sm:p-8',
+    'sm:pt-12',
+    'md:p-10',
+    'md:pt-14',
+    'shadow-[6px_6px_0_var(--color-deep-blue)]'
+);
+
+const priceClassName = classnames(
+    'font-fraunces',
+    'font-wonky',
+    'font-bold',
+    'text-5xl',
+    'md:text-6xl'
+);
+
+const ChecklistItem = ({ children, sparkleFill }) => (
+    <li className={classnames('flex', 'items-start', 'gap-3')}>
+        <Sparkle fill={sparkleFill} className={classnames('mt-1', 'w-4', 'md:w-5', 'shrink-0')} />
+        <span>{children}</span>
+    </li>
+);
 
 export const ServiceDetailsSectionDesktop = () => {
-    const mdScreen = useMediaQuery('768px');
-    const servicesText = mdScreen ? 'Explore Our Services' : 'Services';
-    const monthlyServiceDetails = [
-        'System Analysis',
-        'Water Test & Balance',
-        'Degrease & Clean Filter System',
-        'Clean Shell, Waterline, Pillows & Interior Of Cover',
-        'Check Computer Programming, Equipment, Sanitizing Systems & Settings'
-    ];
-    
-    const fullCleaningDetails = [
-        'Clean & Flush',
-        'Cover Interior Cleaning',
-        'Apply Exterior Protectants',
-        'System Analysis',
-        'Water Test & Balance',
-        'Degrease & Clean Filter System',
-        'Clean Shell, Waterline, Pillow, Jets, Diverter & Velocity Valves',
-        'Check Computer Programming, Equipment, Sanitizing Systems Settings Upon Start Up After Refill'
-    ];
-
     return (
-        <div
-            className={classnames(
-                'rexine-spa-care-service-details-section',
-                'flex flex-col',
-                'bg-white border border-light-blue',
-                'px-8 pb-8 pt-8 sm:pt-0 md:pt-0',
-                'mx-4 mb-4 sm:mb-12 sm:mx-12 md:mx-20',
-                'md:mb-20'
-            )}
-        >
-            <h1
-                className={classnames(
-                    'flex flex-row',
-                    'font-bold font-fraunces',
-                    'text-4xl text-medium-blue',
-                    'mb-8 md:mt-2 md:mb-0 md:pl-6',
-                    'w-fit pt-10 place-self-center md:place-self-start',
-                )}
-            >
-                {servicesText}
-            </h1>
-            <div
-                className={classnames(
-                    'service-details-section',
-                    'flex',
-                    'flex-col',
-                    'xl:flex-row',
-                    'grid',
-                    'grid-rows-2',
-                    'xl:grid-cols-2',
-                    'xl:grid-rows-1',
-                    'md:mt-10',
-                    'md:mx-10',
-                    'gap-8',
-                    'xl:gap-4',
-                    'text-white',
-                    'font-mulish'
-                )}
-            >
-                <div
-                    className={classnames(
-                        'monthly-details-section',
-                        'bg-green-blue',
-                        'p-8',
-                    )}
+        <section className={classnames('rexine-spa-care-service-details-section', 'w-full')}>
+            <SectionHeading eyebrow="02 · Services">Explore Our Services</SectionHeading>
+            <div className={classnames(
+                'service-details-section',
+                fullBleedClassName,
+                'lg:left-auto',
+                'lg:ml-0',
+                'lg:w-auto',
+                'lg:-mx-3',
+                'font-mulish',
+                'text-base',
+                'md:text-lg'
+            )}>
+                <Carousel
+                    label="Services"
+                    inactiveFrom="(min-width: 1024px)"
+                    slideClassName={classnames('basis-[92%]', 'sm:basis-[75%]', 'lg:basis-1/2')}
                 >
-                    <h2
-                        className={classnames(
-                            'uppercase',
-                            'font-light',
-                            'text-2xl lg:text-3xl',
-                            'py-2',
-                            'border-b-2',
-                            'text-center'
-                        )}
-                    >
+                <div className={classnames(cardClassName, 'monthly-details-section', 'bg-white', 'text-deep-blue')}>
+                    <Sparkle className={classnames('absolute', '-top-8', 'left-8', 'w-16')} />
+                    <h3 className={classnames('font-fraunces', 'font-wonky', 'font-bold', 'text-3xl')}>
                         Maintenance
-                    </h2>
-                    <div className={classnames(
-                        'full-cleaning-pricing',
-                        'pt-6',
-                        'text-center'
-                    )}>
-                        <h3
-                            className={classnames(
-                                'font-semibold font-fraunces',
-                                'text-6xl',
-                            )}
-                        >
-                            $129*
-                        </h3>
+                    </h3>
+                    <div className={classnames('mt-4', 'flex', 'flex-wrap', 'items-baseline', 'gap-x-3')}>
+                        <p className={classnames('whitespace-nowrap', 'font-bold', 'uppercase', 'tracking-wider', 'text-sm')}>Starting At</p>
+                        <p className={classnames(priceClassName, 'text-rexine-blue')}>$129*</p>
                     </div>
-                    <p className={classnames('pt-2', 'text-center', 'text-md')}>Starting At</p>
-                    <p className={classnames(
-                        'text-center',
-                        'italic',
-                        'text-sm'
-                    )}>
+                    <p className={classnames('mt-2', 'italic', 'text-sm', 'md:text-base', 'text-green-blue')}>
                         For a singular maintenance visit, see our monthly plans for greater savings!
                     </p>
-                    <ul
-                        className={classnames(
-                            'flex',
-                            'flex-col',
-                            'list-disc',
-                            'pt-4',
-                            'pb-6',
-                            'pl-6',
-                            'justify-self-start'
-                        )}
-                    >
-                        {monthlyServiceDetails.map((montlyItem, i) => {
-                            return <li key={`monthly-service-detail-item-${i}`}>
-                                {montlyItem}
-                            </li>;
-                        })}
+                    <ul className={classnames('flex', 'flex-col', 'gap-2', 'md:gap-3', 'my-6', 'md:my-8')}>
+                        {monthlyServiceDetails.map((monthlyItem) => (
+                            <ChecklistItem key={monthlyItem}>{monthlyItem}</ChecklistItem>
+                        ))}
                     </ul>
-                    <p className={classnames('text-center')}>
+                    <p className={classnames(
+                        'mt-auto',
+                        'rounded-2xl',
+                        'bg-extra-light-blue',
+                        'px-4',
+                        'py-3',
+                        'md:px-5',
+                        'md:py-4',
+                        'text-sm',
+                        'md:text-base'
+                    )}>
                         Monthly plans are available in weekly & bi-weekly increments to make sure that your spa
                         remains in excellent condition. Plan pricing above.
                     </p>
                 </div>
-                <div
-                    className={classnames(
-                        'full-cleaning-details-section',
-                        'bg-medium-teal',
-                        'p-8',
-                        'font-mulish'
-                    )}
-                >
-                    <h2
-                        className={classnames(
-                            'uppercase',
-                            'font-light',
-                            'text-2xl lg:text-3xl',
-                            'py-2',
-                            'border-b-2',
-                            'text-center'
-                        )}
-                    >
+
+                <div className={classnames(cardClassName, 'full-cleaning-details-section', 'bg-rexine-blue', 'text-white')}>
+                    <Sun fill="var(--color-pop-aqua)" className={classnames('absolute', '-top-8', 'left-8', 'w-16')} />
+                    <h3 className={classnames('font-fraunces', 'font-wonky', 'font-bold', 'text-3xl')}>
                         Full Cleaning
-                    </h2>
-                    <div className={classnames(
-                        'full-cleaning-pricing',
-                        'pt-6',
-                        'text-center'
-                    )}>
-                        <h3
-                            className={classnames(
-                                'font-semibold font-fraunces',
-                                'text-6xl',
-                            )}
-                        >
-                            $549
-                        </h3>
-                    </div>
-                    <p className={classnames('pt-2', 'text-center')}>(Clean, Drain, Summerize/Winterize)</p>
-                    <ul
-                        className={classnames(
-                            'flex',
-                            'flex-col',
-                            'list-disc',
-                            'py-6',
-                            'pl-6',
-                            'justify-self-start'
-                        )}
-                    >
-                        {fullCleaningDetails.map((fullCleaningItem, i) => {
-                            return <li key={`full-cleaning-item-${i}`}>
+                    </h3>
+                    <p className={classnames(priceClassName, 'mt-4', 'text-pop-aqua')}>$549</p>
+                    <p className={classnames('mt-2', 'text-light-blue')}>(Clean, Drain, Summerize/Winterize)</p>
+                    <ul className={classnames('flex', 'flex-col', 'gap-2', 'md:gap-3', 'mt-6', 'md:mt-8')}>
+                        {fullCleaningDetails.map((fullCleaningItem) => (
+                            <ChecklistItem key={fullCleaningItem} sparkleFill="var(--color-pop-aqua)">
                                 {fullCleaningItem}
-                            </li>;
-                        })}
+                            </ChecklistItem>
+                        ))}
                     </ul>
                 </div>
+                </Carousel>
             </div>
-            <div className={classnames(
-                'text-green-blue',
-                'font-mulish font-medium',
-                'text-sm md:text-md italic text-center',
-                'mt-8 px-6 md:px-24'
-            )}>
-                If our plans & services do not fit your needs please send us an email at
-                <a
-                    href='mailto:info@rexinespacare.com'
-                    className={classnames('pl-1', 'hover:text-medium-blue')}
-                >
-                    info@rexinespacare.com
-                </a>
-                , or give us a call at
-                <a
-                    href='tel:+1623-282-2530'
-                    className={classnames('pl-1', 'hover:text-medium-blue')}
-                >
-                    +1-623-282-2530
-                </a>
-                , and we will be happy to work with you to
-                create a custom care plan.
-            </div>
-        </div>
+        </section>
     );
 }

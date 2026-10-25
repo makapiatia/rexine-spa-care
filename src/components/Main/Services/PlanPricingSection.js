@@ -1,246 +1,180 @@
-'use client';
-
 import React from 'react';
 import classnames from 'tailwindcss-classnames';
-import { useMediaQuery } from '../../../utils/hooks';
+import { Carousel } from '../Carousel';
+import { Bubbles, Drop, Sparkle } from '../Stickers';
+import { fullBleedClassName, SectionHeading } from './servicePageStyles';
+
+const plans = [
+  {
+    name: 'Six Month Plan',
+    biWeeklyPrice: '$199*',
+    weeklyPrice: '$399*',
+    note: '*Six month plans include a full system flush.',
+    badge: 'Lowest monthly price',
+    Sticker: Sparkle,
+    cardClassName: 'bg-pop-sky'
+  },
+  {
+    name: 'Three Month Plan',
+    biWeeklyPrice: '$209',
+    weeklyPrice: '$409',
+    Sticker: Bubbles,
+    cardClassName: 'bg-pop-aqua'
+  },
+  {
+    name: 'One Month Plan',
+    biWeeklyPrice: '$219',
+    weeklyPrice: '$419',
+    Sticker: Drop,
+    cardClassName: 'bg-pop-periwinkle'
+  }
+];
+
+const visitTotals = [
+  { plan: 'Three month', twoPerMonth: 6, fourPerMonth: 12 },
+  { plan: 'Six month', twoPerMonth: 12, fourPerMonth: 24 }
+];
+
+const PriceTile = ({ price, visits }) => (
+  <div className={classnames(
+    'rounded-2xl',
+    'border-2',
+    'border-deep-blue',
+    'bg-white',
+    'px-4',
+    'py-5'
+  )}>
+    <p className={classnames('font-fraunces', 'font-wonky', 'font-bold', 'text-5xl', 'xl:text-6xl')}>
+      {price}
+    </p>
+    <p className={classnames('mt-1', 'text-sm', 'font-bold', 'uppercase', 'tracking-wider')}>
+      Total Per Month
+    </p>
+    <p className={classnames('text-lg')}>{visits}</p>
+  </div>
+);
 
 export const PlanPricingSection = () => {
-  const mdScreen = useMediaQuery('768px');
-  const plansText = mdScreen ? 'Select Your Plan' : 'Plans';
-
   return (
-    <div
-      className={classnames(
-        'rexine-spa-care-pricing-section',
-        'flex flex-col',
-        'bg-white border border-light-blue',
-        'px-8 pt-4 pb-2 md:pt-8 md:pb-8',
-        'm-4 sm:m-12 md:m-20',
-        'text-center',
-      )}
-    >
-      <h1
-        className={classnames(
-          'flex',
-          'font-bold',
-          'font-fraunces',
-          'text-4xl',
-          'text-medium-blue',
-          'mb-9',
-          'md:mb-0',
-          'pt-6',
-          'px-8',
-          'w-fit',
-          'place-self-center md:place-self-start',
-        )}
-      >
-        {plansText}
-      </h1>
-      <div
-        className={classnames(
-          'tiered-service-pricing-section',
-          'flex',
-          'flex-col',
-          'lg:flex-row',
-          'grid',
-          'grid-rows-3',
-          'lg:grid-cols-3',
-          'lg:grid-rows-1',
-          'mb-10 md:my-10',
-          'md:mx-10',
-          'gap-8',
-          'xl:gap-12',
-          'text-white'
-        )}
-      >
-        <div
-          className={classnames(
-            'six-month-pricing-section',
-            'bg-medium-green',
-            'p-8',
-          )}
+    <section className={classnames('rexine-spa-care-pricing-section', 'w-full')}>
+      <SectionHeading eyebrow="01 · Plans">Select Your Plan</SectionHeading>
+      <div className={classnames(
+        'tiered-service-pricing-section',
+        fullBleedClassName,
+        'lg:left-auto',
+        'lg:ml-0',
+        'lg:w-auto',
+        'lg:-mx-3',
+        'text-deep-blue',
+        'font-mulish',
+        'text-center'
+      )}>
+        <Carousel
+          label="Plans"
+          inactiveFrom="(min-width: 1024px)"
+          slideClassName={classnames('basis-[88%]', 'sm:basis-[60%]', 'lg:basis-1/3')}
         >
-          <h2
+        {plans.map(({ name, biWeeklyPrice, weeklyPrice, note, badge, Sticker, cardClassName }) => (
+          <div
+            key={name}
             className={classnames(
-              'uppercase',
-              'font-mulish',
-              'font-light',
-              'text-2xl lg:text-3xl',
-              'py-2',
-              'border-b-2',
+              'relative',
+              'flex',
+              'flex-col',
+              'h-full',
+              'gap-4',
+              'rounded-3xl',
+              'border-4',
+              'border-deep-blue',
+              'p-6',
+              'pt-12',
+              'shadow-[6px_6px_0_var(--color-deep-blue)]',
+              'transition',
+              'duration-300',
+              'hover:-translate-y-2',
+              cardClassName
             )}
           >
-            Six Month Plan
-          </h2>
-          <div className={classnames(
-            'six-month-bi-weekly-pricing',
-            'py-6',
-            'font-mulish',
-          )}>
-            <h3
-              className={classnames(
-                'font-semibold font-fraunces',
-                'text-6xl',
-                'pb-1'
-              )}
-            >
-              $199*
-            </h3>
-            <p className={classnames('text-sm', 'leading-tight')}>Total Per Month</p>
-            <p className={classnames('text-lg', 'leading-tight')}>For Two Visits</p>
-          </div>
-          <div className={classnames(
-            'six-month-weekly-pricing',
-            'font-mulish',
-          )}>
-            <h3
-              className={classnames(
-                'font-semibold',
-                'font-fraunces',
-                'text-6xl',
-                'pb-1'
-              )}
-            >
-              $399*
-            </h3>
-            <p className={classnames('text-sm', 'leading-tight')}>Total Per Month</p>
-            <p className={classnames('text-lg', 'leading-tight')}>For Four Visits</p>
-          </div>
-          <p
-            className={classnames(
-              'text-white',
-              'font-mulish',
-              'font-medium',
-              'text-sm',
-              'xl:mb-4',
-              'mt-6',
+            <Sticker className={classnames('absolute', '-top-8', 'left-6', 'w-16', 'h-16')} />
+            {badge && (
+              <p className={classnames(
+                'absolute',
+                '-top-4',
+                'right-5',
+                'rounded-full',
+                'border-2',
+                'border-deep-blue',
+                'bg-deep-blue',
+                'px-3',
+                'py-1',
+                'text-xs',
+                'font-extrabold',
+                'uppercase',
+                'tracking-wider',
+                'text-white'
+              )}>
+                {badge}
+              </p>
             )}
-          >
-            *Six month plans include a full system flush.
-          </p>
-        </div>
-        <div
-          className={classnames(
-            'three-month-pricing-section',
-            'bg-medium-teal',
-            'p-8',
-          )}
-        >
-          <h2
-            className={classnames(
-              'uppercase',
-              'font-mulish',
-              'font-light',
-              'text-2xl lg:text-3xl',
-              'py-2',
-              'border-b-2',
+            <h3 className={classnames('font-fraunces', 'font-wonky', 'font-bold', 'text-3xl')}>
+              {name}
+            </h3>
+            <PriceTile price={biWeeklyPrice} visits="For Two Visits" />
+            <PriceTile price={weeklyPrice} visits="For Four Visits" />
+            {note && (
+              <p className={classnames('text-sm', 'font-semibold')}>{note}</p>
             )}
-          >
-            Three Month Plan
-          </h2>
-          <div className={classnames(
-            'three-month-bi-weekly-pricing',
-            'py-6',
-            'font-mulish',
-          )}>
-            <h3
-              className={classnames(
-                'font-semibold',
-                'font-fraunces',
-                'text-6xl',
-                'pb-1'
-              )}
-            >
-              $209
-            </h3>
-            <p className={classnames('text-sm', 'leading-tight')}>Total Per Month</p>
-            <p className={classnames('text-lg', 'leading-tight')}>For Two Visits</p>
           </div>
-          <div className={classnames(
-            'three-month-weekly-pricing',
-            'font-mulish',
-          )}>
-            <h3
-              className={classnames(
-                'font-semibold',
-                'font-fraunces',
-                'text-6xl',
-                'pb-1'
-              )}
-            >
-              $409
-            </h3>
-            <p className={classnames('text-sm', 'leading-tight')}>Total Per Month</p>
-            <p className={classnames('text-lg', 'leading-tight')}>For Four Visits</p>
-          </div>
-        </div>
-        <div
-          className={classnames(
-            'one-month-pricing-section',
-            'bg-green-blue',
-            'p-8',
-          )}
-        >
-          <h2
-            className={classnames(
-              'uppercase',
-              'font-mulish',
-              'font-light',
-              'text-2xl lg:text-3xl',
-              'py-2',
-              'border-b-2',
-            )}
-          >
-            One Month Plan
-          </h2>
-          <div className={classnames(
-            'one-month-bi-weekly-pricing',
-            'py-6',
-            'font-mulish',
-          )}>
-            <h3
-              className={classnames(
-                'font-semibold',
-                'font-fraunces',
-                'text-6xl',
-                'pb-1'
-              )}
-            >
-              $219
-            </h3>
-            <p className={classnames('text-sm', 'leading-tight')}>Total Per Month</p>
-            <p className={classnames('text-lg', 'leading-tight')}>For Two Visits</p>
-          </div>
-          <div className={classnames(
-            'one-month-weekly-pricing',
-            'font-mulish',
-          )}>
-            <h3
-              className={classnames(
-                'font-semibold',
-                'font-fraunces',
-                'text-6xl',
-                'pb-1'
-              )}
-            >
-              $419
-            </h3>
-            <p className={classnames('text-sm', 'leading-tight')}>Total Per Month</p>
-            <p className={classnames('text-lg', 'leading-tight')}>For Four Visits</p>
-          </div>
-        </div>
+        ))}
+        </Carousel>
       </div>
       <div className={classnames(
-        'text-green-blue',
-        'font-mulish font-medium',
-        'text-sm md:text-md italic text-center',
-        'px-6 md:px-24 mb-6 md:mb-0'
+        'mt-6',
+        'md:mt-12',
+        'mx-auto',
+        'max-w-3xl',
+        'grid',
+        'gap-6',
+        'md:grid-cols-[1fr_auto]',
+        'md:items-center',
+        'rounded-3xl',
+        'border-4',
+        'border-deep-blue',
+        'bg-white',
+        'p-6',
+        'md:p-8',
+        'font-mulish',
+        'text-deep-blue'
       )}>
-        Visits are performed on a monthly, weekly, or every other week basis.
-        Some months may require one extra or one less visit depending on the alignment of the dates.
-        Three month (2 visits/month) plans include 6 visits total, three month (4 visits/month) plans include 12 visits total.
-        Six month (2 visits/month) plans include 12 visits total, six month (4 visits/month) plans include 24 visits total.
+        <div>
+          <h3 className={classnames('font-fraunces', 'font-wonky', 'font-bold', 'text-2xl')}>
+            How visits work
+          </h3>
+          <p className={classnames('mt-2')}>
+            Visits happen weekly, every other week, or monthly. Depending on how the dates fall,
+            a month may have one more or one fewer visit.
+          </p>
+        </div>
+        <table className={classnames('text-center', 'text-sm')}>
+          <caption className={classnames('sr-only')}>Total visits per plan</caption>
+          <thead>
+            <tr className={classnames('font-bold', 'uppercase', 'tracking-wider', 'text-xs', 'text-green-blue')}>
+              <th scope="col" className={classnames('px-3', 'pb-2', 'whitespace-nowrap')}><span className={classnames('sr-only')}>Plan</span></th>
+              <th scope="col" className={classnames('px-3', 'pb-2', 'whitespace-nowrap')}>2 / month</th>
+              <th scope="col" className={classnames('px-3', 'pb-2', 'whitespace-nowrap')}>4 / month</th>
+            </tr>
+          </thead>
+          <tbody>
+            {visitTotals.map(({ plan, twoPerMonth, fourPerMonth }) => (
+              <tr key={plan} className={classnames('border-t-2', 'border-extra-light-blue')}>
+                <th scope="row" className={classnames('px-3', 'py-2', 'text-left', 'font-bold', 'whitespace-nowrap')}>{plan}</th>
+                <td className={classnames('px-3', 'py-2')}>{twoPerMonth} visits</td>
+                <td className={classnames('px-3', 'py-2')}>{fourPerMonth} visits</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
-    </div>
+    </section>
   );
 }
