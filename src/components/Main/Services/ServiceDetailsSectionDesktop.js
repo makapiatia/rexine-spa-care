@@ -5,22 +5,19 @@ import { Sparkle, Sun } from '../Stickers';
 import { fullBleedClassName, SectionHeading } from './servicePageStyles';
 
 const monthlyServiceDetails = [
-    'System Analysis',
-    'Water Test & Balance',
-    'Degrease & Clean Filter System',
-    'Clean Shell, Waterline, Pillows & Interior Of Cover',
-    'Check Computer Programming, Equipment, Sanitizing Systems & Settings'
+    'Water test & balance',
+    'Filter degrease & clean',
+    'Shell, waterline, pillows & cover interior cleaned',
+    'System, equipment & sanitizer settings check'
 ];
 
+// Only what's added on top of a maintenance visit
 const fullCleaningDetails = [
-    'Clean & Flush',
-    'Cover Interior Cleaning',
-    'Apply Exterior Protectants',
-    'System Analysis',
-    'Water Test & Balance',
-    'Degrease & Clean Filter System',
-    'Clean Shell, Waterline, Pillow, Jets, Diverter & Velocity Valves',
-    'Check Computer Programming, Equipment, Sanitizing Systems Settings Upon Start Up After Refill'
+    'Clean, drain, flush & refill',
+    'Seasonal start up or shut down',
+    'Jets, diverter & velocity valves cleaned',
+    'Exterior protectants applied',
+    'System & settings check on start up'
 ];
 
 const cardClassName = classnames(
@@ -61,10 +58,12 @@ export const ServiceDetailsSectionDesktop = () => {
                         <p className={classnames(
                             'whitespace-nowrap font-bold uppercase tracking-wider text-sm'
                         )}>Starting At</p>
-                        <p className={classnames('text-rexine-blue', priceClassName)}>$129*</p>
+                        <p className={classnames('text-rexine-blue', priceClassName)}>
+                            $199<span className={classnames('text-2xl md:text-3xl')}>/month</span>
+                        </p>
                     </div>
                     <p className={classnames('mt-2 italic text-sm md:text-base text-medium-blue')}>
-                        For a singular maintenance visit, see our monthly plans for greater savings!
+                        With a 6 or 12 month bi-weekly plan.
                     </p>
                     <ul className={classnames('flex flex-col gap-2 md:gap-3 my-6 md:my-8')}>
                         {monthlyServiceDetails.map((monthlyItem) => (
@@ -80,20 +79,28 @@ export const ServiceDetailsSectionDesktop = () => {
                     </p>
                 </div>
 
-                <div className={classnames('full-cleaning-details-section bg-pop-aqua text-deep-blue', cardClassName)}>
-                    <Sun className={classnames('absolute z-10 -top-8 left-8 rotate-12 w-16')} />
+                <div className={classnames(
+                    'full-cleaning-details-section bg-pop-periwinkle text-deep-blue',
+                    cardClassName
+                )}>
+                    <Sun className={classnames('absolute z-10 -top-8 left-8 rotate-20 w-16')} />
                     <h3 className={classnames('font-fraunces font-wonky font-bold text-3xl')}>
                         Full Cleaning
                     </h3>
                     <p className={classnames('mt-4 text-rexine-blue', priceClassName)}>$549</p>
-                    <p className={classnames('mt-2')}>(Clean, Drain, Summerize/Winterize)</p>
-                    <ul className={classnames('flex flex-col gap-2 md:gap-3 mt-6 md:mt-8')}>
+                    <p className={classnames('mt-6 md:mt-8 font-bold')}>
+                        Everything in a maintenance visit, plus the following as needed*:
+                    </p>
+                    <ul className={classnames('flex flex-col gap-2 md:gap-3 mt-3')}>
                         {fullCleaningDetails.map((fullCleaningItem) => (
                             <ChecklistItem key={fullCleaningItem}>
                                 {fullCleaningItem}
                             </ChecklistItem>
                         ))}
                     </ul>
+                    <p className={classnames('mt-auto pt-6 text-sm italic')}>
+                        *Depending on your needs and your spa's condition.
+                    </p>
                 </div>
                 </Carousel>
             </div>

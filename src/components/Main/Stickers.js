@@ -99,5 +99,5 @@ export const HoverBubbles = ({ dark = false }) => (
 );
 
 // How much a sticker tilts when it sits on a card
-const stickerTilts = new Map([[Sparkle, 'rotate-20'], [Sun, 'rotate-12']]);
+const stickerTilts = new Map([[Sparkle, 'rotate-20'], [Sun, 'rotate-20']]);
 export const stickerTilt = (Sticker) => stickerTilts.get(Sticker);

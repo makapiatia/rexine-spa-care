@@ -3,29 +3,27 @@ import classnames from 'tailwindcss-classnames';
 import { Carousel } from '../Carousel';
 import { fullBleedClassName, SectionHeading } from './servicePageStyles';
 
-const schedulingText = 'On the day of your service, our provider will perform the agreed upon visit within the '
-    + 'business hours of 8am-6pm. Due to scheduling, weather and other factors, we cannot guarantee a'
-    + ' specific time for your visit. If you do have a preferred time, you can communicate this to us'
-    + ' and we will do our best to accommodate your needs.';
-const accessText = 'Our service provider will require unobstructed access to your spa, this means that gates must be '
-    + 'unlocked for the day & access codes must be communicated prior to the visit.';
-const visitDayText = 'If you are receiving monthly, bi-weekly or weekly service, your visit will fall on the same day '
-    + 'of the week unless either party asks for an alternative. You will receive your maintenance '
-    + 'schedule upon your first visit & we ask that you give us 24 hours notice if you require a change'
-    + ' to that schedule. We promise to give you as much notice as possible if we need to alter your '
-    + 'visit schedule in any way.';
-const sanitizationOptions = 'We provide bromine, chlorine & potassium based sanitization at no extra cost. If FROG '
-    + '@Ease cartridges are your preferred sanitization, we will expect you to supply your '
-    + 'cartridges, or we can supply those cartridges at cost.';
-const cleaningText = 'Cleanings, start ups & shut downs typically require 3-5 hours. We provide all supplies necessary'
-    + ' for these services but do require a hose hook up with running water, working outdoor outlets, '
-    + 'and any other special instructions.';
+const schedulingText = "Your visit will take place on your scheduled day, anytime between 8am and 6pm. Because "
+    + "scheduling, weather and other things can shift our day, we can't promise an exact time. Have a preferred "
+    + "time? Just let us know and we'll do our best to make it work!";
+const accessText = "To take care of your spa, we'll need easy access to it on the day of your visit. Please "
+    + 'leave any gates unlocked and share gate or access codes with us ahead of time. Thank you!';
+const visitDayText = 'With weekly or every other week service, your visits will land on the same day of the week, '
+    + "unless one of us needs to switch things up. You'll get your maintenance schedule at your first visit. Need "
+    + "to make a change? Just give us 24 hours' notice. And if we ever need to adjust your schedule, we'll let you "
+    + 'know as early as we can!';
+const sanitizationOptions = 'We provide bromine, chlorine & potassium based sanitization at no extra cost. '
+    + "New filters, FROG @ease cartridges and system kits aren't included, but we're happy to help! Feel free to "
+    + 'use your own, or our technician can pick them up for you and you can simply reimburse us.';
+const cleaningText = 'Cleanings, start ups & shut downs typically take 3-5 hours. To get the job done, we just need '
+    + 'a hose hook up with running water and a working outdoor outlet. If there are any special instructions, '
+    + 'please let us know ahead of time!';
 
 const allServiceExpectations = [
     { title: 'Scheduling', text: schedulingText, badgeClassName: 'bg-pop-sky' },
     { title: 'Access', text: accessText, badgeClassName: 'bg-pop-aqua' },
     { title: 'Visit Days', text: visitDayText, badgeClassName: 'bg-pop-periwinkle' },
-    { title: 'Sanitization', text: sanitizationOptions, badgeClassName: 'bg-pop-sky' },
+    { title: 'Sanitizer & Supplies', text: sanitizationOptions, badgeClassName: 'bg-pop-sky' },
     { title: 'Cleanings', text: cleaningText, badgeClassName: 'bg-pop-aqua' }
 ];
 

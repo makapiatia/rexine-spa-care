@@ -6,45 +6,53 @@ import { fullBleedClassName, SectionHeading } from './servicePageStyles';
 
 const plans = [
   {
+    name: 'Twelve Month Plan',
+    months: 12,
+    biWeeklyPrice: '$199',
+    weeklyPrice: '$399',
+    perk: 'Includes 2 full system flushes',
+    Sticker: Drop,
+    cardClassName: 'bg-pop-periwinkle'
+  },
+  {
     name: 'Six Month Plan',
-    biWeeklyPrice: '$199*',
-    weeklyPrice: '$399*',
-    note: '*Six month plans include a full system flush.',
-    badge: 'Lowest monthly price',
+    months: 6,
+    biWeeklyPrice: '$199',
+    weeklyPrice: '$399',
+    perk: 'Includes 1 full system flush',
+    badge: 'Most popular',
     Sticker: Sparkle,
     cardClassName: 'bg-pop-sky'
   },
   {
     name: 'Three Month Plan',
+    months: 3,
     biWeeklyPrice: '$209',
     weeklyPrice: '$409',
     Sticker: Bubbles,
     cardClassName: 'bg-pop-aqua'
-  },
-  {
-    name: 'One Month Plan',
-    biWeeklyPrice: '$219',
-    weeklyPrice: '$419',
-    Sticker: Drop,
-    cardClassName: 'bg-pop-periwinkle'
   }
 ];
 
-const visitTotals = [
-  { plan: 'Three month', twoPerMonth: 6, fourPerMonth: 12 },
-  { plan: 'Six month', twoPerMonth: 12, fourPerMonth: 24 }
-];
+// Open the carousel on the most popular plan
+const featuredPlanIndex = plans.findIndex((plan) => plan.badge);
 
-const PriceTile = ({ price, visits }) => (
+const PriceTile = ({ price, frequency, visitsPerMonth, totalVisits }) => (
   <div className={classnames('px-4 py-5 rounded-2xl border-2 border-deep-blue bg-white')}>
     <p className={classnames('font-fraunces font-wonky font-bold text-5xl xl:text-6xl')}>
-      {price}
+      {price}<span className={classnames('text-2xl')}>/month</span>
     </p>
-    <p className={classnames('mt-1 text-sm font-bold uppercase tracking-wider')}>
-      Total Per Month
-    </p>
-    <p className={classnames('text-lg')}>{visits}</p>
+    <p className={classnames('mt-2 text-sm font-bold uppercase tracking-wider')}>{frequency}</p>
+    <p>{visitsPerMonth} visits a month</p>
+    <p className={classnames('text-sm text-medium-blue')}>{totalVisits} visits total</p>
   </div>
+);
+
+const CheckIcon = () => (
+  <svg viewBox="0 0 24 24" className={classnames('shrink-0 w-6 h-6')} aria-hidden="true">
+    <circle cx="12" cy="12" r="10" fill="var(--color-deep-blue)" />
+    <path d="M7 12.5 L10.5 16 L17 9" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" />
+  </svg>
 );
 
 export const PlanPricingSection = () => {
@@ -59,9 +67,10 @@ export const PlanPricingSection = () => {
         <Carousel
           label="Plans"
           inactiveFrom="(min-width: 1024px)"
+          startIndex={featuredPlanIndex}
           slideClassName={classnames('basis-[88%] sm:basis-[60%] lg:basis-1/3')}
         >
-        {plans.map(({ name, biWeeklyPrice, weeklyPrice, note, badge, Sticker, cardClassName }) => (
+        {plans.map(({ name, months, biWeeklyPrice, weeklyPrice, perk, badge, Sticker, cardClassName }) => (
           <div
             key={name}
             className={classnames(
@@ -87,51 +96,30 @@ export const PlanPricingSection = () => {
             <h3 className={classnames('font-fraunces font-wonky font-bold text-3xl')}>
               {name}
             </h3>
-            <PriceTile price={biWeeklyPrice} visits="For Two Visits" />
-            <PriceTile price={weeklyPrice} visits="For Four Visits" />
-            {note && (
-              <p className={classnames('text-sm font-semibold')}>{note}</p>
+            <PriceTile price={biWeeklyPrice} frequency="Every other week" visitsPerMonth={2} totalVisits={months * 2} />
+            <PriceTile price={weeklyPrice} frequency="Weekly" visitsPerMonth={4} totalVisits={months * 4} />
+            {perk && (
+              <p className={classnames('flex items-center justify-center gap-2 mt-auto font-semibold')}>
+                <CheckIcon />
+                {perk}
+              </p>
             )}
           </div>
         ))}
         </Carousel>
       </div>
       <div className={classnames(
-        'rexine-spa-care-visits-card grid gap-6 md:grid-cols-[1fr_auto] md:items-center max-w-3xl',
-        'mt-6 md:mt-12 mx-auto p-6 md:p-8',
+        'rexine-spa-care-visits-card max-w-2xl mt-6 md:mt-12 mx-auto p-6 md:p-8',
         'rounded-3xl border-4 border-deep-blue bg-white',
-        'font-mulish text-deep-blue'
+        'font-mulish text-deep-blue text-center'
       )}>
-        <div>
-          <h3 className={classnames('font-fraunces font-wonky font-bold text-2xl')}>
-            How visits work
-          </h3>
-          <p className={classnames('mt-2')}>
-            Visits happen weekly, every other week, or monthly. Depending on how the dates fall,
-            a month may have one more or one fewer visit.
-          </p>
-        </div>
-        <table className={classnames('text-center text-sm')}>
-          <caption className={classnames('sr-only')}>Total visits per plan</caption>
-          <thead>
-            <tr className={classnames('font-bold uppercase tracking-wider text-xs text-medium-blue')}>
-              <th scope="col" className={classnames('px-3 pb-2 whitespace-nowrap')}><span className={classnames(
-                'sr-only'
-              )}>Plan</span></th>
-              <th scope="col" className={classnames('px-3 pb-2 whitespace-nowrap')}>2 / month</th>
-              <th scope="col" className={classnames('px-3 pb-2 whitespace-nowrap')}>4 / month</th>
-            </tr>
-          </thead>
-          <tbody>
-            {visitTotals.map(({ plan, twoPerMonth, fourPerMonth }) => (
-              <tr key={plan} className={classnames('border-t-2 border-extra-light-blue')}>
-                <th scope="row" className={classnames('px-3 py-2 text-left font-bold whitespace-nowrap')}>{plan}</th>
-                <td className={classnames('px-3 py-2')}>{twoPerMonth} visits</td>
-                <td className={classnames('px-3 py-2')}>{fourPerMonth} visits</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <h3 className={classnames('font-fraunces font-wonky font-bold text-2xl')}>
+          How visits work
+        </h3>
+        <p className={classnames('mt-2')}>
+          Visits happen weekly or every other week. Depending on how the dates fall,
+          a month may have one more or one fewer visit.
+        </p>
       </div>
     </section>
   );

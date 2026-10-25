@@ -27,9 +27,11 @@ const Chevron = ({ direction }) => (
 // Swipeable, looping carousel.
 // `inactiveFrom` is a media query where it turns off and the slides sit side by side.
 // `minSlides` repeats the slides so Embla has enough of them to loop endlessly.
-export const Carousel = ({ children, label, slideClassName, inactiveFrom, align = 'center', minSlides = 0 }) => {
+export const Carousel = ({
+  children, label, slideClassName, inactiveFrom, align = 'center', minSlides = 0, startIndex = 0
+}) => {
   const breakpoints = inactiveFrom ? { [inactiveFrom]: { active: false } } : {};
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align, breakpoints });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, align, breakpoints, startIndex });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [isActive, setIsActive] = useState(true);
 
