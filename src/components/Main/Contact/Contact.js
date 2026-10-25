@@ -2,6 +2,8 @@
 
 import React, { useState } from 'react';
 import classnames from 'tailwindcss-classnames';
+import { PageBanner } from '../PageBanner';
+import { Bubbles, Drop, HoverBubbles, Sparkle, Sun } from '../Stickers';
 import { ServiceArea } from './ServiceArea';
 
 // After activating the form, the email can be swapped for the random string FormSubmit provides
@@ -36,61 +38,154 @@ const ValidationError = ({ id, error }) => {
     }
 
     return (
-        <p id={id} className={classnames('pt-1', 'text-base', 'text-red-600')}>
+        <p id={id} className={classnames('pt-1', 'font-mulish', 'text-sm', 'font-semibold', 'text-red-600')}>
             {error}
         </p>
     );
 };
 
 const cardClassName = classnames(
-    'flex',
-    'flex-col',
-    'h-auto',
-    'w-auto',
+    'relative',
+    'rounded-3xl',
+    'border-4',
+    'border-deep-blue',
     'bg-white',
-    'm-8',
-    'sm:m-12',
-    'xl:ml-16',
-    'xl:mr-8',
-    'p-8',
-    'sm:p-12',
-    'xl:px-24',
-    'items-center',
-    'border border-light-blue'
+    'p-6',
+    'pt-10',
+    'md:p-10',
+    'shadow-[6px_6px_0_var(--color-deep-blue)]'
 );
 
 const headingClassName = classnames(
-    'pb-8',
-    'sm:pb-16',
     'font-fraunces',
+    'font-wonky',
     'font-bold',
-    'text-4xl',
-    'text-green-blue',
+    'text-3xl',
+    'md:text-4xl',
+    'text-rexine-blue'
+);
+
+const labelClassName = classnames(
+    'mb-1',
+    'block',
+    'font-mulish',
+    'font-extrabold',
+    'uppercase',
+    'tracking-wider',
+    'text-sm'
+);
+
+const inputClassName = classnames(
+    'w-full',
+    'rounded-2xl',
+    'border-2',
+    'bg-extra-light-blue',
+    'px-4',
+    'py-3',
+    'font-mulish',
+    'text-lg',
+    'placeholder:text-deep-blue/40',
+    'transition',
+    'focus:border-deep-blue',
+    'focus:bg-white',
+    'focus:outline-hidden'
+);
+
+const quickContacts = [
+    {
+        label: 'Call',
+        value: '+1-623-282-2530',
+        href: 'tel:+1623-282-2530',
+        Sticker: Sun,
+        cardClassName: 'bg-pop-sky'
+    },
+    {
+        label: 'Email',
+        value: 'info@rexinespacare.com',
+        href: 'mailto:info@rexinespacare.com',
+        Sticker: Drop,
+        cardClassName: 'bg-pop-aqua'
+    },
+    {
+        label: 'Hours',
+        value: 'Monday-Friday 8:00am-6:00pm',
+        note: 'Saturday & Sunday available by appointment.',
+        Sticker: Sparkle,
+        cardClassName: 'bg-pop-periwinkle'
+    }
+];
+
+const Field = ({ label, error, id, children, className }) => (
+    <div className={className}>
+        <label htmlFor={id} className={labelClassName}>{label}</label>
+        {children}
+        <ValidationError id={`${id}-error`} error={error} />
+    </div>
 );
 
 const ContactLayout = ({ children }) => (
     <div className={classnames(
-        'flex',
-        'flex-col',
-        'xl:flex-row',
-        'min-h-max',
+        'rexine-spa-care-contact',
         'w-full',
+        'overflow-x-clip',
         'bg-extra-light-blue',
-        'justify-center',
-        'xl:py-8'
+        'text-deep-blue'
     )}>
-        {children}
-        <div
-            className={classnames(
-                'rexine-spa-care-service-page',
-                'relative flex flex-col place-items-center',
-                'xl:my-12 font-bold font-fraunces text-4xl',
-                'text-green-blue bg-white border border-light-blue',
-                'p-8 mx-8 sm:mx-12 xl:ml-6 xl:mr-12 mb-8 sm:mb-12',
-            )}
-        >
-            <h1 className={classnames('pt-2 sm:pt-4 pb-5')}>Service Area</h1>
-            <ServiceArea />
+        <PageBanner
+            title="Contact"
+            description="Have a question or ready to book a visit? Send us a note and we'll get back to you."
+        />
+        <div className={classnames(
+            'flex',
+            'flex-col',
+            'gap-14',
+            'max-w-(--breakpoint-1xl)',
+            'mx-auto',
+            'px-6',
+            'sm:px-12',
+            'pb-12',
+            'md:pb-16',
+            'xl:pb-24'
+        )}>
+            <div className={classnames('grid', 'gap-10', 'lg:grid-cols-[3fr_2fr]')}>
+                {children}
+                <div className={classnames(cardClassName, 'flex', 'flex-col', 'pt-6', 'md:pt-8')}>
+                    <h2 className={classnames(headingClassName, 'mb-4', 'text-2xl', 'md:text-3xl')}>Service Area</h2>
+                    <ServiceArea />
+                </div>
+            </div>
+            <ul className={classnames('grid', 'gap-4', 'md:grid-cols-3', 'md:gap-6')}>
+                {quickContacts.map(({ label, value, note, href, Sticker, cardClassName: quickCardClassName }) => (
+                    <li
+                        key={label}
+                        className={classnames(
+                            'flex',
+                            'items-center',
+                            'gap-4',
+                            'rounded-2xl',
+                            'border-4',
+                            'border-deep-blue',
+                            'px-5',
+                            'py-4',
+                            'shadow-[4px_4px_0_var(--color-deep-blue)]',
+                            quickCardClassName
+                        )}
+                    >
+                        <Sticker fill="#FFFFFF" className={classnames('w-10', 'shrink-0')} />
+                        <div className={classnames('min-w-0', 'font-mulish')}>
+                            <p className={classnames('font-extrabold', 'uppercase', 'tracking-wider', 'text-sm')}>{label}</p>
+                            {href ? (
+                                <a href={href} className={classnames('break-words', 'text-lg', 'font-semibold', 'hover:underline')}>
+                                    {value}
+                                </a>
+                            ) : (
+                                <p className={classnames('text-lg', 'font-semibold')}>{value}</p>
+                            )}
+                            {note && <p className={classnames('text-sm', 'italic')}>{note}</p>}
+                        </div>
+                    </li>
+                ))}
+            </ul>
         </div>
     </div>
 );
@@ -115,9 +210,8 @@ export const Contact = () => {
     });
 
     const fieldClassName = (name) => classnames(
-        'border-b-2',
-        fieldErrors[name] ? 'border-red-600' : 'border-gray-400',
-        'focus:outline-hidden'
+        inputClassName,
+        fieldErrors[name] ? 'border-red-600' : 'border-deep-blue/20'
     );
 
     const handleSubmit = async (event) => {
@@ -161,11 +255,13 @@ export const Contact = () => {
     if (state.succeeded) {
         return (
             <ContactLayout>
-                <div className={classnames(cardClassName, 'justify-center', 'text-center')}>
-                    <h1 className={headingClassName}>
+                <div className={classnames(cardClassName, 'flex', 'flex-col', 'items-center', 'justify-center', 'text-center', 'min-h-[24rem]')}>
+                    <Sparkle className={classnames('absolute', '-top-8', 'left-8', 'w-16', 'motion-safe:animate-bob')} />
+                    <Bubbles className={classnames('mb-6', 'w-24')} />
+                    <h2 className={headingClassName}>
                         Thank You!
-                    </h1>
-                    <p className={classnames('font-mulish', 'font-medium', 'text-xl')}>
+                    </h2>
+                    <p className={classnames('mt-3', 'font-mulish', 'font-medium', 'text-xl')}>
                         We will be in contact as soon as possible!
                     </p>
                 </div>
@@ -175,137 +271,96 @@ export const Contact = () => {
 
     return (
         <ContactLayout>
-            <form
-                className={cardClassName}
-                onSubmit={handleSubmit}
-                noValidate
-            >
+            <form className={cardClassName} onSubmit={handleSubmit} noValidate>
+                <Sparkle className={classnames('absolute', '-top-8', 'left-8', 'w-16')} />
                 <input type="hidden" name="_subject" value="New Rexine Spa Care inquiry" />
                 <input type="hidden" name="_template" value="table" />
-                <h1 className={headingClassName}>
-                    Get In Touch
-                </h1>
-                <div
-                    className={classnames(
-                        'flex',
-                        'flex-col',
-                        'pb-8',
-                        'w-full',
-                        'font-mulish',
-                        'font-medium',
-                        'text-xl'
-                    )}
-                >
-                    <input
-                        {...fieldProps('name')}
-                        className={fieldClassName('name')}
-                        placeholder="Name"
-                        required={true}
-                    />
-                    <ValidationError id="name-error" error={fieldErrors.name} />
-                </div>
-                <div
-                    className={classnames(
-                        'flex',
-                        'flex-col',
-                        'pb-8',
-                        'w-full',
-                        'font-mulish',
-                        'font-medium',
-                        'text-xl'
-                    )}>
-                    <input
-                        {...fieldProps('telephone')}
-                        type="tel"
-                        placeholder="Phone Number"
-                        className={fieldClassName('telephone')}
-                        required={true}
-                    />
-                    <ValidationError id="telephone-error" error={fieldErrors.telephone} />
-                </div>
-                <div
-                    className={classnames(
-                        'flex',
-                        'flex-col',
-                        'pb-8',
-                        'w-full',
-                        'font-mulish',
-                        'font-medium',
-                        'text-xl'
-                    )}
-                >
-                    <input
-                        {...fieldProps('email')}
-                        type="email"
-                        className={fieldClassName('email')}
-                        placeholder="Email Address"
-                        required={true}
-                    />
-                    <ValidationError id="email-error" error={fieldErrors.email} />
-                </div>
-                <div
-                    className={classnames(
-                        'flex',
-                        'flex-col',
-                        'pb-8',
-                        'w-full',
-                        'font-mulish',
-                        'font-medium',
-                        'text-xl'
-                    )}
-                >
-                    <input
-                        {...fieldProps('location')}
-                        className={fieldClassName('location')}
-                        placeholder="Location"
-                        required={true}
-                    />
-                    <ValidationError id="location-error" error={fieldErrors.location} />
-                </div>
-                <div
-                    className={classnames(
-                        'flex',
-                        'flex-col',
-                        'pb-8',
-                        'w-full',
-                        'font-mulish',
-                        'font-medium',
-                        'text-xl',
-                    )}
-                >
-                    <textarea
-                        id="message"
-                        name="message"
-                        className={classnames(
-                            'border-b-2',
-                            'border-gray-400',
-                            'focus:outline-hidden'
+                <h2 className={headingClassName}>Get In Touch</h2>
+                <p className={classnames('mt-2', 'font-mulish', 'text-green-blue')}>
+                    Fill out the form and we'll reach out to you.
+                </p>
 
-                        )}
-                        placeholder="Extra Info (Optional)"
-                    />
+                <div className={classnames('mt-8', 'grid', 'gap-5', 'sm:grid-cols-2')}>
+                    <Field label="Name" id="name" error={fieldErrors.name}>
+                        <input
+                            {...fieldProps('name')}
+                            placeholder="Your name"
+                            autoComplete="name"
+                            className={fieldClassName('name')}
+                            required={true}
+                        />
+                    </Field>
+                    <Field label="Phone Number" id="telephone" error={fieldErrors.telephone}>
+                        <input
+                            {...fieldProps('telephone')}
+                            type="tel"
+                            placeholder="(623) 555-0123"
+                            autoComplete="tel"
+                            className={fieldClassName('telephone')}
+                            required={true}
+                        />
+                    </Field>
+                    <Field label="Email Address" id="email" error={fieldErrors.email}>
+                        <input
+                            {...fieldProps('email')}
+                            type="email"
+                            placeholder="you@example.com"
+                            autoComplete="email"
+                            className={fieldClassName('email')}
+                            required={true}
+                        />
+                    </Field>
+                    <Field label="Location" id="location" error={fieldErrors.location}>
+                        <input
+                            {...fieldProps('location')}
+                            placeholder="City or neighborhood"
+                            className={fieldClassName('location')}
+                            required={true}
+                        />
+                    </Field>
+                    <Field label="Extra Info (Optional)" id="message" className={classnames('sm:col-span-2')}>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows={4}
+                            placeholder="Spa make or model, gate codes, preferred visit times…"
+                            className={classnames(inputClassName, 'border-deep-blue/20', 'resize-y')}
+                        />
+                    </Field>
                 </div>
+
                 {state.error && (
-                    <p className={classnames('font-mulish', 'text-red-600')}>{state.error}</p>
+                    <p className={classnames('mt-6', 'font-mulish', 'font-semibold', 'text-red-600')}>{state.error}</p>
                 )}
                 <button
                     type="submit"
                     disabled={state.submitting}
                     className={classnames(
-                        'px-6',
-                        'py-4',
-                        'bg-rexine-blue',
-                        'hover:bg-blue-500',
-                        'rounded-lg',
-                        'text-white',
-                        'text-3xl',
+                        'group',
+                        'relative',
+                        'mt-8',
+                        'w-full',
+                        'sm:w-auto',
+                        'rounded-full',
+                        'border-4',
+                        'border-deep-blue',
+                        'bg-pop-sky',
+                        'px-10',
+                        'py-3',
+                        'font-mulish',
+                        'font-extrabold',
+                        'uppercase',
                         'tracking-wider',
-                        'font-fraunces', 
-                        'font-light', 
-                        'mt-6',
+                        'text-lg',
+                        'transition',
+                        'hover:-translate-y-1',
+                        'hover:bg-pop-aqua',
+                        'disabled:opacity-60',
+                        'disabled:hover:translate-y-0'
                     )}
                 >
-                    Send
+                    {state.submitting ? 'Sending…' : 'Send ➚'}
+                    <HoverBubbles />
                 </button>
             </form>
         </ContactLayout>
