@@ -58,6 +58,7 @@ export const ServicePage = () => {
         <WhatToExpectSection />
 
         <section className={classnames(
+          'rexine-spa-care-custom-plan',
           'flex',
           'flex-col',
           'md:flex-row',

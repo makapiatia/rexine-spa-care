@@ -85,7 +85,7 @@ export const Carousel = ({ children, label, slideClassName, inactiveFrom, align 
   const currentSlide = selectedIndex % slideCount;
 
   return (
-    <div role="region" aria-roledescription="carousel" aria-label={label}>
+    <div className={classnames('rexine-spa-care-carousel')} role="region" aria-roledescription="carousel" aria-label={label}>
       <div className={classnames('overflow-hidden')} ref={emblaRef}>
         <div className={classnames('flex', 'touch-pan-y')}>
           {slides.map((slide, i) => (

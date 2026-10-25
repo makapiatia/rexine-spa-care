@@ -147,14 +147,14 @@ const ContactLayout = ({ children }) => (
             'md:pb-16',
             'xl:pb-24'
         )}>
-            <div className={classnames('grid', 'gap-10', 'lg:grid-cols-[3fr_2fr]')}>
+            <div className={classnames('rexine-spa-care-contact-main', 'grid', 'gap-10', 'lg:grid-cols-[3fr_2fr]')}>
                 {children}
-                <div className={classnames(cardClassName, 'flex', 'flex-col', 'pt-6', 'md:pt-8')}>
+                <div className={classnames('rexine-spa-care-service-area-card', cardClassName, 'flex', 'flex-col', 'pt-6', 'md:pt-8')}>
                     <h2 className={classnames(headingClassName, 'mb-4', 'text-2xl', 'md:text-3xl')}>Service Area</h2>
                     <ServiceArea />
                 </div>
             </div>
-            <ul className={classnames('grid', 'gap-4', 'md:grid-cols-3', 'md:gap-6')}>
+            <ul className={classnames('rexine-spa-care-quick-contacts', 'grid', 'gap-4', 'md:grid-cols-3', 'md:gap-6')}>
                 {quickContacts.map(({ label, value, note, href, Sticker, cardClassName: quickCardClassName }) => (
                     <li
                         key={label}
@@ -255,7 +255,7 @@ export const Contact = () => {
     if (state.succeeded) {
         return (
             <ContactLayout>
-                <div className={classnames(cardClassName, 'flex', 'flex-col', 'items-center', 'justify-center', 'text-center', 'min-h-[24rem]')}>
+                <div className={classnames('rexine-spa-care-contact-thank-you', cardClassName, 'flex', 'flex-col', 'items-center', 'justify-center', 'text-center', 'min-h-[24rem]')}>
                     <Sparkle className={classnames('absolute', '-top-8', 'left-8', 'w-16', 'motion-safe:animate-bob')} />
                     <Bubbles className={classnames('mb-6', 'w-24')} />
                     <h2 className={headingClassName}>
@@ -271,7 +271,7 @@ export const Contact = () => {
 
     return (
         <ContactLayout>
-            <form className={cardClassName} onSubmit={handleSubmit} noValidate>
+            <form className={classnames('rexine-spa-care-contact-form', cardClassName)} onSubmit={handleSubmit} noValidate>
                 <Sparkle className={classnames('absolute', '-top-8', 'left-8', 'w-16')} />
                 <input type="hidden" name="_subject" value="New Rexine Spa Care inquiry" />
                 <input type="hidden" name="_template" value="table" />

@@ -129,6 +129,7 @@ export const PlanPricingSection = () => {
         </Carousel>
       </div>
       <div className={classnames(
+        'rexine-spa-care-visits-card',
         'mt-6',
         'md:mt-12',
         'mx-auto',

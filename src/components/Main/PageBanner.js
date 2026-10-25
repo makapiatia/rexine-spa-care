@@ -4,7 +4,7 @@ import RexineSpaCareLogo_WhiteText from '../../assets/images/RexineSpaCareLogo_W
 
 // Sky-blue page header with a wavy bottom edge and the logo badge sitting on the wave
 export const PageBanner = ({ title, description }) => (
-  <header className={classnames('relative', 'mb-24', 'md:mb-28')}>
+  <header className={classnames('rexine-spa-care-page-banner', 'relative', 'mb-24', 'md:mb-28')}>
     <div className={classnames('bg-pop-sky')}>
       <div className={classnames(
         'flex',

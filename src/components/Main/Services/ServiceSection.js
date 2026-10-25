@@ -62,6 +62,7 @@ export const ServiceSection = () => {
       'text-deep-blue'
     )}>
       <section className={classnames(
+        'rexine-spa-care-home-intro',
         'relative',
         'max-w-(--breakpoint-1xl)',
         'mx-auto',
@@ -113,6 +114,7 @@ export const ServiceSection = () => {
       </section>
 
       <section className={classnames(
+        'rexine-spa-care-home-services',
         'max-w-(--breakpoint-1xl)',
         'mx-auto',
         'px-8',
@@ -182,7 +184,7 @@ export const ServiceSection = () => {
         </ul>
       </section>
 
-      <section className={classnames('px-4', 'pb-16', 'sm:px-8', 'xl:pb-24')}>
+      <section className={classnames('rexine-spa-care-home-cta', 'px-4', 'pb-16', 'sm:px-8', 'xl:pb-24')}>
         <div className={classnames(
           'relative',
           'overflow-hidden',
@@ -199,14 +201,6 @@ export const ServiceSection = () => {
           'md:py-20',
           'text-center'
         )}>
-          <Bubbles className={classnames(
-            'absolute',
-            '-bottom-4',
-            '-left-4',
-            'w-28',
-            'md:w-40',
-            'opacity-90'
-          )} />
           <Sparkle
             fill="var(--color-pop-aqua)"
             className={classnames(

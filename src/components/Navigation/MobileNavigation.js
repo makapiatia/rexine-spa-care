@@ -110,6 +110,7 @@ export const MobileNavigation = () => {
         id="mobile-navigation-menu"
         inert={!isOpen}
         className={classnames(
+          'rexine-spa-care-mobile-menu',
           'absolute',
           'inset-x-0',
           'top-full',

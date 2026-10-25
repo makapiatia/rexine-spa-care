@@ -95,6 +95,7 @@ export const AboutUs = () => {
         'xl:pb-24'
       )}>
         <section className={classnames(
+          'rexine-spa-care-about-story',
           'grid',
           'gap-12',
           'lg:grid-cols-2',
@@ -181,7 +182,7 @@ export const AboutUs = () => {
           </div>
         </section>
 
-        <section>
+        <section className={classnames('rexine-spa-care-about-fun-facts')}>
           <ul className={classnames('grid', 'gap-8', 'md:grid-cols-3')}>
             {funFacts.map(({ stat, label, Sticker, cardClassName }) => (
               <li
@@ -225,7 +226,7 @@ export const AboutUs = () => {
           </ul>
         </section>
 
-        <section>
+        <section className={classnames('rexine-spa-care-about-brands')}>
           <SectionHeading eyebrow="Know-How">Brands We Know</SectionHeading>
           <p className={classnames(
             'mx-auto',
@@ -286,6 +287,7 @@ export const AboutUs = () => {
         </section>
 
         <section className={classnames(
+          'rexine-spa-care-dive-in',
           'relative',
           'overflow-hidden',
           'mx-auto',
