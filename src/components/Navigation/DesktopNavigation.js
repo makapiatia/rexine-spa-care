@@ -1,8 +1,13 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import classnames from 'tailwindcss-classnames';
+import { Sparkle } from '../Main/Stickers';
 
 export const DesktopNavigation = () => {
+  const pathname = usePathname();
   const navigationSections = [
     { 'tabTitle': 'Home', 'url': '/' },
     { 'tabTitle': 'Services + Pricing', 'url': '/services' },
@@ -14,69 +19,74 @@ export const DesktopNavigation = () => {
     <div className={classnames(
       'rexine-spa-care-desktop-navigation',
       'hidden',
-      'tablet:flex',
-      'tablet:flex-row',
-      'tablet:grid',
-      'tablet:grid-cols-3',
+      'lg:flex',
       'items-center',
+      'justify-between',
       'w-full',
       'h-20',
+      'px-6',
       'bg-rexine-blue',
       'text-white',
-      'font-fraunces',
-      'font-light'
+      'font-fraunces'
     )}>
       <Link
         className={classnames(
+          'group',
           'flex',
-          'h-full',
-          'items-center'
+          'items-center',
+          'gap-2'
         )}
         href={'/'}
       >
+        <Sparkle className={classnames(
+          'w-8',
+          'transition',
+          'duration-500',
+          'group-hover:rotate-90'
+        )} />
         <span
           className={classnames(
             'navigation-logo',
-            'px-6',
+            'font-wonky',
+            'font-semibold',
             'text-3xl',
           )}
         >
           Rexine Spa Care
         </span>
       </Link>
-      <div className={classnames(
+      <nav className={classnames(
         'flex',
-        'flex-row',
-        'col-span-2',
-        'justify-end',
-        'h-full',
-        'items-center'
+        'items-center',
+        'gap-2'
       )}>
         {navigationSections.map((tab, i) => {
+          const isActive = pathname === tab?.url;
+
           return (
             <Link
-              className={classnames('h-full')}
               key={`${tab?.tabTitle}-${i}`}
               href={tab?.url}
-            >
-              <span className={classnames(
+              aria-current={isActive ? 'page' : undefined}
+              className={classnames(
                 'navigation-tab',
-                'flex',
-                'pt-6',
-                'px-4',
-                'lg:px-6',
-                'hover:bg-blue-500',
-                'border-l',
-                'border-blue-600',
-                'h-full',
-                'text-2xl'
-              )}>
-                {tab?.tabTitle}
-              </span>
+                'rounded-full',
+                'border-2',
+                'px-5',
+                'py-1.5',
+                'text-2xl',
+                'font-wonky',
+                'transition',
+                isActive
+                  ? 'border-deep-blue bg-white text-deep-blue shadow-[3px_3px_0_var(--color-deep-blue)]'
+                  : 'border-transparent hover:border-deep-blue hover:bg-pop-sky hover:text-deep-blue'
+              )}
+            >
+              {tab?.tabTitle}
             </Link>
           );
         })}
-      </div>
+      </nav>
     </div>
   );
 }

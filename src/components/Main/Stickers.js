@@ -57,7 +57,7 @@ export const Sun = ({ className, fill = 'var(--color-pop-sky)' }) => (
 );
 
 export const Wave = ({ className, stroke = 'var(--color-pop-sky)' }) => (
-  <svg viewBox="0 0 120 40" className={className} aria-hidden="true">
+  <svg viewBox="0 0 128 40" className={className} aria-hidden="true">
     <path
       d="M4 20 Q 19 4 34 20 T 64 20 T 94 20 T 124 20"
       fill="none"

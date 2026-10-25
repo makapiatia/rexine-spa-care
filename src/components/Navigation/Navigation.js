@@ -11,8 +11,8 @@ export const Navigation = () => {
         'sticky', 
         'top-0',
         'z-50',
-        'shadow-xs',
-        'shadow-blue-500'
+        'border-b-4',
+        'border-deep-blue'
       )}
     >
       <DesktopNavigation />
