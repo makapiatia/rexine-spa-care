@@ -7,11 +7,7 @@ import { ServiceSection } from './Services/ServiceSection';
 export const Main = () => {
   return (
     <div
-      className={classnames(
-        'rexine-spa-care-main-body',
-        'relative',
-        'bg-extra-light-blue',
-      )}
+      className={classnames('rexine-spa-care-main-body relative bg-extra-light-blue')}
     >
       <Hero />
       <Marquee />

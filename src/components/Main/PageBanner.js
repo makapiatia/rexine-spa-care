@@ -4,45 +4,17 @@ import RexineSpaCareLogo_WhiteText from '../../assets/images/RexineSpaCareLogo_W
 
 // Sky-blue page header with a wavy bottom edge and the logo badge sitting on the wave
 export const PageBanner = ({ title, description }) => (
-  <header className={classnames('rexine-spa-care-page-banner', 'relative', 'mb-24', 'md:mb-28')}>
+  <header className={classnames('rexine-spa-care-page-banner relative mb-24 md:mb-28')}>
     <div className={classnames('bg-pop-sky')}>
       <div className={classnames(
-        'flex',
-        'flex-col',
-        'items-center',
-        'gap-4',
-        'text-center',
-        'max-w-(--breakpoint-1xl)',
-        'mx-auto',
-        'px-6',
-        'sm:px-12',
-        'pt-8',
-        'pb-16',
-        'md:pt-12',
-        'md:pb-20'
+        'flex flex-col items-center gap-4 max-w-(--breakpoint-1xl) mx-auto px-6 sm:px-12 pt-8 pb-16 md:pt-12 md:pb-20',
+        'text-center'
       )}>
         <div className={classnames(
-          'flex',
-          'items-center',
-          'justify-center',
           // Badge sitting on the wavy bottom edge of the banner
-          'absolute',
-          'z-10',
-          'bottom-4',
-          'md:bottom-6',
-          'left-1/2',
-          '-translate-x-1/2',
-          'translate-y-1/2',
-          'aspect-square',
-          'w-36',
-          'md:w-44',
-          'p-3',
-          'md:p-4',
-          'rounded-full',
-          'bg-green-blue',
-          'border-4',
-          'border-deep-blue',
-          'shadow-[5px_5px_0_var(--color-deep-blue)]'
+          'flex items-center justify-center absolute z-10 bottom-4 md:bottom-6 left-1/2 aspect-square -translate-x-1/2',
+          'translate-y-1/2 w-36 md:w-44 p-3 md:p-4',
+          'rounded-full border-4 border-deep-blue shadow-[5px_5px_0_var(--color-deep-blue)] bg-green-blue'
         )}>
           <img
             src={RexineSpaCareLogo_WhiteText.src}
@@ -50,17 +22,10 @@ export const PageBanner = ({ title, description }) => (
           />
         </div>
         <div>
-          <h1 className={classnames(
-            'font-fraunces',
-            'font-wonky',
-            'font-bold',
-            'text-4xl',
-            'md:text-5xl',
-            'text-deep-blue'
-          )}>
+          <h1 className={classnames('font-fraunces font-wonky font-bold text-4xl md:text-5xl text-deep-blue')}>
             {title}
           </h1>
-          <p className={classnames('mt-2', 'mx-auto', 'max-w-xl', 'font-mulish', 'text-deep-blue')}>
+          <p className={classnames('max-w-xl mt-2 mx-auto font-mulish text-deep-blue')}>
             {description}
           </p>
         </div>
@@ -69,7 +34,7 @@ export const PageBanner = ({ title, description }) => (
     <svg
       viewBox="0 0 1440 60"
       preserveAspectRatio="none"
-      className={classnames('block', 'w-full', 'h-8', 'md:h-12')}
+      className={classnames('block w-full h-8 md:h-12')}
       aria-hidden="true"
     >
       <path

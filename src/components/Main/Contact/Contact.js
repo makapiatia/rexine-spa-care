@@ -38,57 +38,26 @@ const ValidationError = ({ id, error }) => {
     }
 
     return (
-        <p id={id} className={classnames('pt-1', 'font-mulish', 'text-sm', 'font-semibold', 'text-red-600')}>
+        <p id={id} className={classnames('pt-1 font-mulish text-sm font-semibold text-red-600')}>
             {error}
         </p>
     );
 };
 
 const cardClassName = classnames(
-    'relative',
-    'rounded-3xl',
-    'border-4',
-    'border-deep-blue',
-    'bg-white',
-    'p-6',
-    'pt-10',
-    'md:p-10',
-    'shadow-[6px_6px_0_var(--color-deep-blue)]'
+    'relative p-6 pt-10 md:p-10',
+    'rounded-3xl border-4 border-deep-blue shadow-[6px_6px_0_var(--color-deep-blue)] bg-white'
 );
 
-const headingClassName = classnames(
-    'font-fraunces',
-    'font-wonky',
-    'font-bold',
-    'text-3xl',
-    'md:text-4xl',
-    'text-rexine-blue'
-);
+const headingClassName = classnames('font-fraunces font-wonky font-bold text-3xl md:text-4xl text-rexine-blue');
 
-const labelClassName = classnames(
-    'mb-1',
-    'block',
-    'font-mulish',
-    'font-extrabold',
-    'uppercase',
-    'tracking-wider',
-    'text-sm'
-);
+const labelClassName = classnames('block mb-1 font-mulish font-extrabold uppercase tracking-wider text-sm');
 
 const inputClassName = classnames(
-    'w-full',
-    'rounded-2xl',
-    'border-2',
-    'bg-extra-light-blue',
-    'px-4',
-    'py-3',
-    'font-mulish',
-    'text-lg',
-    'placeholder:text-deep-blue/40',
-    'transition',
-    'focus:border-deep-blue',
-    'focus:bg-white',
-    'focus:outline-hidden'
+    'w-full px-4 py-3',
+    'rounded-2xl border-2 focus:border-deep-blue focus:outline-hidden bg-extra-light-blue focus:bg-white',
+    'font-mulish text-lg placeholder:text-deep-blue/40',
+    'transition'
 );
 
 const quickContacts = [
@@ -124,64 +93,47 @@ const Field = ({ label, error, id, children, className }) => (
 );
 
 const ContactLayout = ({ children }) => (
-    <div className={classnames(
-        'rexine-spa-care-contact',
-        'w-full',
-        'overflow-x-clip',
-        'bg-extra-light-blue',
-        'text-deep-blue'
-    )}>
+    <div className={classnames('rexine-spa-care-contact overflow-x-clip w-full bg-extra-light-blue text-deep-blue')}>
         <PageBanner
             title="Contact"
             description="Have a question or ready to book a visit? Send us a note and we'll get back to you."
         />
         <div className={classnames(
-            'flex',
-            'flex-col',
-            'gap-14',
-            'max-w-(--breakpoint-1xl)',
-            'mx-auto',
-            'px-6',
-            'sm:px-12',
-            'pb-12',
-            'md:pb-16',
-            'xl:pb-24'
+            'flex flex-col gap-14 max-w-(--breakpoint-1xl) mx-auto px-6 sm:px-12 pb-12 md:pb-16 xl:pb-24'
         )}>
-            <div className={classnames('rexine-spa-care-contact-main', 'grid', 'gap-10', 'lg:grid-cols-[3fr_2fr]')}>
+            <div className={classnames('rexine-spa-care-contact-main grid gap-10 lg:grid-cols-[3fr_2fr]')}>
                 {children}
-                <div className={classnames('rexine-spa-care-service-area-card', cardClassName, 'flex', 'flex-col', 'pt-6', 'md:pt-8')}>
-                    <h2 className={classnames(headingClassName, 'mb-4', 'text-2xl', 'md:text-3xl')}>Service Area</h2>
+                <div className={classnames(
+                    'rexine-spa-care-service-area-card flex flex-col pt-6 md:pt-8',
+                    cardClassName
+                )}>
+                    <h2 className={classnames('mb-4 text-2xl md:text-3xl', headingClassName)}>Service Area</h2>
                     <ServiceArea />
                 </div>
             </div>
-            <ul className={classnames('rexine-spa-care-quick-contacts', 'grid', 'gap-4', 'md:grid-cols-3', 'md:gap-6')}>
+            <ul className={classnames('rexine-spa-care-quick-contacts grid gap-4 md:grid-cols-3 md:gap-6')}>
                 {quickContacts.map(({ label, value, note, href, Sticker, cardClassName: quickCardClassName }) => (
                     <li
                         key={label}
                         className={classnames(
-                            'flex',
-                            'items-center',
-                            'gap-4',
-                            'rounded-2xl',
-                            'border-4',
-                            'border-deep-blue',
-                            'px-5',
-                            'py-4',
-                            'shadow-[4px_4px_0_var(--color-deep-blue)]',
+                            'flex items-center gap-4 px-5 py-4',
+                            'rounded-2xl border-4 border-deep-blue shadow-[4px_4px_0_var(--color-deep-blue)]',
                             quickCardClassName
                         )}
                     >
-                        <Sticker fill="#FFFFFF" className={classnames('w-10', 'shrink-0')} />
-                        <div className={classnames('min-w-0', 'font-mulish')}>
-                            <p className={classnames('font-extrabold', 'uppercase', 'tracking-wider', 'text-sm')}>{label}</p>
+                        <Sticker fill="#FFFFFF" className={classnames('shrink-0 w-10')} />
+                        <div className={classnames('min-w-0 font-mulish')}>
+                            <p className={classnames('font-extrabold uppercase tracking-wider text-sm')}>{label}</p>
                             {href ? (
-                                <a href={href} className={classnames('break-words', 'text-lg', 'font-semibold', 'hover:underline')}>
+                                <a href={href} className={classnames(
+                                    'break-words text-lg font-semibold hover:underline'
+                                )}>
                                     {value}
                                 </a>
                             ) : (
-                                <p className={classnames('text-lg', 'font-semibold')}>{value}</p>
+                                <p className={classnames('text-lg font-semibold')}>{value}</p>
                             )}
-                            {note && <p className={classnames('text-sm', 'italic')}>{note}</p>}
+                            {note && <p className={classnames('text-sm italic')}>{note}</p>}
                         </div>
                     </li>
                 ))}
@@ -255,13 +207,17 @@ export const Contact = () => {
     if (state.succeeded) {
         return (
             <ContactLayout>
-                <div className={classnames('rexine-spa-care-contact-thank-you', cardClassName, 'flex', 'flex-col', 'items-center', 'justify-center', 'text-center', 'min-h-[24rem]')}>
-                    <Sparkle className={classnames('absolute', '-top-8', 'left-8', 'w-16', 'motion-safe:animate-bob')} />
-                    <Bubbles className={classnames('mb-6', 'w-24')} />
+                <div className={classnames(
+                    'rexine-spa-care-contact-thank-you flex flex-col items-center justify-center min-h-[24rem]',
+                    'text-center',
+                    cardClassName
+                )}>
+                    <Sparkle className={classnames('absolute -top-8 left-8 w-16 motion-safe:animate-bob')} />
+                    <Bubbles className={classnames('w-24 mb-6')} />
                     <h2 className={headingClassName}>
                         Thank You!
                     </h2>
-                    <p className={classnames('mt-3', 'font-mulish', 'font-medium', 'text-xl')}>
+                    <p className={classnames('mt-3 font-mulish font-medium text-xl')}>
                         We will be in contact as soon as possible!
                     </p>
                 </div>
@@ -271,16 +227,19 @@ export const Contact = () => {
 
     return (
         <ContactLayout>
-            <form className={classnames('rexine-spa-care-contact-form', cardClassName)} onSubmit={handleSubmit} noValidate>
-                <Sparkle className={classnames('absolute', '-top-8', 'left-8', 'w-16')} />
+            <form className={classnames(
+                'rexine-spa-care-contact-form',
+                cardClassName
+            )} onSubmit={handleSubmit} noValidate>
+                <Sparkle className={classnames('absolute -top-8 left-8 w-16')} />
                 <input type="hidden" name="_subject" value="New Rexine Spa Care inquiry" />
                 <input type="hidden" name="_template" value="table" />
                 <h2 className={headingClassName}>Get In Touch</h2>
-                <p className={classnames('mt-2', 'font-mulish', 'text-green-blue')}>
+                <p className={classnames('mt-2 font-mulish text-green-blue')}>
                     Fill out the form and we'll reach out to you.
                 </p>
 
-                <div className={classnames('mt-8', 'grid', 'gap-5', 'sm:grid-cols-2')}>
+                <div className={classnames('grid gap-5 sm:grid-cols-2 mt-8')}>
                     <Field label="Name" id="name" error={fieldErrors.name}>
                         <input
                             {...fieldProps('name')}
@@ -324,39 +283,22 @@ export const Contact = () => {
                             name="message"
                             rows={4}
                             placeholder="Spa make or model, gate codes, preferred visit times…"
-                            className={classnames(inputClassName, 'border-deep-blue/20', 'resize-y')}
+                            className={classnames('border-deep-blue/20 resize-y', inputClassName)}
                         />
                     </Field>
                 </div>
 
                 {state.error && (
-                    <p className={classnames('mt-6', 'font-mulish', 'font-semibold', 'text-red-600')}>{state.error}</p>
+                    <p className={classnames('mt-6 font-mulish font-semibold text-red-600')}>{state.error}</p>
                 )}
                 <button
                     type="submit"
                     disabled={state.submitting}
                     className={classnames(
-                        'group',
-                        'relative',
-                        'mt-8',
-                        'w-full',
-                        'sm:w-auto',
-                        'rounded-full',
-                        'border-4',
-                        'border-deep-blue',
-                        'bg-pop-sky',
-                        'px-10',
-                        'py-3',
-                        'font-mulish',
-                        'font-extrabold',
-                        'uppercase',
-                        'tracking-wider',
-                        'text-lg',
-                        'transition',
-                        'hover:-translate-y-1',
-                        'hover:bg-pop-aqua',
-                        'disabled:opacity-60',
-                        'disabled:hover:translate-y-0'
+                        'group relative w-full sm:w-auto mt-8 px-10 py-3',
+                        'rounded-full border-4 border-deep-blue bg-pop-sky hover:bg-pop-aqua disabled:opacity-60',
+                        'font-mulish font-extrabold uppercase tracking-wider text-lg',
+                        'transition hover:-translate-y-1 disabled:hover:translate-y-0'
                     )}
                 >
                     {state.submitting ? 'Sending…' : 'Send ➚'}

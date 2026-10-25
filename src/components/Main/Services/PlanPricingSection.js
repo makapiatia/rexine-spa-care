@@ -36,18 +36,11 @@ const visitTotals = [
 ];
 
 const PriceTile = ({ price, visits }) => (
-  <div className={classnames(
-    'rounded-2xl',
-    'border-2',
-    'border-deep-blue',
-    'bg-white',
-    'px-4',
-    'py-5'
-  )}>
-    <p className={classnames('font-fraunces', 'font-wonky', 'font-bold', 'text-5xl', 'xl:text-6xl')}>
+  <div className={classnames('px-4 py-5 rounded-2xl border-2 border-deep-blue bg-white')}>
+    <p className={classnames('font-fraunces font-wonky font-bold text-5xl xl:text-6xl')}>
       {price}
     </p>
-    <p className={classnames('mt-1', 'text-sm', 'font-bold', 'uppercase', 'tracking-wider')}>
+    <p className={classnames('mt-1 text-sm font-bold uppercase tracking-wider')}>
       Total Per Month
     </p>
     <p className={classnames('text-lg')}>{visits}</p>
@@ -56,99 +49,58 @@ const PriceTile = ({ price, visits }) => (
 
 export const PlanPricingSection = () => {
   return (
-    <section className={classnames('rexine-spa-care-pricing-section', 'w-full')}>
+    <section className={classnames('rexine-spa-care-pricing-section w-full')}>
       <SectionHeading eyebrow="01 · Plans">Select Your Plan</SectionHeading>
       <div className={classnames(
-        'tiered-service-pricing-section',
-        fullBleedClassName,
-        'lg:left-auto',
-        'lg:ml-0',
-        'lg:w-auto',
-        'lg:-mx-3',
-        'text-deep-blue',
-        'font-mulish',
-        'text-center'
+        'tiered-service-pricing-section lg:left-auto lg:w-auto lg:ml-0 lg:-mx-3',
+        'text-deep-blue font-mulish text-center',
+        fullBleedClassName
       )}>
         <Carousel
           label="Plans"
           inactiveFrom="(min-width: 1024px)"
-          slideClassName={classnames('basis-[88%]', 'sm:basis-[60%]', 'lg:basis-1/3')}
+          slideClassName={classnames('basis-[88%] sm:basis-[60%] lg:basis-1/3')}
         >
         {plans.map(({ name, biWeeklyPrice, weeklyPrice, note, badge, Sticker, cardClassName }) => (
           <div
             key={name}
             className={classnames(
-              'relative',
-              'flex',
-              'flex-col',
-              'h-full',
-              'gap-4',
-              'rounded-3xl',
-              'border-4',
-              'border-deep-blue',
-              'p-6',
-              'pt-12',
-              'shadow-[6px_6px_0_var(--color-deep-blue)]',
-              'transition',
-              'duration-300',
-              'hover:-translate-y-2',
+              'relative flex flex-col gap-4 h-full p-6 pt-12',
+              'rounded-3xl border-4 border-deep-blue shadow-[6px_6px_0_var(--color-deep-blue)]',
+              'transition duration-300 hover:-translate-y-2',
               cardClassName
             )}
           >
-            <Sticker className={classnames('absolute', '-top-8', 'left-6', 'w-16', 'h-16')} />
+            <Sticker className={classnames('absolute -top-8 left-6 w-16 h-16')} />
             {badge && (
               <p className={classnames(
-                'absolute',
-                '-top-4',
-                'right-5',
-                'rounded-full',
-                'border-2',
-                'border-deep-blue',
-                'bg-deep-blue',
-                'px-3',
-                'py-1',
-                'text-xs',
-                'font-extrabold',
-                'uppercase',
-                'tracking-wider',
-                'text-white'
+                'absolute -top-4 right-5 px-3 py-1',
+                'rounded-full border-2 border-deep-blue bg-deep-blue',
+                'text-xs font-extrabold uppercase tracking-wider text-white'
               )}>
                 {badge}
               </p>
             )}
-            <h3 className={classnames('font-fraunces', 'font-wonky', 'font-bold', 'text-3xl')}>
+            <h3 className={classnames('font-fraunces font-wonky font-bold text-3xl')}>
               {name}
             </h3>
             <PriceTile price={biWeeklyPrice} visits="For Two Visits" />
             <PriceTile price={weeklyPrice} visits="For Four Visits" />
             {note && (
-              <p className={classnames('text-sm', 'font-semibold')}>{note}</p>
+              <p className={classnames('text-sm font-semibold')}>{note}</p>
             )}
           </div>
         ))}
         </Carousel>
       </div>
       <div className={classnames(
-        'rexine-spa-care-visits-card',
-        'mt-6',
-        'md:mt-12',
-        'mx-auto',
-        'max-w-3xl',
-        'grid',
-        'gap-6',
-        'md:grid-cols-[1fr_auto]',
-        'md:items-center',
-        'rounded-3xl',
-        'border-4',
-        'border-deep-blue',
-        'bg-white',
-        'p-6',
-        'md:p-8',
-        'font-mulish',
-        'text-deep-blue'
+        'rexine-spa-care-visits-card grid gap-6 md:grid-cols-[1fr_auto] md:items-center max-w-3xl',
+        'mt-6 md:mt-12 mx-auto p-6 md:p-8',
+        'rounded-3xl border-4 border-deep-blue bg-white',
+        'font-mulish text-deep-blue'
       )}>
         <div>
-          <h3 className={classnames('font-fraunces', 'font-wonky', 'font-bold', 'text-2xl')}>
+          <h3 className={classnames('font-fraunces font-wonky font-bold text-2xl')}>
             How visits work
           </h3>
           <p className={classnames('mt-2')}>
@@ -156,21 +108,23 @@ export const PlanPricingSection = () => {
             a month may have one more or one fewer visit.
           </p>
         </div>
-        <table className={classnames('text-center', 'text-sm')}>
+        <table className={classnames('text-center text-sm')}>
           <caption className={classnames('sr-only')}>Total visits per plan</caption>
           <thead>
-            <tr className={classnames('font-bold', 'uppercase', 'tracking-wider', 'text-xs', 'text-green-blue')}>
-              <th scope="col" className={classnames('px-3', 'pb-2', 'whitespace-nowrap')}><span className={classnames('sr-only')}>Plan</span></th>
-              <th scope="col" className={classnames('px-3', 'pb-2', 'whitespace-nowrap')}>2 / month</th>
-              <th scope="col" className={classnames('px-3', 'pb-2', 'whitespace-nowrap')}>4 / month</th>
+            <tr className={classnames('font-bold uppercase tracking-wider text-xs text-green-blue')}>
+              <th scope="col" className={classnames('px-3 pb-2 whitespace-nowrap')}><span className={classnames(
+                'sr-only'
+              )}>Plan</span></th>
+              <th scope="col" className={classnames('px-3 pb-2 whitespace-nowrap')}>2 / month</th>
+              <th scope="col" className={classnames('px-3 pb-2 whitespace-nowrap')}>4 / month</th>
             </tr>
           </thead>
           <tbody>
             {visitTotals.map(({ plan, twoPerMonth, fourPerMonth }) => (
-              <tr key={plan} className={classnames('border-t-2', 'border-extra-light-blue')}>
-                <th scope="row" className={classnames('px-3', 'py-2', 'text-left', 'font-bold', 'whitespace-nowrap')}>{plan}</th>
-                <td className={classnames('px-3', 'py-2')}>{twoPerMonth} visits</td>
-                <td className={classnames('px-3', 'py-2')}>{fourPerMonth} visits</td>
+              <tr key={plan} className={classnames('border-t-2 border-extra-light-blue')}>
+                <th scope="row" className={classnames('px-3 py-2 text-left font-bold whitespace-nowrap')}>{plan}</th>
+                <td className={classnames('px-3 py-2')}>{twoPerMonth} visits</td>
+                <td className={classnames('px-3 py-2')}>{fourPerMonth} visits</td>
               </tr>
             ))}
           </tbody>

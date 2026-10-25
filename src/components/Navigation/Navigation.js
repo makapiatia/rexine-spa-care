@@ -6,14 +6,7 @@ import { MobileNavigation } from './MobileNavigation';
 export const Navigation = () => {
   return (
     <header
-      className={classnames(
-        'rexine-spa-care-navigation',
-        'sticky', 
-        'top-0',
-        'z-50',
-        'border-b-4',
-        'border-deep-blue'
-      )}
+      className={classnames('rexine-spa-care-navigation sticky top-0 z-50 border-b-4 border-deep-blue')}
     >
       <DesktopNavigation />
       <MobileNavigation />

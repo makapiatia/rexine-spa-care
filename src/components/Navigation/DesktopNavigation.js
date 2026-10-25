@@ -17,49 +17,22 @@ export const DesktopNavigation = () => {
 
   return (
     <div className={classnames(
-      'rexine-spa-care-desktop-navigation',
-      'hidden',
-      'lg:flex',
-      'items-center',
-      'justify-between',
-      'w-full',
-      'h-20',
-      'px-6',
+      'rexine-spa-care-desktop-navigation hidden lg:flex items-center justify-between w-full h-20 px-6',
       'bg-rexine-blue',
-      'text-white',
-      'font-fraunces'
+      'text-white font-fraunces'
     )}>
       <Link
-        className={classnames(
-          'group',
-          'flex',
-          'items-center',
-          'gap-2'
-        )}
+        className={classnames('group flex items-center gap-2')}
         href={'/'}
       >
-        <Sparkle className={classnames(
-          'w-8',
-          'transition',
-          'duration-500',
-          'group-hover:rotate-90'
-        )} />
+        <Sparkle className={classnames('w-8 transition duration-500 group-hover:rotate-90')} />
         <span
-          className={classnames(
-            'navigation-logo',
-            'font-wonky',
-            'font-semibold',
-            'text-3xl',
-          )}
+          className={classnames('navigation-logo font-wonky font-semibold text-3xl')}
         >
           Rexine Spa Care
         </span>
       </Link>
-      <nav className={classnames(
-        'flex',
-        'items-center',
-        'gap-2'
-      )}>
+      <nav className={classnames('flex items-center gap-2')}>
         {navigationSections.map((tab, i) => {
           const isActive = pathname === tab?.url;
 
@@ -69,13 +42,9 @@ export const DesktopNavigation = () => {
               href={tab?.url}
               aria-current={isActive ? 'page' : undefined}
               className={classnames(
-                'navigation-tab',
-                'rounded-full',
-                'border-2',
-                'px-5',
-                'py-1.5',
-                'text-2xl',
-                'font-wonky',
+                'navigation-tab px-5 py-1.5',
+                'rounded-full border-2',
+                'text-2xl font-wonky',
                 'transition',
                 isActive
                   ? 'border-deep-blue bg-white text-deep-blue shadow-[3px_3px_0_var(--color-deep-blue)]'

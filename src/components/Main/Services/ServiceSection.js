@@ -36,147 +36,65 @@ const services = [
 ];
 
 const pillClassName = classnames(
-  'group',
-  'relative',
-  'rounded-full',
-  'border-4',
-  'border-deep-blue',
-  'px-7',
-  'py-3',
-  'font-mulish',
-  'font-extrabold',
-  'uppercase',
-  'tracking-wider',
-  'text-lg',
-  'transition',
-  'hover:-translate-y-1'
+  'group relative px-5 py-2',
+  'rounded-full border-2 border-deep-blue',
+  'font-mulish font-extrabold uppercase tracking-wider text-sm',
+  'transition hover:-translate-y-0.5'
 );
 
 export const ServiceSection = () => {
   return (
     <div className={classnames(
-      'rexine-spa-care-service-section',
-      'w-full',
-      'overflow-x-clip',
+      'rexine-spa-care-service-section overflow-x-clip w-full',
       'bg-extra-light-blue',
       'text-deep-blue'
     )}>
       <section className={classnames(
-        'rexine-spa-care-home-intro',
-        'relative',
-        'max-w-(--breakpoint-1xl)',
-        'mx-auto',
-        'px-8',
-        'py-16',
-        'xl:px-16',
-        'xl:py-24',
-        'grid',
-        'gap-12',
-        'xl:grid-cols-5',
-        'xl:items-center'
+        'rexine-spa-care-home-intro relative grid gap-12 xl:grid-cols-5 xl:items-center max-w-(--breakpoint-1xl)',
+        'mx-auto px-8 py-16 xl:px-16 xl:py-24'
       )}>
         <div className={classnames('xl:col-span-3')}>
-          <Wave className={classnames('w-28', 'mb-6')} />
-          <p className={classnames(
-            'font-fraunces',
-            'font-wonky',
-            'text-2xl',
-            'md:text-3xl',
-            'xl:text-4xl',
-            'leading-snug'
-          )}>
+          <Wave className={classnames('w-28 mb-6')} />
+          <p className={classnames('font-fraunces font-wonky text-2xl md:text-3xl xl:text-4xl leading-snug')}>
             At Rexine Spa Care, we specialize in ensuring your spa experience is as{' '}
-            <span className={classnames('bg-pop-aqua', 'px-1', 'rounded-lg')}>relaxing and worry-free</span>
+            <span className={classnames('px-1 rounded-lg bg-pop-aqua')}>relaxing and worry-free</span>
             {' '}as possible.
           </p>
-          <p className={classnames(
-            'mt-6',
-            'font-mulish',
-            'text-xl',
-            'text-green-blue'
-          )}>
+          <p className={classnames('mt-6 font-mulish text-xl text-green-blue')}>
             With extensive field experience and training in a variety of spa sanitation options including
             FROG @ease, Soft Soak, bromine, chlorine, and more. We are equipped to handle all your spa care needs
             with expertise and precision.
           </p>
         </div>
-        <div className={classnames('relative', 'xl:col-span-2')}>
-          <Sparkle className={classnames(
-            'absolute',
-            '-top-6',
-            'right-2',
-            'w-12',
-            'rotate-12',
-            'motion-safe:animate-bob'
-          )} />
+        <div className={classnames('relative xl:col-span-2')}>
+          <Sparkle className={classnames('absolute -top-6 right-2 rotate-12 w-12 motion-safe:animate-bob')} />
           <SanitationProductLogoSection />
         </div>
       </section>
 
       <section className={classnames(
-        'rexine-spa-care-home-services',
-        'max-w-(--breakpoint-1xl)',
-        'mx-auto',
-        'px-8',
-        'pb-16',
-        'xl:px-16',
-        'xl:pb-24'
+        'rexine-spa-care-home-services max-w-(--breakpoint-1xl) mx-auto px-8 pb-16 xl:px-16 xl:pb-24'
       )}>
-        <h2 className={classnames(
-          'mb-10',
-          'font-fraunces',
-          'font-wonky',
-          'font-bold',
-          'text-4xl',
-          'md:text-5xl',
-          'text-rexine-blue'
-        )}>
+        <h2 className={classnames('mb-10 font-fraunces font-wonky font-bold text-4xl md:text-5xl text-rexine-blue')}>
           Our Services <span className={classnames('text-pop-cobalt')}>✹</span>
         </h2>
-        <ul className={classnames(
-          'grid',
-          'gap-8',
-          'md:grid-cols-2',
-          'xl:grid-cols-4'
-        )}>
+        <ul className={classnames('grid gap-8 md:grid-cols-2 xl:grid-cols-4')}>
           {services.map(({ title, description, Sticker, cardClassName }) => (
             <li
               key={title}
               className={classnames(
-                'relative',
-                'flex',
-                'flex-col',
-                'rounded-3xl',
-                'border-4',
-                'border-deep-blue',
-                'p-7',
-                'pt-12',
-                'shadow-[6px_6px_0_var(--color-deep-blue)]',
-                'transition',
-                'duration-300',
-                'hover:rotate-0',
-                'hover:-translate-y-2',
+                'relative flex flex-col p-7 pt-12',
+                'rounded-3xl border-4 border-deep-blue shadow-[6px_6px_0_var(--color-deep-blue)]',
                 'hover:shadow-[10px_10px_0_var(--color-deep-blue)]',
+                'transition duration-300 hover:rotate-0 hover:-translate-y-2',
                 cardClassName
               )}
             >
-              <Sticker className={classnames(
-                'absolute',
-                '-top-8',
-                'left-6',
-                'w-16',
-                'h-16'
-              )} />
-              <h3 className={classnames(
-                'mb-3',
-                'font-fraunces',
-                'font-wonky',
-                'font-bold',
-                'text-2xl'
-              )}>
+              <Sticker className={classnames('absolute -top-8 left-6 w-16 h-16')} />
+              <h3 className={classnames('mb-3 font-fraunces font-wonky font-bold text-2xl')}>
                 {title}
               </h3>
-              <p className={classnames('font-mulish', 'text-lg')}>
+              <p className={classnames('font-mulish text-lg')}>
                 {description}
               </p>
             </li>
@@ -184,88 +102,38 @@ export const ServiceSection = () => {
         </ul>
       </section>
 
-      <section className={classnames('rexine-spa-care-home-cta', 'px-4', 'pb-16', 'sm:px-8', 'xl:pb-24')}>
+      <section className={classnames('rexine-spa-care-home-cta px-4 pb-16 sm:px-8 xl:pb-24')}>
         <div className={classnames(
-          'relative',
-          'overflow-hidden',
-          'max-w-(--breakpoint-1xl)',
-          'mx-auto',
-          'rounded-[3rem]',
-          'border-4',
-          'border-deep-blue',
-          'bg-rexine-blue',
-          'text-white',
-          'px-8',
-          'py-14',
-          'md:px-16',
-          'md:py-20',
-          'text-center'
+          'relative overflow-hidden max-w-4xl mx-auto px-6 py-10 md:px-12 md:py-12',
+          'rounded-3xl border-4 border-deep-blue bg-rexine-blue',
+          'text-white text-center'
         )}>
           <Sparkle
             fill="var(--color-pop-aqua)"
-            className={classnames(
-              'absolute',
-              'top-6',
-              'right-6',
-              'md:right-16',
-              'w-12',
-              'md:w-16',
-              'motion-safe:animate-spin-slow'
-            )}
+            className={classnames('absolute top-4 right-4 md:right-8 w-8 md:w-10 motion-safe:animate-spin-slow')}
           />
           <p className={classnames(
             'relative',
-            'font-fraunces',
-            'font-wonky',
-            'font-semibold',
-            'text-3xl',
-            'md:text-5xl',
-            'leading-tight'
+            'font-fraunces font-wonky font-semibold text-2xl md:text-3xl leading-tight'
           )}>
-            We believe that a clean spa is a <span className={classnames('text-pop-aqua', 'italic')}>happy</span> spa.
-            <br className={classnames('hidden', 'md:block')} />
+            We believe that a clean spa is a <span className={classnames('text-pop-aqua italic')}>happy</span> spa.
+            <br className={classnames('hidden md:block')} />
             {' '}Let us help you maintain your oasis of relaxation!
           </p>
-          <p className={classnames(
-            'relative',
-            'mt-6',
-            'max-w-2xl',
-            'mx-auto',
-            'font-mulish',
-            'text-xl',
-            'text-light-blue'
-          )}>
+          <p className={classnames('relative max-w-xl mt-3 mx-auto font-mulish text-light-blue')}>
             Explore our services today and discover the difference that professional care can make.
           </p>
-          <div className={classnames(
-            'relative',
-            'flex',
-            'flex-col',
-            'sm:flex-row',
-            'justify-center',
-            'gap-4',
-            'mt-10'
-          )}>
+          <div className={classnames('relative flex flex-col sm:flex-row justify-center gap-3 mt-6')}>
             <Link
               href="/services"
-              className={classnames(
-                pillClassName,
-                'bg-pop-sky',
-                'text-deep-blue',
-                'hover:bg-pop-aqua'
-              )}
+              className={classnames('bg-pop-sky hover:bg-pop-aqua text-deep-blue', pillClassName)}
             >
               Services + Pricing ➚
               <HoverBubbles />
             </Link>
             <Link
               href="/contact"
-              className={classnames(
-                pillClassName,
-                'bg-white',
-                'text-deep-blue',
-                'hover:bg-extra-light-blue'
-              )}
+              className={classnames('bg-white hover:bg-extra-light-blue text-deep-blue', pillClassName)}
             >
               Contact ➚
               <HoverBubbles />

@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'tailwindcss-classnames';
 
 const outline = 'var(--color-deep-blue)';
 
@@ -82,7 +83,12 @@ export const HoverBubbles = () => (
     {hoverBubbles.map(({ left, size, delay }) => (
       <span
         key={left}
-        className={`absolute top-0 rounded-full border-2 border-deep-blue bg-pop-aqua opacity-0 motion-safe:group-hover:animate-bubble motion-safe:group-focus-visible:animate-bubble ${size}`}
+        className={classnames(
+          'absolute top-0',
+          'rounded-full border-2 border-deep-blue bg-pop-aqua opacity-0',
+          'motion-safe:group-hover:animate-bubble motion-safe:group-focus-visible:animate-bubble',
+          size
+        )}
         style={{ left, animationDelay: delay }}
       />
     ))}

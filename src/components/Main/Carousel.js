@@ -5,19 +5,14 @@ import useEmblaCarousel from 'embla-carousel-react';
 import classnames from 'tailwindcss-classnames';
 
 const controlButtonClassName = classnames(
-  'flex',
-  'h-8',
-  'w-8',
-  'items-center',
-  'justify-center',
+  'flex items-center justify-center h-8 w-8',
   'rounded-full',
-  'text-deep-blue/50',
-  'transition',
-  'hover:text-deep-blue'
+  'text-deep-blue/50 hover:text-deep-blue',
+  'transition'
 );
 
 const Chevron = ({ direction }) => (
-  <svg viewBox="0 0 24 24" className={classnames('h-4', 'w-4')} aria-hidden="true">
+  <svg viewBox="0 0 24 24" className={classnames('h-4 w-4')} aria-hidden="true">
     <path
       d={direction === 'left' ? 'M15 5 L8 12 L15 19' : 'M9 5 L16 12 L9 19'}
       fill="none"
@@ -85,16 +80,18 @@ export const Carousel = ({ children, label, slideClassName, inactiveFrom, align 
   const currentSlide = selectedIndex % slideCount;
 
   return (
-    <div className={classnames('rexine-spa-care-carousel')} role="region" aria-roledescription="carousel" aria-label={label}>
+    <div className={classnames(
+      'rexine-spa-care-carousel'
+    )} role="region" aria-roledescription="carousel" aria-label={label}>
       <div className={classnames('overflow-hidden')} ref={emblaRef}>
-        <div className={classnames('flex', 'touch-pan-y')}>
+        <div className={classnames('flex touch-pan-y')}>
           {slides.map((slide, i) => (
             <div
               key={i}
               role="group"
               aria-roledescription="slide"
               aria-label={`${(i % slideCount) + 1} of ${slideCount}`}
-              className={classnames('min-w-0', 'shrink-0', 'grow-0', 'px-3', 'pt-9', 'pb-3', slideClassName)}
+              className={classnames('shrink-0 grow-0 min-w-0 px-3 pt-9 pb-3', slideClassName)}
             >
               {slide}
             </div>
@@ -103,7 +100,7 @@ export const Carousel = ({ children, label, slideClassName, inactiveFrom, align 
       </div>
 
       {isActive && slideCount > 1 && (
-        <div className={classnames('mt-1', 'flex', 'items-center', 'justify-center', 'gap-2')}>
+        <div className={classnames('flex items-center justify-center gap-2 mt-1')}>
           <button
             type="button"
             aria-label="Previous slide"
@@ -112,7 +109,7 @@ export const Carousel = ({ children, label, slideClassName, inactiveFrom, align 
           >
             <Chevron direction="left" />
           </button>
-          <div className={classnames('flex', 'items-center')}>
+          <div className={classnames('flex items-center')}>
             {Array.from({ length: slideCount }).map((_, i) => (
               <button
                 key={i}
@@ -120,14 +117,12 @@ export const Carousel = ({ children, label, slideClassName, inactiveFrom, align 
                 aria-label={`Go to slide ${i + 1}`}
                 aria-current={i === currentSlide ? 'true' : undefined}
                 onClick={() => emblaApi?.scrollTo(i)}
-                className={classnames('group', 'px-1', 'py-3')}
+                className={classnames('group px-1 py-3')}
               >
                 <span className={classnames(
-                  'block',
-                  'h-[3px]',
+                  'block h-[3px]',
                   'rounded-full',
-                  'transition-all',
-                  'duration-300',
+                  'transition-all duration-300',
                   i === currentSlide ? 'w-8 bg-deep-blue' : 'w-4 bg-deep-blue/20 group-hover:bg-deep-blue/40'
                 )} />
               </button>

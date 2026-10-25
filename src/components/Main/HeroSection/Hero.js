@@ -18,138 +18,65 @@ export const Hero = () => {
     return (
         <section
             className={classnames(
-                'rexine-spa-care-hero-section',
-                'relative',
-                'flex',
-                'overflow-hidden',
-                'bg-cover',
-                'bg-center',
-                'w-full',
-                'min-h-[480px]',
-                'md:min-h-[600px]',
-                'items-center',
-                'justify-center',
-                'text-center',
-                'px-6',
-                'py-16'
+                'rexine-spa-care-hero-section relative flex overflow-hidden items-center justify-center',
+                'w-full min-h-[480px] md:min-h-[600px] px-6 py-16',
+                'bg-cover bg-center',
+                'text-center'
             )}
             style={{ backgroundImage: `url(${imageUrl.src})` }}
         >
             <div className={classnames(
-                'absolute',
-                'inset-0',
-                'bg-linear-to-b',
-                'from-deep-blue/30',
-                'via-transparent',
-                'to-deep-blue/60'
+                'absolute inset-0',
+                'bg-linear-to-b from-deep-blue/30 via-transparent to-deep-blue/60'
             )} />
 
-            <div className={classnames('relative', 'flex', 'flex-col', 'items-center')}>
+            <div className={classnames('relative flex flex-col items-center')}>
                 <div className={classnames(
-                    'relative',
-                    'max-w-[300px]',
-                    'md:max-w-[360px]',
-                    'px-7',
-                    'py-9',
-                    'md:px-9',
-                    'md:py-11',
-                    'bg-green-blue/25',
-                    'backdrop-blur-[2px]',
-                    'rounded-full'
+                    'relative max-w-[300px] md:max-w-[360px] px-7 py-9 md:px-9 md:py-11',
+                    'rounded-full bg-green-blue/25',
+                    'backdrop-blur-[2px]'
                 )}>
                     <img
                         src={RexineSpaCareLogo_WhiteText.src}
                         alt={'rexine-spa-care-logo'}
                     />
                     <Sparkle className={classnames(
-                        'absolute',
-                        'z-10',
-                        '-top-2',
-                        '-left-4',
-                        'md:-top-10',
-                        'md:-left-44',
-                        'w-14',
-                        'md:w-28',
-                        'rotate-12',
+                        'absolute z-10 -top-2 -left-4 md:-top-10 md:-left-44 rotate-12 w-14 md:w-28',
                         'motion-safe:animate-bob'
                     )} />
                     <Sparkle
                         fill="var(--color-pop-periwinkle)"
                         className={classnames(
-                            'absolute',
-                            'z-10',
-                            'top-1/2',
-                            '-right-3',
-                            'md:-right-44',
-                            'w-8',
-                            'md:w-16',
-                            '-rotate-12',
-                            'motion-safe:animate-bob',
-                            '[animation-delay:0.8s]'
+                            'absolute z-10 top-1/2 -right-3 md:-right-44 -rotate-12 w-8 md:w-16',
+                            'motion-safe:animate-bob [animation-delay:0.8s]'
                         )}
                     />
                     <Bubbles className={classnames(
-                        'absolute',
-                        'z-10',
-                        '-bottom-1',
-                        '-left-1',
-                        'md:bottom-0',
-                        'md:-left-36',
-                        'w-12',
-                        'md:w-24',
-                        'motion-safe:animate-bob',
-                        '[animation-delay:1.5s]'
+                        'absolute z-10 -bottom-1 -left-1 md:bottom-0 md:-left-36 w-12 md:w-24',
+                        'motion-safe:animate-bob [animation-delay:1.5s]'
                     )} />
                 </div>
 
                 <p className={classnames(
-                    'mt-8',
-                    'px-6',
-                    'py-3',
-                    'rounded-full',
-                    'border-4',
-                    'border-deep-blue',
-                    'bg-white',
-                    'text-deep-blue',
-                    'font-fraunces',
-                    'font-wonky',
-                    'font-semibold',
-                    'whitespace-nowrap',
-                    'text-xl',
-                    'xs:text-2xl',
-                    'md:text-4xl',
-                    'shadow-[5px_5px_0_var(--color-deep-blue)]'
+                    'mt-8 px-6 py-3',
+                    'rounded-full border-4 border-deep-blue shadow-[5px_5px_0_var(--color-deep-blue)] bg-white',
+                    'text-deep-blue font-fraunces font-wonky font-semibold whitespace-nowrap text-xl xs:text-2xl',
+                    'md:text-4xl'
                 )}>
-                    a clean spa is a <span className={classnames('text-pop-cobalt', 'italic')}>happy</span> spa ✹
+                    a clean spa is a <span className={classnames('text-pop-cobalt italic')}>happy</span> spa ✹
                 </p>
 
                 <div className={classnames(
-                    'flex',
-                    'flex-col',
-                    'sm:flex-row',
-                    'gap-4',
-                    'mt-8',
-                    'font-mulish',
-                    'font-extrabold',
-                    'uppercase',
-                    'tracking-wider',
-                    'text-lg'
+                    'flex flex-col sm:flex-row gap-4 mt-8',
+                    'font-mulish font-extrabold uppercase tracking-wider text-lg'
                 )}>
                     <Link
                         href="/services"
                         className={classnames(
-                            'group',
-                            'relative',
-                            'rounded-full',
-                            'border-4',
-                            'border-deep-blue',
-                            'bg-pop-sky',
+                            'group relative px-7 py-3',
+                            'rounded-full border-4 border-deep-blue bg-pop-sky hover:bg-pop-aqua',
                             'text-deep-blue',
-                            'px-7',
-                            'py-3',
-                            'transition',
-                            'hover:-translate-y-1',
-                            'hover:bg-pop-aqua'
+                            'transition hover:-translate-y-1'
                         )}
                     >
                         Services + Pricing ➚
@@ -158,18 +85,10 @@ export const Hero = () => {
                     <a
                         href="tel:+1623-282-2530"
                         className={classnames(
-                            'group',
-                            'relative',
-                            'rounded-full',
-                            'border-4',
-                            'border-white',
-                            'bg-deep-blue/70',
+                            'group relative px-7 py-3',
+                            'rounded-full border-4 border-white bg-deep-blue/70 hover:bg-rexine-blue',
                             'text-white',
-                            'px-7',
-                            'py-3',
-                            'transition',
-                            'hover:-translate-y-1',
-                            'hover:bg-rexine-blue'
+                            'transition hover:-translate-y-1'
                         )}
                     >
                         Call Us Today!

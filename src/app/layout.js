@@ -19,7 +19,8 @@ const fraunces = Fraunces({
 
 export const metadata = {
   title: 'Rexine Spa Care',
-  description: 'We are fully field experienced & trained in a multitude of spa sanitation options including FROG @ease, Soft Soak, bromine, chlorine, and many more!',
+  description: 'We are fully field experienced & trained in a multitude of spa sanitation options including '
+    + 'FROG @ease, Soft Soak, bromine, chlorine, and many more!',
   manifest: '/manifest.json',
   icons: {
     icon: '/favicon.ico',
