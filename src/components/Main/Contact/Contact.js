@@ -42,6 +42,59 @@ const ValidationError = ({ id, error }) => {
     );
 };
 
+const cardClassName = classnames(
+    'flex',
+    'flex-col',
+    'h-auto',
+    'w-auto',
+    'bg-white',
+    'm-8',
+    'sm:m-12',
+    'xl:ml-16',
+    'xl:mr-8',
+    'p-8',
+    'sm:p-12',
+    'xl:px-24',
+    'items-center',
+    'border border-light-blue'
+);
+
+const headingClassName = classnames(
+    'pb-8',
+    'sm:pb-16',
+    'font-fraunces',
+    'font-bold',
+    'text-4xl',
+    'text-green-blue',
+);
+
+const ContactLayout = ({ children }) => (
+    <div className={classnames(
+        'flex',
+        'flex-col',
+        'xl:flex-row',
+        'min-h-max',
+        'w-full',
+        'bg-extra-light-blue',
+        'justify-center',
+        'xl:py-8'
+    )}>
+        {children}
+        <div
+            className={classnames(
+                'rexine-spa-care-service-page',
+                'relative flex flex-col place-items-center',
+                'xl:my-12 font-bold font-fraunces text-4xl',
+                'text-green-blue bg-white border border-light-blue',
+                'p-8 mx-8 sm:mx-12 xl:ml-6 xl:mr-12 mb-8 sm:mb-12',
+            )}
+        >
+            <h1 className={classnames('pt-2 sm:pt-4 pb-5')}>Service Area</h1>
+            <ServiceArea />
+        </div>
+    </div>
+);
+
 export const Contact = () => {
     const [state, setState] = useState({ submitting: false, succeeded: false, error: null });
     const [fieldErrors, setFieldErrors] = useState({});
@@ -106,51 +159,30 @@ export const Contact = () => {
     };
 
     if (state.succeeded) {
-        return <p>Thank you! We will be in contact as soon as possible!</p>;
+        return (
+            <ContactLayout>
+                <div className={classnames(cardClassName, 'justify-center', 'text-center')}>
+                    <h1 className={headingClassName}>
+                        Thank You!
+                    </h1>
+                    <p className={classnames('font-mulish', 'font-medium', 'text-xl')}>
+                        We will be in contact as soon as possible!
+                    </p>
+                </div>
+            </ContactLayout>
+        );
     }
 
     return (
-        <div className={classnames(
-            'flex',
-            'flex-col',
-            'xl:flex-row',
-            'min-h-max',
-            'w-full',
-            'bg-extra-light-blue',
-            'justify-center',
-            'xl:py-8'
-        )}>
+        <ContactLayout>
             <form
-                className={classnames(
-                    'flex',
-                    'flex-col',
-                    'h-auto',
-                    'w-auto',
-                    'bg-white',
-                    'm-8',
-                    'sm:m-12',
-                    'xl:ml-16',
-                    'xl:mr-8',
-                    'p-8',
-                    'sm:p-12',
-                    'xl:px-24',
-                    'items-center',
-                    'border border-light-blue'
-                )}
+                className={cardClassName}
                 onSubmit={handleSubmit}
                 noValidate
             >
                 <input type="hidden" name="_subject" value="New Rexine Spa Care inquiry" />
                 <input type="hidden" name="_template" value="table" />
-                <h1 className={classnames(
-                    'pb-8',
-                    'sm:pb-16',
-                    'font-fraunces',
-                    'font-bold',
-                    'text-4xl',
-                    'text-green-blue',
-                )}
-                >
+                <h1 className={headingClassName}>
                     Get In Touch
                 </h1>
                 <div
@@ -276,18 +308,6 @@ export const Contact = () => {
                     Send
                 </button>
             </form>
-            <div
-                className={classnames(
-                    'rexine-spa-care-service-page',
-                    'relative flex flex-col place-items-center',
-                    'xl:my-12 font-bold font-fraunces text-4xl',
-                    'text-green-blue bg-white border border-light-blue',
-                    'p-8 mx-8 sm:mx-12 xl:ml-6 xl:mr-12 mb-8 sm:mb-12',
-                )}
-            >
-                <h1 className={classnames('pt-2 sm:pt-4 pb-5')}>Service Area</h1>
-                <ServiceArea />
-            </div>
-        </div>
+        </ContactLayout>
     );
 }
