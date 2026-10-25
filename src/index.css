@@ -1,6 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import 'tailwindcss';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-xs: 375px;
+  --breakpoint-sm: 500px;
+  --breakpoint-md: 768px;
+  --breakpoint-tablet: 830px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-1xl: 1476px;
+  --breakpoint-2xl: 1536px;
+
+  --font-mulish: var(--font-mulish-loaded), sans-serif;
+  --font-fraunces: var(--font-fraunces-loaded), serif;
+
+  --radius-extraLarge: 12rem;
+
+  --color-extra-light-blue: #e8faff;
+  --color-light-blue: #c3edfa;
+  --color-green-blue: #007db6;
+  --color-rexine-blue: #0f52ba;
+  --color-medium-blue: #005d9e;
+  --color-deep-blue: #0b387e;
+  --color-light-teal: #00bfb9;
+  --color-medium-teal: #029794;
+  --color-light-green: #00ba69;
+  --color-medium-green: #029756;
+  --color-pricing-yellow: #fff300;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}

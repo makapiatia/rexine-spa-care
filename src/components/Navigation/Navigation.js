@@ -10,8 +10,8 @@ export const Navigation = () => {
         'rexine-spa-care-navigation',
         'sticky', 
         'top-0',
-        'z-[50]',
-        'shadow-sm',
+        'z-50',
+        'shadow-xs',
         'shadow-blue-500'
       )}
     >

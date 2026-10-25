@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import classnames from 'tailwindcss-classnames';
 import { SanitationProductLogoSection } from './SanitationProductLogoSection';
 
@@ -52,7 +52,7 @@ export const ServiceSection = () => {
               'hover:bg-blue-500 px-6 py-6 xl:px-8 w-full xl:w-fit text-center'
             )}>
               <Link
-                to="/services"
+                href="/services"
               >
                 <span>
                   Services + Pricing

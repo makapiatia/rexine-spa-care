@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import classnames from 'tailwindcss-classnames';
 import heroBG_3000x2000 from '../../../assets/images/heroBG_3000x2000.jpg';
@@ -25,7 +27,7 @@ export const Hero = () => {
                 'justify-center',
                 'text-center',
             )}
-            style={{ backgroundImage: `url(${imageUrl})` }}
+            style={{ backgroundImage: `url(${imageUrl.src})` }}
         >
             <div
                 className={classnames(
@@ -43,7 +45,7 @@ export const Hero = () => {
                     'rounded-full'
                 )}>
                     <img
-                        src={RexineSpaCareLogo_WhiteText}
+                        src={RexineSpaCareLogo_WhiteText.src}
                         alt={'rexine-spa-care-logo'}
                     />
                 </div>
@@ -60,7 +62,7 @@ export const Hero = () => {
                 'rounded-full'
             )}>
                 <img
-                    src={RexineSpaCareLogo_WhiteText}
+                    src={RexineSpaCareLogo_WhiteText.src}
                     alt={'rexine-spa-care-logo'}
                 />
             </div>

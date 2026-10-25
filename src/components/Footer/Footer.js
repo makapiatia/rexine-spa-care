@@ -92,13 +92,13 @@ export const Footer = () => {
           )}
         >
           <a href='https://www.linkedin.com/company/rexine-spa-care/' >
-            <img src={linkedin} width='50px' height='50px' alt={'linkedin-logo'} className={classnames('mr-6')} />
+            <img src={linkedin.src} width='50px' height='50px' alt={'linkedin-logo'} className={classnames('mr-6')} />
           </a>
           <a href='https://www.facebook.com/rexinespacare/'>
-            <img src={squareFacebook} width='50px' height='50px' alt={'facebook-logo'} className={classnames('mr-6')} />
+            <img src={squareFacebook.src} width='50px' height='50px' alt={'facebook-logo'} className={classnames('mr-6')} />
           </a>
           <a href='https://www.instagram.com/rexinespacare/'>
-            <img src={squareInstagram} width='50px' height='50px' alt={'instagram-logo'} />
+            <img src={squareInstagram.src} width='50px' height='50px' alt={'instagram-logo'} />
           </a>
         </div>
       </div>

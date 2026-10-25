@@ -24,7 +24,7 @@ export const AboutUs = () => {
       className={classnames(
         'rexine-spa-care-about-us',
         'flex flex-col place-items-center bg-extra-light-blue',
-        'max-w-screen-1xl justify-center mx-auto'
+        'max-w-(--breakpoint-1xl) justify-center mx-auto'
       )}
     >
       <div className="mx-8 mt-9 lg:px-8 flex flex-col lg:flex-row items-center">
@@ -62,7 +62,7 @@ export const AboutUs = () => {
         {logos?.map((logo, i) => {
           return (
             <img
-              src={logo?.imgSrc}
+              src={logo?.imgSrc?.src}
               alt={logo?.brand + i}
               key={logo?.brand + i}
               className={classnames(

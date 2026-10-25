@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import classnames from 'tailwindcss-classnames';
 
 export const DesktopNavigation = () => {
@@ -32,7 +32,7 @@ export const DesktopNavigation = () => {
           'h-full',
           'items-center'
         )}
-        to={'/'}
+        href={'/'}
       >
         <span
           className={classnames(
@@ -57,7 +57,7 @@ export const DesktopNavigation = () => {
             <Link
               className={classnames('h-full')}
               key={`${tab?.tabTitle}-${i}`}
-              to={tab?.url}
+              href={tab?.url}
             >
               <span className={classnames(
                 'navigation-tab',

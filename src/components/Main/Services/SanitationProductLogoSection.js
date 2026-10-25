@@ -27,7 +27,7 @@ export const SanitationProductLogoSection = () => {
                         'object-contain flex items-center border border-light-blue'
                     )}>
                         <img
-                            src={product?.imgSrc}
+                            src={product?.imgSrc?.src}
                             alt={product?.brand + i}
                             key={product?.brand + i}
                         />

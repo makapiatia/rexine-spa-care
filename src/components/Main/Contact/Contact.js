@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import classnames from 'tailwindcss-classnames';
 import { ServiceArea } from './ServiceArea';
@@ -62,7 +64,7 @@ export const Contact = () => {
     const fieldClassName = (name) => classnames(
         'border-b-2',
         fieldErrors[name] ? 'border-red-600' : 'border-gray-400',
-        'focus:outline-none'
+        'focus:outline-hidden'
     );
 
     const handleSubmit = async (event) => {
@@ -245,7 +247,7 @@ export const Contact = () => {
                         className={classnames(
                             'border-b-2',
                             'border-gray-400',
-                            'focus:outline-none'
+                            'focus:outline-hidden'
 
                         )}
                         placeholder="Extra Info (Optional)"

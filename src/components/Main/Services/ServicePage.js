@@ -15,7 +15,7 @@ export const ServicePage = () => {
         'flex-col',
         'place-items-center',
         'bg-extra-light-blue',
-        'max-w-screen-1xl',
+        'max-w-(--breakpoint-1xl)',
         'justify-center',
         'mx-auto'
       )}

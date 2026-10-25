@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import classnames from 'tailwindcss-classnames';
 import { slide as Menu } from 'react-burger-menu';
