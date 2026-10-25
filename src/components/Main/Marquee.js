@@ -41,33 +41,34 @@ export const Marquee = () => {
   const [isPaused, setIsPaused] = useState(false);
 
   return (
-    <div
-      className={classnames(
-        'rexine-spa-care-marquee relative overflow-hidden py-4',
+    // The button sits on the strip's bottom border, so it lives outside the clipped strip
+    <div className={classnames('rexine-spa-care-marquee relative')}>
+      <div className={classnames(
+        'overflow-hidden py-4',
         'border-y-4 border-deep-blue bg-rexine-blue',
         'text-white font-fraunces font-wonky text-2xl md:text-3xl'
-      )}
-    >
-      {/* Screen readers get the list once; the scrolling copies are visual only */}
-      <ul className={classnames('sr-only')}>
-        {services.map((item) => <li key={item}>{item}</li>)}
-      </ul>
-      <div
-        aria-hidden="true"
-        className={classnames('flex w-max motion-safe:animate-marquee')}
-        // Inline so it wins over the animation shorthand
-        style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
-      >
-        <MarqueeRow />
-        <MarqueeRow />
+      )}>
+        {/* Screen readers get the list once; the scrolling copies are visual only */}
+        <ul className={classnames('sr-only')}>
+          {services.map((item) => <li key={item}>{item}</li>)}
+        </ul>
+        <div
+          aria-hidden="true"
+          className={classnames('flex w-max motion-safe:animate-marquee')}
+          // Inline so it wins over the animation shorthand
+          style={{ animationPlayState: isPaused ? 'paused' : 'running' }}
+        >
+          <MarqueeRow />
+          <MarqueeRow />
+        </div>
       </div>
       <button
         type="button"
         onClick={() => setIsPaused(!isPaused)}
         aria-label={isPaused ? 'Play scrolling services' : 'Pause scrolling services'}
         className={classnames(
-          'absolute z-10 top-1/2 right-3 -translate-y-1/2 flex items-center justify-center motion-reduce:hidden',
-          'w-9 h-9',
+          'absolute z-10 bottom-0.5 right-6 md:right-10 translate-y-1/2 flex items-center justify-center',
+          'motion-reduce:hidden w-9 h-9',
           'rounded-full border-2 border-deep-blue bg-white hover:bg-pop-aqua',
           'text-deep-blue',
           'transition'
