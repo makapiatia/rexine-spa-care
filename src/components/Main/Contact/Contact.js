@@ -212,7 +212,7 @@ export const Contact = () => {
                     'text-center',
                     cardClassName
                 )}>
-                    <Sparkle className={classnames('absolute -top-8 left-8 w-16 motion-safe:animate-bob')} />
+                    <Sparkle className={classnames('absolute z-10 -top-8 left-8 w-16 motion-safe:animate-bob')} />
                     <Bubbles className={classnames('w-24 mb-6')} />
                     <h2 className={headingClassName}>
                         Thank You!
@@ -231,7 +231,7 @@ export const Contact = () => {
                 'rexine-spa-care-contact-form',
                 cardClassName
             )} onSubmit={handleSubmit} noValidate>
-                <Sparkle className={classnames('absolute -top-8 left-8 w-16')} />
+                <Sparkle className={classnames('absolute z-10 -top-8 left-8 w-16')} />
                 <input type="hidden" name="_subject" value="New Rexine Spa Care inquiry" />
                 <input type="hidden" name="_template" value="table" />
                 <h2 className={headingClassName}>Get In Touch</h2>

@@ -71,10 +71,10 @@ export const PlanPricingSection = () => {
               cardClassName
             )}
           >
-            <Sticker className={classnames('absolute -top-8 left-6 w-16 h-16')} />
+            <Sticker className={classnames('absolute z-10 -top-8 left-6 w-16 h-16')} />
             {badge && (
               <p className={classnames(
-                'absolute -top-4 right-5 px-3 py-1',
+                'absolute z-20 -top-4 right-5 px-3 py-1',
                 'rounded-full border-2 border-deep-blue bg-deep-blue',
                 'text-xs font-extrabold uppercase tracking-wider text-white'
               )}>

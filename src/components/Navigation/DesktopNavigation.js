@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import classnames from 'tailwindcss-classnames';
-import { Sparkle } from '../Main/Stickers';
+import { Bubbles } from '../Main/Stickers';
 
 export const DesktopNavigation = () => {
   const pathname = usePathname();
@@ -25,7 +25,7 @@ export const DesktopNavigation = () => {
         className={classnames('group flex items-center gap-2')}
         href={'/'}
       >
-        <Sparkle className={classnames('w-8 transition duration-500 group-hover:rotate-90')} />
+        <Bubbles className={classnames('w-9 motion-safe:group-hover:animate-wiggle')} />
         <span
           className={classnames('navigation-logo font-wonky font-semibold text-3xl')}
         >

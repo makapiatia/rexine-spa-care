@@ -4,7 +4,6 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import classnames from 'tailwindcss-classnames';
-import { Sparkle } from '../Main/Stickers';
 
 const menuLinks = [
   { title: 'Home', url: '/' },
@@ -38,7 +37,7 @@ export const MobileNavigation = () => {
 
   return (
     <div className={classnames('rexine-spa-care-mobile-navigation relative lg:hidden')}>
-      <div className={classnames('flex items-center justify-between w-full h-24 px-7 bg-rexine-blue font-fraunces')}>
+      <div className={classnames('flex items-center justify-between w-full h-20 px-7 bg-rexine-blue font-fraunces')}>
         <button
           type="button"
           aria-label={isOpen ? 'Close menu' : 'Open menu'}
@@ -51,20 +50,11 @@ export const MobileNavigation = () => {
           <span className={classnames('top-3', burgerBarClassName, isOpen ? 'opacity-0' : 'opacity-100')} />
           <span className={classnames(burgerBarClassName, isOpen ? 'top-3 -rotate-45' : 'top-6')} />
         </button>
-        <Link
-          href="/"
-          className={classnames('flex items-center gap-2 text-white text-2xl font-wonky font-semibold')}
-        >
-          <Sparkle className={classnames('w-7')} />
-          Rexine Spa Care
-        </Link>
-        {/* Balances the menu button so the title stays centered */}
-        <span className={classnames('shrink-0 w-9')} aria-hidden="true" />
       </div>
 
       {isOpen && (
         <div
-          className={classnames('fixed inset-x-0 top-24 bottom-0 bg-deep-blue/50')}
+          className={classnames('fixed inset-x-0 top-20 bottom-0 bg-deep-blue/50')}
           onClick={() => setIsOpen(false)}
           aria-hidden="true"
         />

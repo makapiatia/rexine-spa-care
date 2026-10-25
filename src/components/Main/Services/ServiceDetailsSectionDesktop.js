@@ -53,7 +53,7 @@ export const ServiceDetailsSectionDesktop = () => {
                     slideClassName={classnames('basis-[92%] sm:basis-[75%] lg:basis-1/2')}
                 >
                 <div className={classnames('monthly-details-section bg-white text-deep-blue', cardClassName)}>
-                    <Sparkle className={classnames('absolute -top-8 left-8 w-16')} />
+                    <Sparkle className={classnames('absolute z-10 -top-8 left-8 w-16')} />
                     <h3 className={classnames('font-fraunces font-wonky font-bold text-3xl')}>
                         Maintenance
                     </h3>

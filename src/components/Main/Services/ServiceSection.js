@@ -67,7 +67,7 @@ export const ServiceSection = () => {
           </p>
         </div>
         <div className={classnames('relative xl:col-span-2')}>
-          <Sparkle className={classnames('absolute -top-6 right-2 rotate-12 w-12 motion-safe:animate-bob')} />
+          <Sparkle className={classnames('absolute z-10 -top-6 right-2 rotate-12 w-12 motion-safe:animate-bob')} />
           <SanitationProductLogoSection />
         </div>
       </section>
@@ -90,7 +90,7 @@ export const ServiceSection = () => {
                 cardClassName
               )}
             >
-              <Sticker className={classnames('absolute -top-8 left-6 w-16 h-16')} />
+              <Sticker className={classnames('absolute z-10 -top-8 left-6 w-16 h-16')} />
               <h3 className={classnames('mb-3 font-fraunces font-wonky font-bold text-2xl')}>
                 {title}
               </h3>
@@ -110,7 +110,7 @@ export const ServiceSection = () => {
         )}>
           <Sparkle
             fill="var(--color-pop-aqua)"
-            className={classnames('absolute top-4 right-4 md:right-8 w-8 md:w-10 motion-safe:animate-spin-slow')}
+            className={classnames('absolute z-10 top-4 right-4 md:right-8 w-8 md:w-10 motion-safe:animate-spin-slow')}
           />
           <p className={classnames(
             'relative',

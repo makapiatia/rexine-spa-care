@@ -127,7 +127,7 @@ export const AboutUs = () => {
                 )}
               >
                 <Sticker className={classnames(
-                  'absolute -top-7 left-1/2 -translate-x-1/2 w-14',
+                  'absolute z-10 -top-7 left-1/2 -translate-x-1/2 w-14',
                   'motion-safe:group-hover:animate-wiggle'
                 )} />
                 <p className={classnames(
