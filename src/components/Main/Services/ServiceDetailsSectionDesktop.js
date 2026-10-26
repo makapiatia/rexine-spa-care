@@ -37,7 +37,7 @@ const ChecklistItem = ({ children, sparkleFill }) => (
 export const ServiceDetailsSectionDesktop = () => {
     return (
         <section className={classnames('rexine-spa-care-service-details-section w-full')}>
-            <SectionHeading eyebrow="02 · Services">Explore Our Services</SectionHeading>
+            <SectionHeading eyebrow="01 · Services">Explore Our Services</SectionHeading>
             <div className={classnames(
                 'service-details-section lg:left-auto lg:w-auto lg:ml-0 lg:-mx-3',
                 'font-mulish text-base md:text-lg',

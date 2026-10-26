@@ -3,7 +3,7 @@ import classnames from 'tailwindcss-classnames';
 import linkedin from '../../assets/images/socials/linkedin.svg';
 import squareFacebook from '../../assets/images/socials/squareFacebook.svg';
 import squareInstagram from '../../assets/images/socials/squareInstagram.svg';
-import { Bubbles, darkOutline, HoverBubbles, Sparkle } from '../Main/Stickers';
+import { Bubbles, darkOutline, HoverBubbles } from '../Main/Stickers';
 
 const headingClassName = classnames('font-fraunces font-wonky font-semibold text-2xl text-white');
 
@@ -44,28 +44,23 @@ export const Footer = () => {
         )} />
 
         <div className={classnames('relative max-w-(--breakpoint-1xl) mx-auto')}>
-          <p className={classnames(
-            'flex items-center gap-3 mb-10',
-            'font-fraunces font-wonky font-semibold text-3xl sm:text-4xl md:text-5xl text-white'
-          )}>
-            <Sparkle outline={darkOutline} className={classnames('shrink-0 w-10 md:w-12')} />
-            Rexine Spa Care
-          </p>
-
           <div className={classnames('grid gap-10 md:grid-cols-3')}>
             <div className={classnames('flex flex-col gap-1')}>
-              <p className={headingClassName}>Inquiries & Assistance:</p>
+              <p className={headingClassName}>Call or text us</p>
               <a href='tel:+1623-282-2530' className={classnames('w-fit hover:text-white', detailClassName)}>
                 +1-623-282-2530
               </a>
-              <p className={classnames('pt-4', headingClassName)}>Email:</p>
+              <a href='sms:+16232822530' className={classnames('w-fit hover:text-white', detailClassName)}>
+                Send us a text <span aria-hidden="true">➚</span>
+              </a>
+              <p className={classnames('pt-4', headingClassName)}>Drop us a line</p>
               <a href='mailto:info@rexinespacare.com' className={classnames('w-fit hover:text-white', detailClassName)}>
                 info@rexinespacare.com
               </a>
             </div>
 
             <div className={classnames('flex flex-col gap-1')}>
-              <p className={headingClassName}>Regular Business Hours:</p>
+              <p className={headingClassName}>When you can reach us</p>
               <p className={detailClassName}>Monday-Friday 8:00am-6:00pm</p>
               <p className={classnames('italic font-normal', detailClassName)}>
                 Saturday & Sunday available by appointment.
@@ -73,7 +68,7 @@ export const Footer = () => {
             </div>
 
             <div className={classnames('flex flex-col gap-3')}>
-              <p className={headingClassName}>Follow us on social media!</p>
+              <p className={headingClassName}>Come say hi online</p>
               <div className={classnames('flex flex-row gap-4')}>
                 {socialLinks.map(({ href, icon, alt }) => (
                   <a

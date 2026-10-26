@@ -108,7 +108,7 @@ export const MobileNavigation = () => {
                 'text-center font-mulish font-extrabold uppercase tracking-wider text-lg text-deep-blue'
               )}
             >
-              Call Us Today!
+              Call or Text Us Today!
             </a>
           </nav>
         </div>

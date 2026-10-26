@@ -96,7 +96,7 @@ export const Hero = () => {
                             'transition hover:-translate-y-1'
                         )}
                     >
-                        Call Us Today!
+                        Call or Text Us Today!
                         <HoverBubbles dark />
                     </a>
                 </div>

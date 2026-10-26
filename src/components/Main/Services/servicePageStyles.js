@@ -1,6 +1,29 @@
 import React from 'react';
 import classnames from 'tailwindcss-classnames';
-import { Wave } from '../Stickers';
+import { HoverBubbles, Wave } from '../Stickers';
+
+const pillClassName = classnames(
+  'group relative px-5 py-2',
+  'rounded-full border-2 border-deep-blue',
+  'text-center whitespace-nowrap font-mulish font-extrabold uppercase tracking-wider text-sm text-deep-blue',
+  'transition hover:-translate-y-0.5'
+);
+
+const contactLinks = [
+  { label: 'Call or text us', href: 'tel:+1623-282-2530', className: 'bg-pop-aqua hover:bg-pop-sky' },
+  { label: 'Email us', href: 'mailto:info@rexinespacare.com', className: 'bg-pop-periwinkle hover:bg-white' }
+];
+
+export const ContactButtons = ({ className }) => (
+  <div className={classnames('flex flex-col sm:flex-row gap-3', className)}>
+    {contactLinks.map(({ label, href, className: buttonClassName }) => (
+      <a key={label} href={href} className={classnames(buttonClassName, pillClassName)}>
+        {label}
+        <HoverBubbles />
+      </a>
+    ))}
+  </div>
+);
 
 // Stretches a carousel to the screen edges past the page padding
 export const fullBleedClassName = classnames('relative left-1/2 w-screen -ml-[50vw]');

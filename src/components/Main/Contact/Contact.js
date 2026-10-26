@@ -62,7 +62,7 @@ const inputClassName = classnames(
 
 const quickContacts = [
     {
-        label: 'Call',
+        label: 'Call or Text',
         value: '+1-623-282-2530',
         href: 'tel:+1623-282-2530',
         Sticker: Sun,
@@ -96,7 +96,7 @@ const ContactLayout = ({ children }) => (
     <div className={classnames('rexine-spa-care-contact overflow-x-clip w-full bg-extra-light-blue text-deep-blue')}>
         <PageBanner
             title="Contact"
-            description="Have a question or ready to book a visit? Send us a note and we'll get back to you."
+            description="Have a question or ready to book a visit? Text, call or email us, or send a note and we'll get back to you."
         />
         <div className={classnames(
             'flex flex-col gap-14 max-w-(--breakpoint-1xl) mx-auto px-6 sm:px-12 pb-12 md:pb-16 xl:pb-24'
@@ -296,7 +296,7 @@ export const Contact = () => {
                             id="message"
                             name="message"
                             rows={4}
-                            placeholder="Spa make or model, gate codes, preferred visit times…"
+                            placeholder="Spa make or model, services you're interested in, any questions…"
                             className={classnames('border-deep-blue/60 resize-y', inputClassName)}
                         />
                     </Field>

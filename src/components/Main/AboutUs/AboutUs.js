@@ -68,7 +68,7 @@ export const AboutUs = () => {
         <section className={classnames(
           'rexine-spa-care-about-story grid gap-12 lg:grid-cols-2 lg:gap-16 items-center'
         )}>
-          <div className={classnames('relative w-full max-w-md mx-auto')}>
+          <div className={classnames('relative w-3/4 sm:w-full max-w-md mx-auto')}>
             <Sparkle className={classnames(
               'absolute z-10 -top-6 -right-4 rotate-12 w-16 md:w-20',
               'motion-safe:animate-bob'
@@ -84,7 +84,7 @@ export const AboutUs = () => {
               <Image
                 src={aboutUsPhoto}
                 alt="Rexine Spa Care technician installing a clean filter in a spa"
-                sizes="(min-width: 1024px) 448px, 90vw"
+                sizes="(min-width: 1024px) 448px, (min-width: 640px) 90vw, 75vw"
                 className={classnames('h-auto w-full')}
                 placeholder="blur"
               />
@@ -155,7 +155,7 @@ export const AboutUs = () => {
                 key={brand}
                 className={classnames(
                   'flex aspect-square items-center justify-center overflow-hidden',
-                  'w-[21%] sm:w-[20%] lg:w-[11%] max-w-37.5',
+                  'w-[30%] sm:w-[20%] lg:w-[11%] max-w-37.5',
                   'rounded-2xl border-4 border-deep-blue shadow-[4px_4px_0_var(--color-deep-blue)]',
                   'motion-safe:hover:animate-wiggle',
                   tileClassName || 'bg-white'

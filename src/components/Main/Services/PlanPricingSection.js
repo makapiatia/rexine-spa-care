@@ -6,13 +6,12 @@ import { fullBleedClassName, SectionHeading } from './servicePageStyles';
 
 const plans = [
   {
-    name: 'Twelve Month Plan',
-    months: 12,
-    biWeeklyPrice: '$199',
-    weeklyPrice: '$399',
-    perk: 'Includes 2 full system flushes',
-    Sticker: Drop,
-    cardClassName: 'bg-pop-periwinkle'
+    name: 'Three Month Plan',
+    months: 3,
+    biWeeklyPrice: '$209',
+    weeklyPrice: '$409',
+    Sticker: Bubbles,
+    cardClassName: 'bg-pop-aqua'
   },
   {
     name: 'Six Month Plan',
@@ -25,12 +24,13 @@ const plans = [
     cardClassName: 'bg-pop-sky'
   },
   {
-    name: 'Three Month Plan',
-    months: 3,
-    biWeeklyPrice: '$209',
-    weeklyPrice: '$409',
-    Sticker: Bubbles,
-    cardClassName: 'bg-pop-aqua'
+    name: 'Twelve Month Plan',
+    months: 12,
+    biWeeklyPrice: '$199',
+    weeklyPrice: '$399',
+    perk: 'Includes 2 full system flushes',
+    Sticker: Drop,
+    cardClassName: 'bg-pop-periwinkle'
   }
 ];
 
@@ -58,7 +58,7 @@ const CheckIcon = () => (
 export const PlanPricingSection = () => {
   return (
     <section className={classnames('rexine-spa-care-pricing-section w-full')}>
-      <SectionHeading eyebrow="01 · Plans">Select Your Plan</SectionHeading>
+      <SectionHeading eyebrow="02 · Plans">Select Your Plan</SectionHeading>
       <div className={classnames(
         'tiered-service-pricing-section lg:left-auto lg:w-auto lg:ml-0 lg:-mx-3',
         'text-deep-blue font-mulish text-center',
@@ -96,14 +96,14 @@ export const PlanPricingSection = () => {
             <h3 className={classnames('font-fraunces font-wonky font-bold text-3xl')}>
               {name}
             </h3>
-            <PriceTile price={biWeeklyPrice} frequency="Every other week" visitsPerMonth={2} totalVisits={months * 2} />
-            <PriceTile price={weeklyPrice} frequency="Weekly" visitsPerMonth={4} totalVisits={months * 4} />
             {perk && (
-              <p className={classnames('flex items-center justify-center gap-2 mt-auto font-semibold')}>
+              <p className={classnames('flex items-center justify-center gap-2 font-semibold')}>
                 <CheckIcon />
                 {perk}
               </p>
             )}
+            <PriceTile price={biWeeklyPrice} frequency="Every other week" visitsPerMonth={2} totalVisits={months * 2} />
+            <PriceTile price={weeklyPrice} frequency="Weekly" visitsPerMonth={4} totalVisits={months * 4} />
           </div>
         ))}
         </Carousel>
