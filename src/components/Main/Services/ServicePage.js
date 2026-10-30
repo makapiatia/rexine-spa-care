@@ -15,15 +15,11 @@ export const ServicePage = () => {
     )}>
       <PageBanner
         title="Services + Pricing"
-        description="Explore our services today and discover the difference that professional care can make."
+        description="Ready to get started? Text, call or email us to schedule your service!"
       >
         <div className={classnames(
-          'flex flex-col items-center gap-4 max-w-xl px-6 py-5',
-          'rounded-3xl border-4 border-deep-blue shadow-[5px_5px_0_var(--color-deep-blue)] bg-white'
+          'flex flex-col items-center gap-4 max-w-xl px-6 pb-8'
         )}>
-          <p className={classnames('font-mulish font-bold text-deep-blue')}>
-            Ready to get started? Text, call or email us to schedule your service!
-          </p>
           <ContactButtons />
         </div>
       </PageBanner>

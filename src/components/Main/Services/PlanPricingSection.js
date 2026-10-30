@@ -19,6 +19,7 @@ const plans = [
     biWeeklyPrice: '$199',
     weeklyPrice: '$399',
     perk: 'Includes 1 full system flush',
+    perkValue: '$549 value',
     badge: 'Most popular',
     Sticker: Sparkle,
     cardClassName: 'bg-pop-sky'
@@ -29,6 +30,7 @@ const plans = [
     biWeeklyPrice: '$199',
     weeklyPrice: '$399',
     perk: 'Includes 2 full system flushes',
+    perkValue: '$1,098 value',
     Sticker: Drop,
     cardClassName: 'bg-pop-periwinkle'
   }
@@ -70,7 +72,7 @@ export const PlanPricingSection = () => {
           startIndex={featuredPlanIndex}
           slideClassName={classnames('basis-[88%] sm:basis-[60%] lg:basis-1/3')}
         >
-        {plans.map(({ name, months, biWeeklyPrice, weeklyPrice, perk, badge, Sticker, cardClassName }) => (
+        {plans.map(({ name, months, biWeeklyPrice, weeklyPrice, perk, perkValue, badge, Sticker, cardClassName }) => (
           <div
             key={name}
             className={classnames(
@@ -99,7 +101,10 @@ export const PlanPricingSection = () => {
             {perk && (
               <p className={classnames('flex items-center justify-center gap-2 font-semibold')}>
                 <CheckIcon />
-                {perk}
+                <span>
+                  {perk}{' '}
+                  <span className={classnames('px-1.5 rounded-lg bg-white whitespace-nowrap')}>{perkValue}</span>
+                </span>
               </p>
             )}
             <PriceTile price={biWeeklyPrice} frequency="Every other week" visitsPerMonth={2} totalVisits={months * 2} />
