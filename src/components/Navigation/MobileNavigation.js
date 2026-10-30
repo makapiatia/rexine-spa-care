@@ -39,7 +39,7 @@ export const MobileNavigation = () => {
 
   return (
     <div className={classnames('rexine-spa-care-mobile-navigation relative lg:hidden')}>
-      <div className={classnames('flex items-center justify-between w-full h-20 px-7 bg-rexine-blue font-fraunces')}>
+      <div className={classnames('flex items-center justify-between w-full h-20 px-6 sm:px-12 bg-rexine-blue font-fraunces')}>
         <button
           ref={menuButtonRef}
           type="button"
@@ -74,7 +74,7 @@ export const MobileNavigation = () => {
       >
         <div className={classnames('overflow-hidden')}>
           <nav aria-label="Main" className={classnames(
-            'flex flex-col gap-2 px-6 pt-4 pb-8',
+            'flex flex-col gap-2 px-6 sm:px-12 pt-4 pb-8',
             'border-b-4 border-deep-blue bg-rexine-blue',
             'font-fraunces text-2xl text-white'
           )}>

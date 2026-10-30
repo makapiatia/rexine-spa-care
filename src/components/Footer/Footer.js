@@ -36,7 +36,7 @@ export const Footer = () => {
           vectorEffect="non-scaling-stroke"
         />
       </svg>
-      <div className={classnames('relative overflow-hidden px-8 sm:px-12 pt-8 pb-10 bg-rexine-blue')}>
+      <div className={classnames('relative overflow-hidden px-6 sm:px-12 pt-8 pb-10 bg-rexine-blue')}>
         <Bubbles outline={darkOutline} className={classnames(
           'absolute hidden sm:block right-6 top-4 w-20 md:w-28',
           'opacity-90',

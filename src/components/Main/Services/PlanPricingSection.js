@@ -11,6 +11,7 @@ const plans = [
     biWeeklyPrice: '$209',
     weeklyPrice: '$409',
     Sticker: Bubbles,
+    stickerFill: 'var(--color-pop-sky)',
     cardClassName: 'bg-pop-aqua'
   },
   {
@@ -22,6 +23,7 @@ const plans = [
     perkValue: '$549 value',
     badge: 'Most popular',
     Sticker: Sparkle,
+    stickerFill: 'var(--color-pop-periwinkle)',
     cardClassName: 'bg-pop-sky'
   },
   {
@@ -32,6 +34,7 @@ const plans = [
     perk: 'Includes 2 full system flushes',
     perkValue: '$1,098 value',
     Sticker: Drop,
+    stickerFill: 'var(--color-pop-aqua)',
     cardClassName: 'bg-pop-periwinkle'
   }
 ];
@@ -51,7 +54,7 @@ const PriceTile = ({ price, frequency, visitsPerMonth, totalVisits }) => (
 );
 
 const CheckIcon = () => (
-  <svg viewBox="0 0 24 24" className={classnames('shrink-0 w-6 h-6')} aria-hidden="true">
+  <svg viewBox="0 0 24 24" className={classnames('inline-block w-6 h-6 mr-1.5 -mt-1 align-middle')} aria-hidden="true">
     <circle cx="12" cy="12" r="10" fill="var(--color-deep-blue)" />
     <path d="M7 12.5 L10.5 16 L17 9" fill="none" stroke="#fff" strokeWidth="2.5" strokeLinecap="round" />
   </svg>
@@ -72,7 +75,7 @@ export const PlanPricingSection = () => {
           startIndex={featuredPlanIndex}
           slideClassName={classnames('basis-[88%] sm:basis-[60%] lg:basis-1/3')}
         >
-        {plans.map(({ name, months, biWeeklyPrice, weeklyPrice, perk, perkValue, badge, Sticker, cardClassName }) => (
+        {plans.map(({ name, months, biWeeklyPrice, weeklyPrice, perk, perkValue, badge, Sticker, stickerFill, cardClassName }) => (
           <div
             key={name}
             className={classnames(
@@ -82,7 +85,7 @@ export const PlanPricingSection = () => {
               cardClassName
             )}
           >
-            <Sticker className={classnames(
+            <Sticker fill={stickerFill} className={classnames(
               'absolute z-10 -top-8 left-6 w-16 h-16',
               stickerTilt(Sticker)
             )} />
@@ -99,12 +102,10 @@ export const PlanPricingSection = () => {
               {name}
             </h3>
             {perk && (
-              <p className={classnames('flex items-center justify-center gap-2 font-semibold')}>
+              <p className={classnames('font-semibold')}>
                 <CheckIcon />
-                <span>
-                  {perk}{' '}
-                  <span className={classnames('px-1.5 rounded-lg bg-white whitespace-nowrap')}>{perkValue}</span>
-                </span>
+                {perk}{' '}
+                <span className={classnames('px-1.5 rounded-lg bg-white whitespace-nowrap')}>{perkValue}</span>
               </p>
             )}
             <PriceTile price={biWeeklyPrice} frequency="Every other week" visitsPerMonth={2} totalVisits={months * 2} />

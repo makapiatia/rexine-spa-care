@@ -25,7 +25,7 @@ export const ServicePage = () => {
       </PageBanner>
 
       <div className={classnames(
-        'flex flex-col gap-14 md:gap-24 max-w-(--breakpoint-1xl) mx-auto px-6 sm:px-12 pb-12 md:pb-16 xl:pb-24'
+        'flex flex-col gap-14 md:gap-24 max-w-(--breakpoint-1xl) mx-auto px-6 sm:px-12 pb-14 md:pb-24'
       )}>
         <ServiceDetailsSectionDesktop />
         <PlanPricingSection />

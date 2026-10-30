@@ -24,6 +24,7 @@ const services = [
     description: 'When it\'s time for fresh water, we\'ll drain and refill your spa'
       + ' and balance the new water so it\'s ready to use.',
     Sticker: Drop,
+    stickerFill: 'var(--color-pop-sky)',
     cardClassName: 'bg-pop-periwinkle'
   },
   {
@@ -51,7 +52,7 @@ export const ServiceSection = () => {
     )}>
       <section className={classnames(
         'rexine-spa-care-home-intro relative grid gap-12 xl:grid-cols-5 xl:items-center max-w-(--breakpoint-1xl)',
-        'mx-auto px-8 py-16 xl:px-16 xl:py-24'
+        'mx-auto px-6 sm:px-12 py-14 md:py-24'
       )}>
         <div className={classnames('xl:col-span-3')}>
           <Wave className={classnames('w-28 mb-6')} />
@@ -73,24 +74,24 @@ export const ServiceSection = () => {
       </section>
 
       <section className={classnames(
-        'rexine-spa-care-home-services max-w-(--breakpoint-1xl) mx-auto px-8 pb-16 xl:px-16 xl:pb-24'
+        'rexine-spa-care-home-services max-w-(--breakpoint-1xl) mx-auto px-6 sm:px-12 pb-14 md:pb-24'
       )}>
         <h2 className={classnames('mb-10 font-fraunces font-wonky font-bold text-4xl md:text-5xl text-rexine-blue')}>
           Our Services <span aria-hidden="true" className={classnames('text-pop-cobalt')}>✹</span>
         </h2>
-        <ul className={classnames('grid gap-8 md:grid-cols-2 xl:grid-cols-4')}>
-          {services.map(({ title, description, Sticker, cardClassName }) => (
+        <ul className={classnames('grid gap-x-10 gap-y-14 md:grid-cols-2 xl:grid-cols-4')}>
+          {services.map(({ title, description, Sticker, stickerFill, cardClassName }) => (
             <li
               key={title}
               className={classnames(
-                'relative flex flex-col p-7 pt-12',
+                'relative flex flex-col p-6 pt-12',
                 'rounded-3xl border-4 border-deep-blue shadow-[6px_6px_0_var(--color-deep-blue)]',
                 'hover:shadow-[10px_10px_0_var(--color-deep-blue)]',
                 'transition duration-300 hover:-translate-y-2',
                 cardClassName
               )}
             >
-              <Sticker className={classnames(
+              <Sticker fill={stickerFill} className={classnames(
                 'absolute z-10 -top-8 left-6 w-16 h-16',
                 stickerTilt(Sticker)
               )} />
@@ -105,7 +106,7 @@ export const ServiceSection = () => {
         </ul>
       </section>
 
-      <section className={classnames('rexine-spa-care-home-cta px-4 pb-16 sm:px-8 xl:pb-24')}>
+      <section className={classnames('rexine-spa-care-home-cta px-6 sm:px-12 pb-14 md:pb-24')}>
         <div className={classnames(
           'relative overflow-hidden max-w-4xl mx-auto px-6 py-10 md:px-12 md:py-12',
           'rounded-3xl border-4 border-deep-blue bg-rexine-blue',

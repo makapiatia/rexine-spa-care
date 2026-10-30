@@ -21,7 +21,8 @@ export const PageBanner = ({ title, description, children }) => (
             alt="Rexine Spa Care logo"
           />
         </div>
-        <div>
+        {/* Banners without extra content get the same bottom space as those with buttons */}
+        <div className={classnames(!children && 'pb-8')}>
           <h1 className={classnames('font-fraunces font-wonky font-bold text-4xl md:text-5xl text-deep-blue')}>
             {title}
           </h1>

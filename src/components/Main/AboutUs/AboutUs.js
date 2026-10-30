@@ -31,6 +31,7 @@ const funFacts = [
     stat: '10+',
     label: 'Years in spa service & sales',
     Sticker: Sparkle,
+    stickerFill: 'var(--color-pop-aqua)',
     cardClassName: 'bg-pop-sky'
   },
   {
@@ -43,6 +44,7 @@ const funFacts = [
     stat: 'Water Care',
     label: 'Know-how in spa chemicals, cleaning & maintenance',
     Sticker: Drop,
+    stickerFill: 'var(--color-pop-sky)',
     cardClassName: 'bg-pop-periwinkle'
   }
 ];
@@ -63,7 +65,7 @@ export const AboutUs = () => {
       />
 
       <div className={classnames(
-        'flex flex-col gap-16 md:gap-24 max-w-(--breakpoint-1xl) mx-auto px-6 sm:px-12 pb-12 md:pb-16 xl:pb-24'
+        'flex flex-col gap-14 md:gap-24 max-w-(--breakpoint-1xl) mx-auto px-6 sm:px-12 pb-14 md:pb-24'
       )}>
         <section className={classnames(
           'rexine-spa-care-about-story grid gap-12 lg:grid-cols-2 lg:gap-16 items-center'
@@ -114,18 +116,18 @@ export const AboutUs = () => {
 
         <section className={classnames('rexine-spa-care-about-fun-facts')}>
           <ul className={classnames('grid gap-8 md:grid-cols-3')}>
-            {funFacts.map(({ stat, label, Sticker, cardClassName }) => (
+            {funFacts.map(({ stat, label, Sticker, stickerFill, cardClassName }) => (
               <li
                 key={stat}
                 className={classnames(
-                  'group relative p-7 pt-10',
+                  'group relative p-6 pt-12',
                   'rounded-3xl border-4 border-deep-blue shadow-[6px_6px_0_var(--color-deep-blue)]',
                   'text-center',
                   'transition duration-300 hover:-translate-y-2',
                   cardClassName
                 )}
               >
-                <Sticker className={classnames(
+                <Sticker fill={stickerFill} className={classnames(
                   'absolute z-10 -top-7 left-1/2 -translate-x-1/2 w-14',
                   'motion-safe:group-hover:animate-wiggle',
                   stickerTilt(Sticker)

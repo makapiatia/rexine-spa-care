@@ -3,7 +3,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import classnames from 'tailwindcss-classnames';
 import { PageBanner } from '../PageBanner';
-import { Bubbles, Drop, HoverBubbles, Sparkle, Sun, stickerTilt } from '../Stickers';
+import { ContactButtons } from '../Services/servicePageStyles';
+import { Bubbles, HoverBubbles, Sparkle } from '../Stickers';
 import { ServiceArea } from './ServiceArea';
 
 // After activating the form, the email can be swapped for the random string FormSubmit provides
@@ -45,7 +46,7 @@ const ValidationError = ({ id, error }) => {
 };
 
 const cardClassName = classnames(
-    'relative p-6 pt-10 md:p-10',
+    'relative p-6 pt-12 md:p-10 md:pt-14',
     'rounded-3xl border-4 border-deep-blue shadow-[6px_6px_0_var(--color-deep-blue)] bg-white'
 );
 
@@ -60,30 +61,6 @@ const inputClassName = classnames(
     'transition'
 );
 
-const quickContacts = [
-    {
-        label: 'Call or Text',
-        value: '+1-623-282-2530',
-        href: 'tel:+1623-282-2530',
-        Sticker: Sun,
-        cardClassName: 'bg-pop-sky'
-    },
-    {
-        label: 'Email',
-        value: 'info@rexinespacare.com',
-        href: 'mailto:info@rexinespacare.com',
-        Sticker: Drop,
-        cardClassName: 'bg-pop-aqua'
-    },
-    {
-        label: 'Hours',
-        value: 'Monday-Friday 8:00am-6:00pm',
-        note: 'Saturday & Sunday available by appointment.',
-        Sticker: Sparkle,
-        cardClassName: 'bg-pop-periwinkle'
-    }
-];
-
 const Field = ({ label, error, id, children, className }) => (
     <div className={className}>
         <label htmlFor={id} className={labelClassName}>{label}</label>
@@ -97,9 +74,13 @@ const ContactLayout = ({ children }) => (
         <PageBanner
             title="Contact"
             description="Have a question or ready to book a visit? Text, call or email us, or send a note and we'll get back to you."
-        />
+        >
+            <div className={classnames('flex flex-col items-center gap-4 max-w-xl px-6 pb-8')}>
+                <ContactButtons />
+            </div>
+        </PageBanner>
         <div className={classnames(
-            'flex flex-col gap-14 max-w-(--breakpoint-1xl) mx-auto px-6 sm:px-12 pb-12 md:pb-16 xl:pb-24'
+            'flex flex-col gap-14 md:gap-24 max-w-(--breakpoint-1xl) mx-auto px-6 sm:px-12 pb-14 md:pb-24'
         )}>
             <div className={classnames('rexine-spa-care-contact-main grid gap-10 lg:grid-cols-[3fr_2fr]')}>
                 {children}
@@ -111,36 +92,6 @@ const ContactLayout = ({ children }) => (
                     <ServiceArea />
                 </div>
             </div>
-            <ul className={classnames('rexine-spa-care-quick-contacts grid gap-4 md:grid-cols-3 md:gap-6')}>
-                {quickContacts.map(({ label, value, note, href, Sticker, cardClassName: quickCardClassName }) => (
-                    <li
-                        key={label}
-                        className={classnames(
-                            'flex items-center gap-4 px-5 py-4',
-                            'rounded-2xl border-4 border-deep-blue shadow-[4px_4px_0_var(--color-deep-blue)]',
-                            quickCardClassName
-                        )}
-                    >
-                        <Sticker fill="#FFFFFF" className={classnames(
-                            'shrink-0 w-10',
-                            stickerTilt(Sticker)
-                        )} />
-                        <div className={classnames('min-w-0 font-mulish')}>
-                            <p className={classnames('font-extrabold uppercase tracking-wider text-sm')}>{label}</p>
-                            {href ? (
-                                <a href={href} className={classnames(
-                                    'break-words text-lg font-semibold hover:underline'
-                                )}>
-                                    {value}
-                                </a>
-                            ) : (
-                                <p className={classnames('text-lg font-semibold')}>{value}</p>
-                            )}
-                            {note && <p className={classnames('text-sm italic')}>{note}</p>}
-                        </div>
-                    </li>
-                ))}
-            </ul>
         </div>
     </div>
 );

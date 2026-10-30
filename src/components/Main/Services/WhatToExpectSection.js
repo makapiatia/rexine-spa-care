@@ -2,15 +2,12 @@ import React from 'react';
 import classnames from 'tailwindcss-classnames';
 import { ContactButtons, SectionHeading } from './servicePageStyles';
 
-const schedulingText = "Your visit will take place on your scheduled day, anytime between 8am and 6pm. Because "
-    + "scheduling, weather and other things can shift our day, we can't promise an exact time. Have a preferred "
-    + "time? Just let us know and we'll do our best to make it work!";
+const schedulingText = "Have a time that works best for you? Just let us know and we'll do our best to make it "
+    + "happen! Need to switch things up? No problem, just give us a heads-up 24 hours ahead.";
 const accessText = "To take care of your spa, we'll need easy access to it on the day of your visit. Please "
     + 'leave any gates unlocked and share gate or access codes with us ahead of time. Thank you!';
-const visitDayText = 'With weekly or every other week service, your visits will land on the same day of the week, '
-    + "unless one of us needs to switch things up. You'll get your maintenance schedule at your first visit. Need "
-    + "to make a change? Just give us 24 hours' notice. And if we ever need to adjust your schedule, we'll let you "
-    + 'know as early as we can!';
+const visitDayText = "We'll stop by on the same day of the week, between 8am and 6pm. "
+    + "We'll work out your schedule together before your first visit!";
 const sanitizationOptions = 'We provide bromine, chlorine & potassium based sanitization at no extra cost. '
     + "New filters, FROG @ease cartridges and system kits aren't included, but we're happy to help! Feel free to "
     + 'provide your own, or our technician can pick them up for you and you can simply reimburse us.';
@@ -19,8 +16,8 @@ const cleaningText = 'Cleanings, start ups & shut downs typically take 3-5 hours
     + 'please let us know ahead of time!';
 const paymentText = "We use Square for invoicing, so paying is quick and secure. You can pay your invoice remotely "
     + "from anywhere, so there's no need to be home on visit day!";
-const customPlanText = "Need a custom care plan? If our plans & services don't fit your needs, reach out and "
-    + "we'll be happy to create one with you.";
+const customPlanText = "Looking for something a little different? We'd love to put together a custom care plan "
+    + 'just for you!';
 
 const allServiceExpectations = [
     { title: 'Scheduling', text: [visitDayText, schedulingText, customPlanText], badgeClassName: 'bg-pop-sky', showContactButtons: true },
@@ -55,7 +52,7 @@ export const WhatToExpectSection = () => {
                         )}
                     >
                         <summary className={classnames(
-                            'flex items-center gap-3 p-5 md:p-6 cursor-pointer list-none',
+                            'flex items-center gap-3 p-6 cursor-pointer list-none',
                             '[&::-webkit-details-marker]:hidden'
                         )}>
                             <span className={classnames(
@@ -71,10 +68,10 @@ export const WhatToExpectSection = () => {
                             </h3>
                             <ChevronIcon />
                         </summary>
-                        <div className={classnames('flex flex-col gap-4 px-5 pb-6 md:px-6 text-base text-left leading-relaxed')}>
+                        <div className={classnames('flex flex-col gap-4 px-6 pb-6 text-base text-left leading-relaxed')}>
                             {[].concat(text).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                         </div>
-                        {showContactButtons && <ContactButtons className={classnames('px-5 pb-6 md:px-6')} />}
+                        {showContactButtons && <ContactButtons className={classnames('px-6 pb-6')} />}
                     </details>
                 ))}
             </div>

@@ -11,17 +11,18 @@ const monthlyServiceDetails = [
     'System, equipment & sanitizer settings check'
 ];
 
+const fullCleaningOccasions = ['Water change / Drain & refill', 'Start up', 'Shut down'];
+
 // Only what's added on top of a maintenance visit
 const fullCleaningDetails = [
     'Clean, drain, flush & refill',
-    'Seasonal start up or shut down',
     'Jets, diverter & velocity valves cleaned',
     'Exterior protectants applied',
     'System & settings check on start up'
 ];
 
 const cardClassName = classnames(
-    'relative flex flex-col h-full p-6 pt-10 sm:p-8 sm:pt-12 md:p-10 md:pt-14',
+    'relative flex flex-col h-full p-6 pt-12 md:p-10 md:pt-14',
     'rounded-3xl border-4 border-deep-blue shadow-[6px_6px_0_var(--color-deep-blue)]'
 );
 
@@ -75,7 +76,7 @@ export const ServiceDetailsSectionDesktop = () => {
                         'rounded-2xl bg-extra-light-blue',
                         'text-sm md:text-base'
                     )}>
-                        Prefer regular visits? Monthly plans come in weekly & bi-weekly options. See plan pricing above.
+                        Prefer regular visits? Monthly plans come in weekly & bi-weekly options. See plan pricing below.
                     </p>
                 </div>
 
@@ -88,6 +89,23 @@ export const ServiceDetailsSectionDesktop = () => {
                         Full Cleaning
                     </h3>
                     <p className={classnames('mt-4 text-rexine-blue', priceClassName)}>$549</p>
+                    <div className={classnames('mt-6')}>
+                        <p className={classnames('font-bold uppercase tracking-wider text-sm')}>Book one for a:</p>
+                        <ul className={classnames('flex flex-wrap gap-2 mt-2')}>
+                            {fullCleaningOccasions.map((occasion) => (
+                                <li
+                                    key={occasion}
+                                    className={classnames(
+                                        'px-3 py-1',
+                                        'rounded-full border-2 border-deep-blue bg-white',
+                                        'text-sm md:text-base font-extrabold'
+                                    )}
+                                >
+                                    {occasion}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
                     <p className={classnames('mt-6 md:mt-8 font-bold')}>
                         Everything in a maintenance visit, plus the following as needed*:
                     </p>

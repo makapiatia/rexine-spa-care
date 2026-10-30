@@ -17,17 +17,17 @@ export const DesktopNavigation = () => {
 
   return (
     <div className={classnames(
-      'rexine-spa-care-desktop-navigation hidden lg:flex items-center justify-between w-full h-20 px-6',
+      'rexine-spa-care-desktop-navigation hidden lg:flex items-center justify-between w-full h-20 px-12',
       'bg-rexine-blue',
       'text-white font-fraunces'
     )}>
       <Link
-        className={classnames('group flex items-center gap-2')}
+        className={classnames('group flex shrink-0 items-center gap-2')}
         href={'/'}
       >
         <Bubbles className={classnames('w-9 motion-safe:group-hover:animate-wiggle')} />
         <span
-          className={classnames('navigation-logo font-wonky font-semibold text-3xl')}
+          className={classnames('navigation-logo whitespace-nowrap font-wonky font-semibold text-2xl xl:text-3xl')}
         >
           Rexine Spa Care
         </span>
@@ -42,9 +42,9 @@ export const DesktopNavigation = () => {
               href={tab?.url}
               aria-current={isActive ? 'page' : undefined}
               className={classnames(
-                'navigation-tab px-5 py-1.5',
+                'navigation-tab px-4 xl:px-5 py-1.5',
                 'rounded-full border-2',
-                'text-2xl font-wonky',
+                'whitespace-nowrap text-xl xl:text-2xl font-wonky',
                 'transition',
                 isActive
                   ? 'border-deep-blue bg-white text-deep-blue shadow-[3px_3px_0_var(--color-deep-blue)]'
