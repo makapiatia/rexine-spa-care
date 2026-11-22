@@ -46,7 +46,7 @@ const ValidationError = ({ id, error }) => {
 };
 
 const cardClassName = classnames(
-    'relative p-6 pt-12 md:p-10 md:pt-14',
+    'relative p-6 pt-12 md:p-8 md:pt-14',
     'rounded-3xl border-4 border-deep-blue shadow-[6px_6px_0_var(--color-deep-blue)] bg-white'
 );
 
@@ -237,6 +237,7 @@ export const Contact = () => {
                     <Field label="Location" id="location" error={fieldErrors.location}>
                         <input
                             {...fieldProps('location')}
+                            autoComplete="address-level2"
                             placeholder="City or neighborhood"
                             className={fieldClassName('location')}
                             required={true}
@@ -263,9 +264,9 @@ export const Contact = () => {
                     type="submit"
                     disabled={state.submitting}
                     className={classnames(
-                        'group relative w-full sm:w-auto mt-8 px-10 py-3',
+                        'group relative w-full sm:w-auto mt-8 px-5 py-2.5 md:px-7 md:py-3',
                         'rounded-full border-4 border-deep-blue bg-pop-sky hover:bg-pop-aqua disabled:opacity-60',
-                        'font-mulish font-extrabold uppercase tracking-wider text-lg',
+                        'font-mulish font-extrabold uppercase tracking-wider text-base md:text-lg',
                         'transition hover:-translate-y-1 disabled:hover:translate-y-0'
                     )}
                 >

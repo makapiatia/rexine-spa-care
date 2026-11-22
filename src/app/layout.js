@@ -3,6 +3,7 @@ import classnames from 'tailwindcss-classnames';
 import { Fraunces, Mulish } from 'next/font/google';
 import { Navigation } from '../components/Navigation';
 import { Footer } from '../components/Footer';
+import { pageMetadata, siteName } from './metadata';
 import '../index.css';
 
 const mulish = Mulish({
@@ -19,9 +20,13 @@ const fraunces = Fraunces({
 });
 
 export const metadata = {
-  title: 'Rexine Spa Care',
-  description: 'We are fully field experienced & trained in a multitude of spa sanitation options including '
-    + 'FROG @ease, Soft Soak, bromine, chlorine, and many more!',
+  // Lets the share image (public/og-image.png) resolve to a full URL in link previews
+  metadataBase: new URL('https://www.rexinespacare.com'),
+  ...pageMetadata({
+    title: `${siteName} | Spa & Hot Tub Cleaning and Maintenance in the Phoenix Area`,
+    description: 'Weekly and bi-weekly spa maintenance plans, full cleanings, drains and refills, and seasonal '
+      + 'start ups and shut downs across the Phoenix area. Call, text or email to schedule.'
+  }),
   manifest: '/manifest.json',
   icons: {
     icon: '/favicon.ico',

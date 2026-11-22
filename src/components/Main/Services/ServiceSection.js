@@ -61,7 +61,7 @@ export const ServiceSection = () => {
             <span className={classnames('px-1 rounded-lg bg-pop-aqua')}>relaxing and worry-free</span>
             {' '}as possible.
           </p>
-          <p className={classnames('mt-6 font-mulish text-xl text-medium-blue')}>
+          <p className={classnames('mt-6 font-mulish text-lg md:text-xl text-medium-blue')}>
             With extensive field experience and training in a variety of spa sanitation options including
             FROG @ease, Soft Soak, bromine, chlorine, and more. We are equipped to handle all your spa care needs
             with expertise and precision.
@@ -76,7 +76,7 @@ export const ServiceSection = () => {
       <section className={classnames(
         'rexine-spa-care-home-services max-w-(--breakpoint-1xl) mx-auto px-6 sm:px-12 pb-14 md:pb-24'
       )}>
-        <h2 className={classnames('mb-10 font-fraunces font-wonky font-bold text-4xl md:text-5xl text-rexine-blue')}>
+        <h2 className={classnames('mb-10 font-fraunces font-wonky font-bold text-3xl md:text-4xl text-rexine-blue')}>
           Our Services <span aria-hidden="true" className={classnames('text-pop-cobalt')}>✹</span>
         </h2>
         <ul className={classnames('grid gap-x-10 gap-y-14 md:grid-cols-2 xl:grid-cols-4')}>
@@ -84,7 +84,7 @@ export const ServiceSection = () => {
             <li
               key={title}
               className={classnames(
-                'relative flex flex-col p-6 pt-12',
+                'relative flex flex-col p-6 pt-12 md:p-8 md:pt-14',
                 'rounded-3xl border-4 border-deep-blue shadow-[6px_6px_0_var(--color-deep-blue)]',
                 'hover:shadow-[10px_10px_0_var(--color-deep-blue)]',
                 'transition duration-300 hover:-translate-y-2',
@@ -98,7 +98,7 @@ export const ServiceSection = () => {
               <h3 className={classnames('mb-3 font-fraunces font-wonky font-bold text-2xl')}>
                 {title}
               </h3>
-              <p className={classnames('font-mulish text-lg')}>
+              <p className={classnames('font-mulish text-base md:text-lg')}>
                 {description}
               </p>
             </li>

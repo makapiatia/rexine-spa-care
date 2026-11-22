@@ -2,10 +2,10 @@ import React from 'react';
 import classnames from 'tailwindcss-classnames';
 import RexineSpaCareLogo_WhiteText from '../../assets/images/RexineSpaCareLogo_WhiteText.png';
 
-// Sky-blue page header with a wavy bottom edge and the logo badge sitting on the wave
+// Light blue page header with a wavy bottom edge and the logo badge sitting on the wave
 export const PageBanner = ({ title, description, children }) => (
   <header className={classnames('rexine-spa-care-page-banner relative mb-24 md:mb-28')}>
-    <div className={classnames('bg-pop-sky')}>
+    <div className={classnames('bg-light-blue')}>
       <div className={classnames(
         'flex flex-col items-center gap-4 max-w-(--breakpoint-1xl) mx-auto px-6 sm:px-12 pt-8 pb-16 md:pt-12 md:pb-20',
         'text-center'
@@ -36,12 +36,13 @@ export const PageBanner = ({ title, description, children }) => (
     <svg
       viewBox="0 0 1440 60"
       preserveAspectRatio="none"
-      className={classnames('block w-full h-8 md:h-12')}
+      // Tucks 1px up under the banner so no hairline gap shows on high-density screens
+      className={classnames('block w-full h-8 md:h-12 -mt-px')}
       aria-hidden="true"
     >
       <path
         d="M0 0 H 1440 V 30 C 1320 60 1200 60 1080 30 S 840 0 720 30 S 480 60 360 30 S 120 0 0 30 Z"
-        fill="var(--color-pop-sky)"
+        fill="var(--color-light-blue)"
       />
       <path
         d="M1440 30 C 1320 60 1200 60 1080 30 S 840 0 720 30 S 480 60 360 30 S 120 0 0 30"

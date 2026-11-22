@@ -79,7 +79,7 @@ export const PlanPricingSection = () => {
           <div
             key={name}
             className={classnames(
-              'relative flex flex-col gap-4 h-full p-6 pt-12',
+              'relative flex flex-col gap-4 h-full p-6 pt-12 md:p-8 md:pt-14',
               'rounded-3xl border-4 border-deep-blue shadow-[6px_6px_0_var(--color-deep-blue)]',
               'transition duration-300 hover:-translate-y-2',
               cardClassName
@@ -98,7 +98,7 @@ export const PlanPricingSection = () => {
                 {badge}
               </p>
             )}
-            <h3 className={classnames('font-fraunces font-wonky font-bold text-3xl')}>
+            <h3 className={classnames('font-fraunces font-wonky font-bold text-2xl md:text-3xl')}>
               {name}
             </h3>
             {perk && (
@@ -122,7 +122,7 @@ export const PlanPricingSection = () => {
         <h3 className={classnames('font-fraunces font-wonky font-bold text-2xl')}>
           How visits work
         </h3>
-        <p className={classnames('mt-2')}>
+        <p className={classnames('mt-2 text-base md:text-lg')}>
           Visits happen weekly or every other week. Depending on how the dates fall,
           a month may have one more or one fewer visit.
         </p>

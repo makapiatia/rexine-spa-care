@@ -5,13 +5,13 @@ import { HoverBubbles, Wave } from '../Stickers';
 const pillClassName = classnames(
   'group relative px-5 py-2',
   'rounded-full border-2 border-deep-blue',
-  'text-center whitespace-nowrap font-mulish font-extrabold uppercase tracking-wider text-sm text-deep-blue',
+  'text-center whitespace-nowrap font-mulish font-extrabold uppercase tracking-wider text-sm',
   'transition hover:-translate-y-0.5'
 );
 
 const contactLinks = [
-  { label: 'Call or text us', href: 'tel:+1623-282-2530', className: 'bg-pop-aqua hover:bg-pop-sky' },
-  { label: 'Email us', href: 'mailto:info@rexinespacare.com', className: 'bg-pop-periwinkle hover:bg-white' }
+  { label: 'Call or text us', href: 'tel:+1623-282-2530', className: 'bg-deep-blue hover:bg-rexine-blue text-white' },
+  { label: 'Email us', href: 'mailto:info@rexinespacare.com', className: 'bg-white hover:bg-extra-light-blue text-deep-blue' }
 ];
 
 export const ContactButtons = ({ className }) => (

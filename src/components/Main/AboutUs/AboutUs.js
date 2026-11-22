@@ -120,7 +120,7 @@ export const AboutUs = () => {
               <li
                 key={stat}
                 className={classnames(
-                  'group relative p-6 pt-12',
+                  'group relative p-6 pt-12 md:p-8 md:pt-14',
                   'rounded-3xl border-4 border-deep-blue shadow-[6px_6px_0_var(--color-deep-blue)]',
                   'text-center',
                   'transition duration-300 hover:-translate-y-2',
@@ -138,7 +138,7 @@ export const AboutUs = () => {
                 )}>
                   {stat}
                 </p>
-                <p className={classnames('mt-2 font-mulish font-semibold')}>{label}</p>
+                <p className={classnames('mt-2 font-mulish font-semibold text-base md:text-lg')}>{label}</p>
               </li>
             ))}
           </ul>
@@ -146,7 +146,7 @@ export const AboutUs = () => {
 
         <section className={classnames('rexine-spa-care-about-brands')}>
           <SectionHeading eyebrow="Know-How">Brands We Know</SectionHeading>
-          <p className={classnames('max-w-3xl mx-auto mt-6 text-center font-mulish text-lg')}>
+          <p className={classnames('max-w-3xl mx-auto mt-6 text-center font-mulish text-lg md:text-xl')}>
             He's worked with a wide range of spa brands and has taken part in factory and vendor training
             programs along the way, and he keeps learning as new equipment and best practices come out.
             Brands he knows well include:

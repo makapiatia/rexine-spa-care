@@ -60,25 +60,14 @@ export const Hero = () => {
                     )} />
                 </div>
 
-                <p className={classnames(
-                    'mt-8 px-6 py-3',
-                    'rounded-full border-4 border-deep-blue shadow-[5px_5px_0_var(--color-deep-blue)] bg-white',
-                    'text-deep-blue font-fraunces font-wonky font-semibold whitespace-nowrap text-xl xs:text-2xl',
-                    'md:text-4xl'
-                )}>
-                    a clean spa is a{' '}
-                    <span className={classnames('text-pop-cobalt italic')}>happy</span>
-                    {' '}spa <span aria-hidden="true">✹</span>
-                </p>
-
                 <div className={classnames(
-                    'flex flex-col sm:flex-row gap-4 mt-8',
-                    'font-mulish font-extrabold uppercase tracking-wider text-lg'
+                    'flex flex-col md:flex-row gap-3 md:gap-4 mt-8 md:mt-10',
+                    'font-mulish font-extrabold uppercase tracking-wider text-sm xs:text-base md:text-lg'
                 )}>
                     <Link
                         href="/services"
                         className={classnames(
-                            'group relative px-7 py-3',
+                            'group relative px-5 py-2.5 md:px-7 md:py-3',
                             'rounded-full border-4 border-deep-blue bg-pop-sky hover:bg-pop-aqua',
                             'text-deep-blue',
                             'transition hover:-translate-y-1'
@@ -90,7 +79,7 @@ export const Hero = () => {
                     <a
                         href="tel:+1623-282-2530"
                         className={classnames(
-                            'group relative px-7 py-3',
+                            'group relative px-5 py-2.5 md:px-7 md:py-3',
                             'rounded-full border-4 border-white bg-deep-blue/70 hover:bg-rexine-blue',
                             'text-white',
                             'transition hover:-translate-y-1'

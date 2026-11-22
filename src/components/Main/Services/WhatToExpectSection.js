@@ -68,7 +68,7 @@ export const WhatToExpectSection = () => {
                             </h3>
                             <ChevronIcon />
                         </summary>
-                        <div className={classnames('flex flex-col gap-4 px-6 pb-6 text-base text-left leading-relaxed')}>
+                        <div className={classnames('flex flex-col gap-4 px-6 pb-6 text-base md:text-lg text-left leading-relaxed')}>
                             {[].concat(text).map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
                         </div>
                         {showContactButtons && <ContactButtons className={classnames('px-6 pb-6')} />}

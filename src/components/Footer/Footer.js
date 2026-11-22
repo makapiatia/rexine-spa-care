@@ -1,19 +1,19 @@
 import React from 'react';
 import classnames from 'tailwindcss-classnames';
-import linkedin from '../../assets/images/socials/linkedin.svg';
-import squareFacebook from '../../assets/images/socials/squareFacebook.svg';
-import squareInstagram from '../../assets/images/socials/squareInstagram.svg';
-import { Bubbles, darkOutline, HoverBubbles } from '../Main/Stickers';
+import { Bubbles, darkOutline } from '../Main/Stickers';
 
 const headingClassName = classnames('font-fraunces font-wonky font-semibold text-2xl text-white');
 
 const detailClassName = classnames('text-lg text-light-blue font-mulish font-medium');
 
-const socialLinks = [
-  { href: 'https://www.linkedin.com/company/rexine-spa-care/', icon: linkedin, alt: 'Rexine Spa Care on LinkedIn' },
-  { href: 'https://www.facebook.com/rexinespacare/', icon: squareFacebook, alt: 'Rexine Spa Care on Facebook' },
-  { href: 'https://www.instagram.com/rexinespacare/', icon: squareInstagram, alt: 'Rexine Spa Care on Instagram' }
-];
+// Thicker lines on standard screens keep the small badge readable; high-density screens get the original line art
+const trexBadgeMaskImage = 'image-set(url(/trex-badge-bold.png) 1x, url(/trex-badge.png) 2x)';
+const trexBadgeMask = {
+  maskImage: trexBadgeMaskImage,
+  WebkitMaskImage: `-webkit-${trexBadgeMaskImage}`,
+  maskSize: '100% 100%',
+  WebkitMaskSize: '100% 100%'
+};
 
 export const Footer = () => {
   return (
@@ -21,7 +21,8 @@ export const Footer = () => {
       <svg
         viewBox="0 0 1440 60"
         preserveAspectRatio="none"
-        className={classnames('block w-full h-8 md:h-12')}
+        // Tucks 1px under the block below so no hairline gap shows on high-density screens
+        className={classnames('block w-full h-8 md:h-12 -mb-px')}
         aria-hidden="true"
       >
         <path
@@ -44,7 +45,7 @@ export const Footer = () => {
         )} />
 
         <div className={classnames('relative max-w-(--breakpoint-1xl) mx-auto')}>
-          <div className={classnames('grid gap-10 md:grid-cols-3')}>
+          <div className={classnames('grid gap-10 md:grid-cols-2')}>
             <div className={classnames('flex flex-col gap-1')}>
               <p className={headingClassName}>Call or text us</p>
               <a href='tel:+1623-282-2530' className={classnames('w-fit hover:text-white', detailClassName)}>
@@ -66,51 +67,44 @@ export const Footer = () => {
                 Saturday & Sunday available by appointment.
               </p>
             </div>
-
-            <div className={classnames('flex flex-col gap-3')}>
-              <p className={headingClassName}>Come say hi online</p>
-              <div className={classnames('flex flex-row gap-4')}>
-                {socialLinks.map(({ href, icon, alt }) => (
-                  <a
-                    key={href}
-                    href={href}
-                    className={classnames(
-                      'group relative p-2',
-                      'rounded-2xl border-4 border-deep-blue shadow-[4px_4px_0_var(--color-deep-blue)] bg-pop-cobalt',
-                      'transition hover:-translate-y-1'
-                    )}
-                  >
-                    <img src={icon.src} width='40px' height='40px' alt={alt} />
-                    <HoverBubbles dark />
-                  </a>
-                ))}
-              </div>
-            </div>
           </div>
 
           <div className={classnames(
-            'flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mt-12 pt-6',
+            'flex items-end justify-between gap-6 mt-12 pt-6',
             'border-t-2 border-light-blue/30',
             'font-mulish text-light-blue'
           )}>
-            <div className={classnames('flex flex-row gap-2')}>
-              <a
-                href="https://app.enzuzo.com/policies/tos/8f9a68b8-5d1c-11ee-9c4b-af1815b5c510"
-                className={classnames('hover:text-white')}
-              >
-                Terms of Service
-              </a>
-              <span aria-hidden="true" className={classnames('text-pop-sky')}>✹</span>
-              <a
-                href="https://app.enzuzo.com/policies/privacy/8f9a68b8-5d1c-11ee-9c4b-af1815b5c510"
-                className={classnames('hover:text-white')}
-              >
-                Privacy Policy
-              </a>
+            <div className={classnames('flex flex-col gap-2')}>
+              <div className={classnames('flex flex-row gap-2')}>
+                <a
+                  href="https://app.enzuzo.com/policies/tos/8f9a68b8-5d1c-11ee-9c4b-af1815b5c510"
+                  className={classnames('hover:text-white')}
+                >
+                  Terms of Service
+                </a>
+                <span aria-hidden="true" className={classnames('text-pop-sky')}>✹</span>
+                <a
+                  href="https://app.enzuzo.com/policies/privacy/8f9a68b8-5d1c-11ee-9c4b-af1815b5c510"
+                  className={classnames('hover:text-white')}
+                >
+                  Privacy Policy
+                </a>
+              </div>
+              <p className={classnames('italic text-sm')}>
+                © Rexine Spa Care LLC 2023
+              </p>
             </div>
-            <p className={classnames('italic text-sm')}>
-              © Rexine Spa Care LLC 2023
-            </p>
+            <div className={classnames('flex shrink-0 flex-col items-center gap-1 text-xs')}>
+              Site by
+              {/* The badge's shape masks an off-white fill, so its cut-out lettering shows the navy behind it */}
+              <span
+                role="img"
+                aria-label="TREX"
+                className={classnames('relative block w-12 h-12 md:w-14 md:h-14 rounded-full bg-deep-blue')}
+              >
+                <span className={classnames('absolute inset-0 bg-extra-light-blue')} style={trexBadgeMask} />
+              </span>
+            </div>
           </div>
         </div>
       </div>

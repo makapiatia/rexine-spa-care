@@ -22,7 +22,7 @@ const fullCleaningDetails = [
 ];
 
 const cardClassName = classnames(
-    'relative flex flex-col h-full p-6 pt-12 md:p-10 md:pt-14',
+    'relative flex flex-col h-full p-6 pt-12 md:p-8 md:pt-14',
     'rounded-3xl border-4 border-deep-blue shadow-[6px_6px_0_var(--color-deep-blue)]'
 );
 
@@ -52,7 +52,7 @@ export const ServiceDetailsSectionDesktop = () => {
                 >
                 <div className={classnames('monthly-details-section bg-white text-deep-blue', cardClassName)}>
                     <Sparkle className={classnames('absolute z-10 -top-8 left-8 rotate-20 w-16')} />
-                    <h3 className={classnames('font-fraunces font-wonky font-bold text-3xl')}>
+                    <h3 className={classnames('font-fraunces font-wonky font-bold text-2xl md:text-3xl')}>
                         Maintenance
                     </h3>
                     <div className={classnames('flex flex-wrap items-baseline gap-x-3 mt-4')}>
@@ -85,7 +85,7 @@ export const ServiceDetailsSectionDesktop = () => {
                     cardClassName
                 )}>
                     <Sun className={classnames('absolute z-10 -top-8 left-8 rotate-20 w-16')} />
-                    <h3 className={classnames('font-fraunces font-wonky font-bold text-3xl')}>
+                    <h3 className={classnames('font-fraunces font-wonky font-bold text-2xl md:text-3xl')}>
                         Full Cleaning
                     </h3>
                     <p className={classnames('mt-4 text-rexine-blue', priceClassName)}>$549</p>

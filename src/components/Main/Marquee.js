@@ -3,25 +3,26 @@
 import React, { useState } from 'react';
 import classnames from 'tailwindcss-classnames';
 
-const services = [
-  'Bi-Weekly & Weekly Plans',
-  'Full Cleanings',
-  'Drains & Refills',
-  'Start Ups & Shut Downs'
-];
+const tagline = 'a clean spa is a happy spa';
 
 // Repeated so each row is wider than the screen
-const marqueeItems = [...services, ...services];
+const taglineRepeats = 6;
+
+const Tagline = () => (
+  <>
+    a clean spa is a <span className={classnames('text-pop-aqua italic')}>happy</span> spa
+  </>
+);
 
 const MarqueeRow = () => (
-  <ul className={classnames('flex shrink-0 items-center')}>
-    {marqueeItems.map((item, i) => (
-      <li key={`${item}-${i}`} className={classnames('flex items-center whitespace-nowrap')}>
-        <span className={classnames('px-6')}>{item}</span>
+  <div className={classnames('flex shrink-0 items-center')}>
+    {Array.from({ length: taglineRepeats }, (_, i) => (
+      <span key={i} className={classnames('flex items-center whitespace-nowrap')}>
+        <span className={classnames('px-6')}><Tagline /></span>
         <span className={classnames('text-pop-sky')}>✹</span>
-      </li>
+      </span>
     ))}
-  </ul>
+  </div>
 );
 
 const PauseIcon = () => (
@@ -48,10 +49,8 @@ export const Marquee = () => {
         'border-y-4 border-deep-blue bg-rexine-blue',
         'text-white font-fraunces font-wonky text-2xl md:text-3xl'
       )}>
-        {/* Screen readers get the list once; the scrolling copies are visual only */}
-        <ul className={classnames('sr-only')}>
-          {services.map((item) => <li key={item}>{item}</li>)}
-        </ul>
+        {/* Screen readers get the tagline once; the scrolling copies are visual only */}
+        <p className={classnames('sr-only')}>{tagline}</p>
         <div
           aria-hidden="true"
           className={classnames('flex w-max motion-safe:animate-marquee')}
@@ -65,7 +64,7 @@ export const Marquee = () => {
       <button
         type="button"
         onClick={() => setIsPaused(!isPaused)}
-        aria-label={isPaused ? 'Play scrolling services' : 'Pause scrolling services'}
+        aria-label={isPaused ? 'Play scrolling tagline' : 'Pause scrolling tagline'}
         className={classnames(
           'absolute z-10 bottom-0.5 right-6 md:right-10 translate-y-1/2 flex items-center justify-center',
           'motion-reduce:hidden w-9 h-9',
