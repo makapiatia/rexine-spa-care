@@ -16,6 +16,8 @@ so those options appear throughout the site.
   brainstorming and was then executed in Adobe Illustrator.
 - **The T-rex badge in the footer credit is my own mark**, filled with the site's off-white so its lettering shows
   the navy behind it.
+- **Stock photography from [Adobe Stock](https://stock.adobe.com)**, used under license: the bubbly water
+  background in the home page hero, and the filter photo and spa jet photo on the About Us page.
 - **Spa brand and sanitizer logos** on the About Us and home pages belong to their respective companies.
 - **Built with help from Claude.** I used Claude, Anthropic's AI assistant, to help with many site details: code,
   layout, accessibility testing, search metadata and copy edits. The logo and the T-rex badge are entirely my own.
