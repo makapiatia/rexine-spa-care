@@ -16,12 +16,14 @@ const cleaningText = 'Cleanings, start ups & shut downs typically take 3-5 hours
     + 'please let us know ahead of time!';
 const paymentText = "We use Square for invoicing, so paying is quick and secure. You can pay your invoice remotely "
     + "from anywhere, so there's no need to be home on visit day!";
+const paymentScheduleText = 'Everyone pays once every 4 weeks (28 days). That falls on every other visit for every other '
+    + 'week service, or every fourth visit for weekly service.';
 const customPlanText = "Looking for something a little different? We'd love to put together a custom care plan "
     + 'just for you!';
 
 const allServiceExpectations = [
     { title: 'Scheduling', text: [visitDayText, schedulingText, customPlanText], badgeClassName: 'bg-pop-sky', showContactButtons: true },
-    { title: 'Billing & Payments', text: paymentText, badgeClassName: 'bg-pop-aqua' },
+    { title: 'Billing & Payments', text: [paymentScheduleText, paymentText], badgeClassName: 'bg-pop-aqua' },
     { title: 'Sanitizer & Supplies', text: sanitizationOptions, badgeClassName: 'bg-pop-periwinkle' },
     { title: 'Access', text: accessText, badgeClassName: 'bg-pop-sky' },
     { title: 'Cleanings', text: cleaningText, badgeClassName: 'bg-pop-aqua' }

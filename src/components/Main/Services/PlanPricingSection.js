@@ -4,10 +4,11 @@ import { Carousel } from '../Carousel';
 import { Bubbles, Drop, Sparkle, stickerTilt } from '../Stickers';
 import { fullBleedClassName, SectionHeading } from './servicePageStyles';
 
+// Everyone pays once every 4 weeks (28 days), which covers 2 every other week visits or 4 weekly visits
 const plans = [
   {
     name: 'Three Month Plan',
-    months: 3,
+    payments: 3,
     biWeeklyPrice: '$209',
     weeklyPrice: '$409',
     Sticker: Bubbles,
@@ -16,7 +17,7 @@ const plans = [
   },
   {
     name: 'Six Month Plan',
-    months: 6,
+    payments: 6,
     biWeeklyPrice: '$199',
     weeklyPrice: '$399',
     perk: 'Includes 1 full system flush',
@@ -28,7 +29,7 @@ const plans = [
   },
   {
     name: 'Twelve Month Plan',
-    months: 12,
+    payments: 12,
     biWeeklyPrice: '$199',
     weeklyPrice: '$399',
     perk: 'Includes 2 full system flushes',
@@ -42,14 +43,15 @@ const plans = [
 // Open the carousel on the most popular plan
 const featuredPlanIndex = plans.findIndex((plan) => plan.badge);
 
-const PriceTile = ({ price, frequency, visitsPerMonth, totalVisits }) => (
+const PriceTile = ({ price, frequency, totalVisits, visitsPerPayment }) => (
   <div className={classnames('px-4 py-5 rounded-2xl border-2 border-deep-blue bg-white')}>
     <p className={classnames('font-fraunces font-wonky font-bold text-5xl xl:text-6xl')}>
-      {price}<span className={classnames('text-2xl')}>/month</span>
+      {price}{' '}
+      <span className={classnames('block mt-1 text-xl')}>every 4 weeks</span>
     </p>
-    <p className={classnames('mt-2 text-sm font-bold uppercase tracking-wider')}>{frequency}</p>
-    <p>{visitsPerMonth} visits a month</p>
-    <p className={classnames('text-sm text-medium-blue')}>{totalVisits} visits total</p>
+    <p className={classnames('mt-3 text-sm font-bold uppercase tracking-wider')}>{frequency}</p>
+    <p className={classnames('text-lg font-bold')}>{totalVisits} visits total</p>
+    <p className={classnames('text-sm text-medium-blue')}>{visitsPerPayment} visits per payment</p>
   </div>
 );
 
@@ -75,7 +77,7 @@ export const PlanPricingSection = () => {
           startIndex={featuredPlanIndex}
           slideClassName={classnames('basis-[88%] sm:basis-[60%] lg:basis-1/3')}
         >
-        {plans.map(({ name, months, biWeeklyPrice, weeklyPrice, perk, perkValue, badge, Sticker, stickerFill, cardClassName }) => (
+        {plans.map(({ name, payments, biWeeklyPrice, weeklyPrice, perk, perkValue, badge, Sticker, stickerFill, cardClassName }) => (
           <div
             key={name}
             className={classnames(
@@ -102,14 +104,14 @@ export const PlanPricingSection = () => {
               {name}
             </h3>
             {perk && (
-              <p className={classnames('font-semibold')}>
+              <p className={classnames('-mt-3 font-semibold')}>
                 <CheckIcon />
                 {perk}{' '}
                 <span className={classnames('px-1.5 rounded-lg bg-white whitespace-nowrap')}>{perkValue}</span>
               </p>
             )}
-            <PriceTile price={biWeeklyPrice} frequency="Every other week" visitsPerMonth={2} totalVisits={months * 2} />
-            <PriceTile price={weeklyPrice} frequency="Weekly" visitsPerMonth={4} totalVisits={months * 4} />
+            <PriceTile price={biWeeklyPrice} frequency="Every other week" totalVisits={payments * 2} visitsPerPayment={2} />
+            <PriceTile price={weeklyPrice} frequency="Weekly" totalVisits={payments * 4} visitsPerPayment={4} />
           </div>
         ))}
         </Carousel>
@@ -120,11 +122,12 @@ export const PlanPricingSection = () => {
         'font-mulish text-deep-blue text-center'
       )}>
         <h3 className={classnames('font-fraunces font-wonky font-bold text-2xl')}>
-          How visits work
+          How visits & payments work
         </h3>
         <p className={classnames('mt-2 text-base md:text-lg')}>
-          Visits happen weekly or every other week. Depending on how the dates fall,
-          a month may have one more or one fewer visit.
+          Everyone pays once every 4 weeks (28 days), so payments line up with your visits: every other
+          visit when we come every other week, or every fourth visit when we come weekly. Plans are based
+          on the number of visits, so the months in each plan name are approximate.
         </p>
       </div>
     </section>

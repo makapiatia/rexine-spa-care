@@ -60,11 +60,11 @@ export const ServiceDetailsSectionDesktop = () => {
                             'whitespace-nowrap font-bold uppercase tracking-wider text-sm'
                         )}>Starting At</p>
                         <p className={classnames('text-rexine-blue', priceClassName)}>
-                            $199<span className={classnames('text-2xl md:text-3xl')}>/month</span>
+                            $199<span className={classnames('text-2xl md:text-3xl whitespace-nowrap')}>/4 weeks</span>
                         </p>
                     </div>
                     <p className={classnames('mt-2 italic text-sm md:text-base text-medium-blue')}>
-                        With a 6 or 12 month bi-weekly plan.
+                        For 2 visits, with a 6 or 12 month every other week plan.
                     </p>
                     <ul className={classnames('flex flex-col gap-2 md:gap-3 my-6 md:my-8')}>
                         {monthlyServiceDetails.map((monthlyItem) => (
@@ -76,7 +76,7 @@ export const ServiceDetailsSectionDesktop = () => {
                         'rounded-2xl bg-extra-light-blue',
                         'text-sm md:text-base'
                     )}>
-                        Prefer regular visits? Monthly plans come in weekly & bi-weekly options. See plan pricing below.
+                        Prefer regular visits? Plans come in weekly & every other week options. See plan pricing below.
                     </p>
                 </div>
 

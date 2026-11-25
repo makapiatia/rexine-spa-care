@@ -142,17 +142,17 @@ How the content behaves:
 
 ## Accessibility
 
-The site is built to meet **WCAG 2.2 Level AA**.
+The site is built with **WCAG 2.2 Level AA** as its target.
 
 **How it was checked**
 
-- **Automated checks** run in the browser on every page at mobile (375px) and desktop (1280px) widths: image alt
-  text, link and button names, heading order, form labels, landmarks, page language, duplicate IDs, text contrast
-  and touch target size.
-- **Contrast measured by hand** for colors automated tools can misread, such as text over photos and the scrolling
-  tagline.
-- **Screenshots** at phone (including 3× iPhone density), tablet and desktop widths, and with reduced motion turned
-  on.
+- **Custom scripted checks** run in the browser on every page at mobile (375px), tablet (768px) and desktop (1280px)
+  widths: image alt text, link and button names, heading order, form labels, landmarks, page language, duplicate IDs,
+  text contrast, touch target size and sideways scrolling.
+- **Contrast calculated separately** where a script can't read the background. White text on the 70% navy photo
+  overlay is at least 4.77:1, even over a pure white photo.
+- **Screenshots** of key sections at phone and desktop widths, and of the home page with reduced motion turned on.
+- **Not yet done:** an axe-core audit, a full keyboard walk and testing with a screen reader.
 
 **What's in place**
 
@@ -173,8 +173,8 @@ The site is built to meet **WCAG 2.2 Level AA**.
   - The mobile menu reports its open state, closes with Escape and keeps its links out of the tab order when closed.
 - **Contact form:**
   - Every field has a visible label, and name, phone, email and city support autofill.
-  - Errors are linked to their fields and announced as an alert, and focus moves to the thank-you message after
-    sending.
+  - Errors are linked to their fields, and focus moves to the first field that needs fixing. A failed send is
+    announced as an alert, and focus moves to the thank-you message after a successful one.
 - **Touch targets:** buttons and links are at least 24×24px.
 - **Reflow:** no sideways scrolling from 375px up.
 
